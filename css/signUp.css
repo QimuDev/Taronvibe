@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    background-color:#fffdd0;
+}
+
+h1{
+    margin: 0;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLogo{
+    height: 50vh;
+    width: 25vw;
+    background-color: red;
+}
+
+.signUp{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoContainer{
+    height: 100vh;
+    width: 50vw;
+}
+
+.formContainer{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContent{
+    height: 60vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.formField{
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formFieldGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+    border: none;    
+    outline: none;      
+    background: none;                              
+}
+
+.lineBar{
+    height: 0.1rem;
+    width: 30vw;
+    background-color: black;
+}
+
+.formFieldGroup .formField:nth-last-child(2) .lineBar{
+    width: 15vw; 
+}
+
+.formFieldGroup .formField:last-child .lineBar{
+    width: 15vw; 
+}
+
+.signUpButton{
+    height: 5vh;
+    width: 10vw;
+    margin-left: 3rem;
+}
