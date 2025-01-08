@@ -1,8 +1,8 @@
 /* General */
 @font-face {
     font-family: 'Varela Round';
-    src: url('./fonts/VarelaRound-Regular.ttf') format('woff2'),
-         url('./fonts/VarelaRound-Regular.ttf') format('woff');
+    src: url('../fonts/VarelaRound-Regular.ttf') format('woff2'),
+         url('../fonts/VarelaRound-Regular.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -79,7 +79,7 @@ nav {
 
 .profile-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
@@ -103,7 +103,7 @@ nav {
 .profile-image {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    text-align: center;
+    margin-left: 40px;
 }
 
 .profile-form {
@@ -194,8 +194,8 @@ label{
 }
 
 .gustos-container {
-    display: grid;
-    grid-template-rows: auto auto;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
@@ -215,7 +215,6 @@ label{
 .gusto-item img {
     width: 70px;
     height: 70px;
-    gap: 30px;
 }
 
 .gusto-item p {
@@ -227,7 +226,7 @@ label{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
+    gap: 20px 0px;
     justify-items: center;
     align-items: center;
     width: 100%;
