@@ -1,0 +1,238 @@
+:root{
+    --naranjaPrimario:#ff9f21;
+    --marron:#d07a52;
+    --marronSecundario:#f0a26b;
+    --fondoPagina:#fffdd0;
+    --amarilloSecundario:#ffcd5f;
+    --botones:#fd5461;
+}
+
+body{
+    margin: 0;
+}
+html{
+    background-color: var(--fondoPagina)    ;
+}
+
+
+
+
+.nav-container{
+    background-color: var(--naranjaPrimario);
+}
+
+.items-container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: right;
+    gap: 5rem;
+}
+
+
+.items p{
+    cursor: pointer;
+}
+
+.logo-nav img{
+    margin-left:3rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+
+
+
+/* Contenedor principal del carrusel */
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.carousel {
+  display: flex; /* Cambia de grid a flex para disposición horizontal */
+  flex-direction: row; /* Asegura que las diapositivas estén en fila */
+  gap: 0; /* Elimina espacio entre las diapositivas */
+  overflow: hidden; /* Oculta diapositivas fuera del área visible */
+  width: 100%; /* Ancho visible */
+  max-width: 1200px; /* Ajusta según tus necesidades */
+  transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+}
+
+
+/* Estilos para cada slide */
+.slide {
+  min-width: 100%; /* Cada diapositiva ocupa el 100% del contenedor visible */
+  height: auto; /* Ajusta según el contenido */
+  display: grid; /* Mantén el diseño en cuadrícula */
+  grid-template-columns: 1fr 1fr; /* Dos columnas por diapositiva */
+  grid-template-rows: auto;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Imagen */
+.slide-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  transition: opacity 0.5s;
+}
+
+/* Contenido del slide (texto + botón) */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 1rem;
+}
+
+.slider-content {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.btn-slider {
+  background-color: var(--botones);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-slider:hover {
+  background-color: #d03f51; 
+}
+
+
+/*  parte del scroll inicio */
+
+.scroll-container {
+  position: relative;
+  overflow: hidden; /* Oculta el contenido que sale del contenedor */
+  white-space: nowrap; /* Evita el salto de línea para el contenido */
+  width: 100%; /* Ancho del contenedor */
+  height: 30px; /* Altura del contenedor ajustable */
+  background-color: #f5f5f5; /* Fondo opcional */
+  border: 1px solid #ccc; /* Borde opcional */
+  margin: 5rem 0;
+}
+
+/* Contenido que se desplaza */
+.scroll-content {
+  display: inline-block; /* Asegura que todo esté en línea */
+  white-space: nowrap; /* Evita el salto de línea */
+  animation: scroll-horizontal 15s linear infinite; /* Animación */
+}
+
+/* Elementos dentro del scroll */
+.scroll-item {
+  display: inline-block;
+  margin-right: 20px; /* Espaciado entre elementos */
+  font-size: 18px;
+  color: #333;
+}
+
+/* Animación de desplazamiento */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%); /* Inicia fuera del contenedor a la derecha */
+  }
+  100% {
+    transform: translateX(-100%); /* Se mueve fuera del contenedor a la izquierda */
+  }
+}
+/* scroll final */
+
+/* aventos pasados y activos inicio */
+.wrapper {
+  position: relative;
+  width: 250px;
+  height: 36px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px var(--main-color);
+  justify-content: center;
+}
+
+.option {
+  margin-right: 5px;
+  width: 80.5px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 34px;
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.option:last-child {
+  margin-right: 4px;
+}
+
+.option:hover {
+  background-color: var(--secondary-color);
+}
+
+.option:hover .span {
+  color: var(--font-color-light);
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span {
+  color: var(--font-color-dark);
+}
+
+.input:checked + .btn {
+  background-color: var(--main-color);
+  transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.input:checked + .btn .span {
+  color: var(--font-color-light);
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+
+
+
+
+
