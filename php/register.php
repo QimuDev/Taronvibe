@@ -23,11 +23,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->bind_param("sssisi", $name, $email, $passSecure, $postalCode, $birthday, $rol);
 
         if($stmt->execute()){
-            //Añadir header a main
+            //inicia la sesión
             session_start();
 
             $_SESSION['name'] = $name;
             $_SESSION['rol'] = $rol;
+
+            header("Location: ../main.php");
         } else {
             $message = 'Error a la hora de preparar la consulta';
             echo "<script type='text/javascript'>alert('$message');

@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $_SESSION['name'] = $row['name'];
         $_SESSION['rol'] = $row['rol'];
-        //falta añadir un header
+        header("Location: ../main.php");
     } else {
         $message = 'correo o contraseña incorrectos';
         echo "<script type='text/javascript'>alert('$message');
