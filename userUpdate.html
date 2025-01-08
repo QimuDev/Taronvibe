@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edita tus datos</title>
-    <link rel="stylesheet" href="./userUpdate.css">
+    <link rel="stylesheet" href="./css/userUpdate.css">
 </head>
 <body>
     <!-- NAV MENÚ -->
     <nav>
         <div class="nav-logo">
-            <img src="./img_userUpdate/TARONVIBE Logo.png" alt="Logo">
+            <img src="./img/img_userUpdate/TARONVIBE Logo.png" alt="Logo">
         </div>
         <div class="nav-profile">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#Eventos">Eventos</a></li>
                 <li class="nav-item"><a href="#Organizadores">Organizadores</a></li>
-                <li><button class="btn-profile"><img src="./img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
+                <li><button class="btn-profile"><img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
             </ul>
         </div>
     </nav>
@@ -30,7 +30,7 @@
             <button class="btn-save">Guardar cambios</button>
         </div>
         <div class="profile-image">
-            <img src="./img/Login/Property 1=Rectangle 40.png" alt="Profile">
+            <img src="./img/img_userUpdate/Property 1=Rectangle 40.png" alt="Profile">
         </div>
         <div class="profile-form">
             <div class="text-line">
@@ -63,17 +63,57 @@
             <h1>Selecciona tus gustos</h1>
         </div>
         <div class="gustos">
-            <img src="./img_userUpdate/svg/arbol-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/arte-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/cine-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/coctel-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/fiesta-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/libro-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/magia-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/musica-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/oso-blanco.svg" alt="">
-            <img src="./img_userUpdate/svg/persona-blanco.svg" alt="">
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/arbol-blanco.svg" data-alt-src="./img/img_userUpdate/svg/arbol-naranja.svg" alt="">
+                <p>Naturaleza y aire libre</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/arte-blanco.svg" data-alt-src="./img/img_userUpdate/svg/arte-naranja.svg" alt="">
+                <p>Arte</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/cine-blanco.svg" data-alt-src="./img/img_userUpdate/svg/cine-naranja.svg" alt="">
+                <p>Cine</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/coctel-blanco.svg" data-alt-src="./img/img_userUpdate/svg/coctel-naranja.svg" alt="">
+                <p>Cocteleria y bebidas</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/fiesta-blanco.svg" data-alt-src="./img/img_userUpdate/svg/fiesta-naranja.svg" alt="">
+                <p>Fiestas y noche </p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/libro-blanco.svg" data-alt-src="./img/img_userUpdate/svg/libro-naranja.svg" alt="">
+                <p>Cultura y educación</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/magia-blanco.svg" data-alt-src="./img/img_userUpdate/svg/magia-naranja.svg" alt="">
+                <p>Juegos de mesa</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/musica-blanco.svg" data-alt-src="./img/img_userUpdate/svg/musica-naranja.svg" alt="">
+                <p>Música y festivales</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/oso-blanco.svg" data-alt-src="./img/img_userUpdate/svg/oso-naranja.svg" alt="">
+                <p>Familia y niños</p>
+            </div>
+            <div class="gusto-item">
+                <img src="./img/img_userUpdate/svg/persona-blanco.svg" data-alt-src="./img/img_userUpdate/svg/persona-naranja.svg" alt="">
+                <p>Deportes y actividades</p>
+            </div>
         </div>
     </div>
 </body>
+<script>
+    document.querySelectorAll('.gustos img').forEach(img => {
+        img.addEventListener('click', () => {
+            let currentSrc = img.getAttribute('src');
+            let altSrc = img.getAttribute('data-alt-src');
+            img.setAttribute('src', altSrc);
+            img.setAttribute('data-alt-src', currentSrc);
+        });
+    });
+</script>
 </html>

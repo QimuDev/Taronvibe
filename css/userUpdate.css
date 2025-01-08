@@ -195,7 +195,6 @@ label{
 
 .gustos-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
     padding: 20px;
@@ -206,16 +205,36 @@ label{
     margin: 40px;
 }
 
-.gustos > img {
+.gusto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gusto-item img {
     width: 70px;
     height: 70px;
     gap: 30px;
 }
 
+.gusto-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
 .gustos{
-    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gustos-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    width: 100%;
 }
