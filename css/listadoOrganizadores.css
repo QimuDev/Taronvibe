@@ -1,0 +1,61 @@
+:root{
+    font-family: "baloo tamma 2", serif;
+}
+.topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.texto {
+    display: flex;
+    margin-left: 50px;
+}
+
+.descubre {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.ola {
+    width: 120px;
+    height: 120px;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #FF7700;
+}
+
+.slider p {
+    display: inline-block;
+    padding-left: 100%;
+    font-weight:bold;
+    white-space: nowrap;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
