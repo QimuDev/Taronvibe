@@ -19,7 +19,19 @@
                 <li><button class="btn-profile"><img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
             </ul>
         </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+    <div class="mobile-nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#Eventos">Eventos</a></li>
+            <li class="nav-item"><a href="#Organizadores">Organizadores</a></li>
+            <li><button class="btn-profile"><img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
+        </ul>
+    </div>
 
     <!-- CONTENIDO PÁGINA -->
     <div class="profile-container">
@@ -114,6 +126,11 @@
             img.setAttribute('src', altSrc);
             img.setAttribute('data-alt-src', currentSrc);
         });
+    });
+</script>
+<script>
+    document.querySelector('.hamburger-menu').addEventListener('click', () => {
+        document.querySelector('.mobile-nav').classList.toggle('active');
     });
 </script>
 </html>
