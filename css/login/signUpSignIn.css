@@ -1,0 +1,209 @@
+:root {
+  --primary: #ff9f21;
+  --seconday: #ffcd5f;
+  --brown:  #d07a52;
+  --brownSecondary: #f0a26b;
+  --background: #fffdd0;
+  --botones: #e84954;
+
+}
+body {
+  margin: 0;
+  font-family: "Varela Round";
+}
+
+.loginPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff9f0;
+}
+
+.navBar {
+  height: 10vh;
+  width: 90vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navBarImg {
+  height: 20px;
+  width: 20px;
+  background-image: url("/img/login/inicio.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0.5rem;
+}
+
+.navBar a {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Baloo Tamma 2";
+  font-size: 23px;
+  font-weight: 700;
+  color: #ff9f21;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navBar a:hover {
+  background-color: #ff9f21;
+  border-radius: 2rem;
+  color: #fff9f0;
+}
+
+.navBar a:hover .navBarImg {
+  background-image: url("/img/login/inicioHover.svg");
+}
+
+.mainContainer {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.imgContainer {
+  height: 75vh;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/img/login/taronvibeLogo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 68%;
+  margin-right: 4rem;
+}
+
+.loginContainer {
+  height: 75vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ff9f21;
+  border-radius: 2rem;
+}
+
+.loginContainer1 {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.loginContainer1 h1 {
+  margin: 0;
+  font-family: "Baloo Tamma 2";
+  font-size: 58px;
+  font-weight: 800;
+}
+
+.loginContainer1 p {
+  margin: 0;
+}
+
+.loginContainer1 input {
+  padding: 1rem;
+  border: 2px solid #ff9f21;
+  border-radius: 2rem;
+  font-family: "Varela Round";
+}
+
+.formButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formButton button {
+  padding: 0.5rem 2rem;
+  border: 2px solid #ff9f21;
+  border-radius: 2rem;
+  font-family: "Baloo Tamma 2";
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #fff9f0;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.formButton button:hover {
+  background-color: #ff9f21;
+  color: #fff9f0;
+}
+
+.loginContainer2 {
+  height: 20%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.loginContainer a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.loginContainer a:hover {
+  border-bottom: 2px solid black;
+}
+
+/* SIGN IN */
+.loginContainerInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px;
+}
+
+.loginContainerInputs2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.terms {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms span{
+  color:#D07A52;
+}
+
+.loginContainerInputs2 button{
+  padding: 0.5rem 2rem;
+  border: 2px solid #ff9f21;
+  border-radius: 2rem;
+  font-family: "Baloo Tamma 2";
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #fff9f0;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.loginContainerInputs2 button:hover {
+  background-color: #ff9f21;
+  color: #fff9f0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: 2px solid #D07A52;
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2024 a las 13:30:49
+-- Tiempo de generación: 08-01-2025 a las 09:36:28
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -127,6 +127,14 @@ CREATE TABLE `rol` (
   `name_rol` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`id_rol`, `name_rol`) VALUES
+(1, 'admin'),
+(2, 'user');
+
 -- --------------------------------------------------------
 
 --
@@ -155,6 +163,17 @@ CREATE TABLE `user` (
   `image` varchar(500) NOT NULL,
   `id_rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id_user`, `name_user`, `email_user`, `password`, `biography`, `birthdate`, `postal_code`, `image`, `id_rol`) VALUES
+(6, 'Marcos', 'marcos@taronvive.com', '21232f297a57a5a743894a0e4a801fc3', '', '0000-00-00', 0, '', 1),
+(7, 'Quique', 'quique@taronvive.com', '21232f297a57a5a743894a0e4a801fc3', '', '0000-00-00', 0, '', 1),
+(8, 'David', 'david@taronvive.com', '21232f297a57a5a743894a0e4a801fc3', '', '0000-00-00', 0, '', 1),
+(9, 'Maïna', 'maina@taronvive.com', '21232f297a57a5a743894a0e4a801fc3', '', '0000-00-00', 0, '', 1),
+(10, 'JuanPablo', 'juanpablo@taronvive.com', '21232f297a57a5a743894a0e4a801fc3', '', '0000-00-00', 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -270,13 +289,13 @@ ALTER TABLE `preferences`
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
