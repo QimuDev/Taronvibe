@@ -1,54 +1,47 @@
-:root{
-    --naranjaPrimario:#ff9f21;
-    --marron:#d07a52;
-    --marronSecundario:#f0a26b;
-    --fondoPagina:#fffdd0;
-    --amarilloSecundario:#ffcd5f;
-    --botones:#fd5461;
+:root {
+  --naranjaPrimario: #ff9f21;
+  --marron: #d07a52;
+  --marronSecundario: #f0a26b;
+  --fondoPagina: #fffdd0;
+  --amarilloSecundario: #ffcd5f;
+  --botones: #fd5461;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
-html{
-    background-color: var(--fondoPagina)    ;
-}
-
-
-
-
-.nav-container{
-    background-color: var(--naranjaPrimario);
+html {
+  background-color: var(--fondoPagina);
 }
 
-.items-container{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.items{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: right;
-    gap: 5rem;
+.nav-container {
+  background-color: var(--naranjaPrimario);
 }
 
-
-.items p{
-    cursor: pointer;
+.items-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+  gap: 5rem;
 }
 
-.logo-nav img{
-    margin-left:3rem;
-    height: 5rem;
-    width: 5rem;
+.items p {
+  cursor: pointer;
 }
 
-
-
+.logo-nav img {
+  margin-left: 3rem;
+  height: 5rem;
+  width: 5rem;
+}
 
 /* Contenedor principal del carrusel */
 .container-carousel {
@@ -68,7 +61,6 @@ html{
   transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
 }
 
-
 /* Estilos para cada slide */
 .slide {
   min-width: 100%; /* Cada diapositiva ocupa el 100% del contenedor visible */
@@ -84,12 +76,11 @@ html{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Imagen */
 .slide-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px; 
+  border-radius: 8px;
   transition: opacity 0.5s;
 }
 
@@ -98,7 +89,7 @@ html{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -118,9 +109,8 @@ html{
 }
 
 .btn-slider:hover {
-  background-color: #d03f51; 
+  background-color: #d03f51;
 }
-
 
 /*  parte del scroll inicio */
 
@@ -137,7 +127,7 @@ html{
 
 /* Contenido que se desplaza */
 .scroll-content {
-  display: inline-block; 
+  display: inline-block;
   white-space: nowrap; /* Evita el salto de línea */
   animation: scroll-horizontal 15s linear infinite; /* Animación */
 }
@@ -145,7 +135,7 @@ html{
 /* Elementos dentro del scroll */
 .scroll-item {
   display: inline-block;
-  margin-right: 20px; 
+  margin-right: 20px;
   font-size: 18px;
   color: #333;
 }
@@ -153,7 +143,7 @@ html{
 /* Animación de desplazamiento */
 @keyframes scroll-horizontal {
   0% {
-    transform: translateX(100%); 
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
@@ -233,27 +223,50 @@ html{
 
 /* GALERIA DE IMAGENES */
 
-
-.galery-container{
-margin: 10rem;
+.galery-container {
+  display: flex; /* Usar Flexbox para alinear hijos dentro del contenedor */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Opcional: Centrar verticalmente */
+  height: auto; /* Ajustar la altura según el contenido */
 }
 
-.img-contianer{
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-  align-items: center;  
-  border-color: solid var(--botones);
+.img-container {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas uniformes */
+  grid-template-rows: repeat(3, 1fr); /* Tres filas uniformes */
+  gap: 1rem; /* Espaciado entre elementos */
+  background-color: red; /* Fondo para depuración */
 }
 
-.galery-image{
 
+.galery-image {
+  height: 17rem;
+  width: 17rem;
+  background-color: green;
 }
 
-.galery-button{
-  margin: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.galery-button {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.galery-button button {
+  background-color: darkblue;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.galery-button button:hover {
+  background-color: navy;
+}
+
+
+/* comentarios */
+.comments-container{
+  
 }
