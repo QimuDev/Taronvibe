@@ -150,7 +150,7 @@ nav {
 }
 
 .profile-button {
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
     grid-row: 1 / 2;
     display: flex;
     justify-content: center;
@@ -159,13 +159,13 @@ nav {
 
 .profile-image {
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 2 / 2;
     margin-left: 40px;
 }
 
 .profile-form {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
