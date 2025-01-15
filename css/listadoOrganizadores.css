@@ -14,8 +14,7 @@
     --brownSecondary: #f0a26b;
     --background: #fffdd0;
     --botones: #e84954;
-  }
-   
+}
 
 body {
     margin: 0;
@@ -31,9 +30,13 @@ nav {
     padding: 20px 30px;
 }
 
+.nav-logo{
+    margin-left: 5rem;
+}
+
 .nav-logo img {
     height: 60px;
-    margin-left: 40px;
+    margin-left: px;
 }
 
 .nav-list {
@@ -79,6 +82,7 @@ nav {
     font-size: 16px;
     font-weight: bold; 
     cursor: pointer; 
+    margin-right: 5rem;;
 }
 
 .btn-profile:hover {
@@ -94,7 +98,6 @@ nav {
     font-weight: bold; 
     cursor: pointer; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 .btn-profile:hover .profile-icon {
@@ -104,8 +107,9 @@ nav {
 .descubre {
     display: flex;
     justify-content: left;
-    margin-left: 50px;
+    margin-left: 7rem;
     align-items: center;
+    margin-bottom: 2rem; /* Añadir margen inferior */
 }
 
 .texto {
@@ -152,12 +156,19 @@ nav {
     }
 }
 
+.listOrgContainer {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Añadir align-items center */
+    margin: 1rem 7rem 7rem; /* Reduce el margen superior */
+}
+
 .searchbar-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 5rem;
-    margin-top: 5rem;
+    margin: 2rem 7rem;
 }
 
 .searchbar {
@@ -165,6 +176,7 @@ nav {
     border-radius: 50px;
     border-style: solid;
     padding: 1rem;
+    margin: 15px 20px;
 }
 
 .search-icon {
@@ -181,3 +193,42 @@ nav {
     outline: none;
 }
 
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.ulOrg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 7rem;
+}
+
+.ulOrg li {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.imgOrg {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+}
+
+.ulOrg li:hover .imgOrg {
+    transition: transform 0.3s;
+    filter: brightness(0.9);
+}
+
+.ulOrg li:hover {
+    text-decoration-line: underline;
+}
