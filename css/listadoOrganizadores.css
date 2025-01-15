@@ -1,5 +1,9 @@
-:root{
-    font-family: "baloo tamma 2", serif;
+@font-face {
+    font-family: 'Varela Round';
+    src: url('./fonts/VarelaRound-Regular.ttf') format('woff2'),
+        url('./fonts/VarelaRound-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 nav {
@@ -34,6 +38,22 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center; 
+    padding: 15px 20px;
+    background-color: #ff7a00; 
+    color: white; 
+    border: none; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
     padding: 15px 20px;
     background-color: #ff7a00; 
     color: white; 
