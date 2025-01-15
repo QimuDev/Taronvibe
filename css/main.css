@@ -137,7 +137,7 @@ html{
 
 /* Contenido que se desplaza */
 .scroll-content {
-  display: inline-block; /* Asegura que todo esté en línea */
+  display: inline-block; 
   white-space: nowrap; /* Evita el salto de línea */
   animation: scroll-horizontal 15s linear infinite; /* Animación */
 }
@@ -145,7 +145,7 @@ html{
 /* Elementos dentro del scroll */
 .scroll-item {
   display: inline-block;
-  margin-right: 20px; /* Espaciado entre elementos */
+  margin-right: 20px; 
   font-size: 18px;
   color: #333;
 }
@@ -153,10 +153,10 @@ html{
 /* Animación de desplazamiento */
 @keyframes scroll-horizontal {
   0% {
-    transform: translateX(100%); /* Inicia fuera del contenedor a la derecha */
+    transform: translateX(100%); 
   }
   100% {
-    transform: translateX(-100%); /* Se mueve fuera del contenedor a la izquierda */
+    transform: translateX(-100%);
   }
 }
 /* scroll final */
@@ -231,8 +231,29 @@ html{
   transition: 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
+/* GALERIA DE IMAGENES */
 
 
+.galery-container{
+margin: 10rem;
+}
 
+.img-contianer{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;  
+  border-color: solid var(--botones);
+}
 
+.galery-image{
 
+}
+
+.galery-button{
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
