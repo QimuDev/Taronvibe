@@ -5,17 +5,20 @@
   --brownSecondary: #f0a26b;
   --background: #fffdd0;
   --botones: #e84954;
+  --nav:#ff7700;
 }
 
 body {
   margin: 0;
+  background-color: var(--background);
+
 }
 html {
-  background-color: var(--fondoPagina);
+  
 }
 
 .nav-container {
-  background-color: var(--naranjaPrimario);
+  background-color: var(--background);
 }
 
 .items-container {
@@ -31,6 +34,7 @@ html {
   justify-content: center;
   align-items: right;
   gap: 5rem;
+  color: var(--nav);
 }
 
 .items p {
@@ -49,24 +53,25 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 .carousel {
-  display: flex; /* Cambia de grid a flex para disposición horizontal */
-  flex-direction: row; /* Asegura que las diapositivas estén en fila */
-  gap: 0; /* Elimina espacio entre las diapositivas */
-  overflow: hidden; /* Oculta diapositivas fuera del área visible */
-  width: 100%; /* Ancho visible */
-  max-width: 1200px; /* Ajusta según tus necesidades */
-  transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+  display: flex; 
+  flex-direction: row; 
+  gap: 0; 
+  overflow: hidden;
+  width: 100%; 
+  max-width: 1200px; 
+  transition: transform 0.5s ease-in-out; 
 }
 
 /* Estilos para cada slide */
 .slide {
-  min-width: 100%; /* Cada diapositiva ocupa el 100% del contenedor visible */
-  height: auto; /* Ajusta según el contenido */
-  display: grid; /* Mantén el diseño en cuadrícula */
-  grid-template-columns: 1fr 1fr; /* Dos columnas por diapositiva */
+  min-width: 100%;
+  height: auto; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
   grid-template-rows: auto;
   gap: 1rem;
   align-items: center;
@@ -124,22 +129,23 @@ html {
   border: 1px solid #ccc; 
   display: flex;
   align-items: center; 
+  background-color: var(--primary);
 }
 
 .scroll-content {
   display: inline-block;
-  white-space: nowrap; /* Evita el salto de línea */
-  animation: scroll-horizontal 15s linear infinite; /* Animación */
+  white-space: nowrap; 
+  animation: scroll-horizontal 15s linear infinite;  
 }
 
 .scroll-item {
-  display: inline-flex; /* Cambia a flex para centrar contenido */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  display: inline-flex;  
+  justify-content: center; 
+  align-items: center;  
   margin-right: 20px;
   font-size: 18px;
-  color: #333;
-  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+  color: var(--background);
+  height: 100%;  
 }
 
 /* Animación de desplazamiento */
@@ -155,17 +161,29 @@ html {
 /* scroll final */
 
 /* aventos pasados y activos inicio */
+.wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+.title-wrap{
+  text-align: center;
+}
+
 .wrapper {
   position: relative;
   width: 250px;
   height: 36px;
-  background-color: var(--bg-color);
-  border: 2px solid var(--main-color);
+  background-color: var(--background);
+  border: 2px solid var(--primary);
   border-radius: 34px;
   display: flex;
   flex-direction: row;
-  box-shadow: 4px 4px var(--main-color);
-  justify-content: center;
+  justify-content: center; 
+  box-shadow: 4px 4px var(--primary);
+  margin-top: 1rem;
 }
 
 .option {
@@ -184,11 +202,11 @@ html {
 }
 
 .option:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--seconday);
 }
 
 .option:hover .span {
-  color: var(--font-color-light);
+  color: var(--background);
 }
 
 .input {
@@ -211,34 +229,34 @@ html {
 }
 
 .span {
-  color: var(--font-color-dark);
+  color: var(--primary);
 }
 
 .input:checked + .btn {
-  background-color: var(--main-color);
+  background-color: var(--primary);
   transition: 0.2s cubic-bezier(0, 0, 0, 1);
 }
 
 .input:checked + .btn .span {
-  color: var(--font-color-light);
+  color: var(--background);
   transition: 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 /* GALERIA DE IMAGENES */
 
 .galery-container {
-  display: flex; /* Usar Flexbox para alinear hijos dentro del contenedor */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Opcional: Centrar verticalmente */
-  height: auto; /* Ajustar la altura según el contenido */
+  display: flex; 
+  justify-content: center;  
+  align-items: center;  
+  height: auto;  
   margin: 5rem;
 }
 
 .img-container {  
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas uniformes */
-  grid-template-rows: repeat(3, 1fr); /* Tres filas uniformes */
-  gap: 2rem; /* Espaciado entre elementos */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+  gap: 2rem;  
 }
 
 
@@ -309,18 +327,18 @@ html {
 }
 
 .galery-button button {
-  background-color: darkblue;
-  color: white;
+  background-color: var(--background);
+  color: black;
   padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
+  border: solid var(--primary);
+  border-radius: 10rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .galery-button button:hover {
-  background-color: navy;
+  background-color: var(--primary);
 }
 
 
@@ -343,7 +361,7 @@ html {
 .comments-container {
   /* text-align: center; */
   padding: 2rem 0;
-  background-color: #f7f7f7;
+  background-color: var(--brown);
   color: #333;
   margin-top: 3rem;
 }
@@ -351,16 +369,17 @@ html {
 .comments-container h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #007BFF;
+  color: var(--background);
   width: 30rem;
-  margin: 3rem 5rem;
+  margin: 1rem 5rem;
 }
 
 .comments {
   display: flex;
   overflow: hidden;
   position: relative;
-  height: 250px;
+  height: auto;
+  margin-bottom: 3rem;
 }
 
 .comment {
@@ -370,11 +389,12 @@ html {
   justify-content: flex-start;
   margin: 0 2rem;
   padding: 0.5rem;
-  background-color: #fff;
+  background-color: var(--background);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 400px; 
   animation: slide 10s linear infinite;
+  height: auto;
 }
 
 .comment img {
@@ -388,7 +408,7 @@ html {
 .comment h3 {
   font-size: 1.1rem;
   margin: 0.3rem 1rem;
-  color: #007BFF;
+  color: black;
   font-weight: bold;
   text-align: start ;
 }
@@ -426,8 +446,8 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  overflow: hidden; /* Oculta contenido que sale del contenedor */
-  height: 500px; /* Altura total de la animación */
+  overflow: hidden;  
+  height: 500px;  
   padding: 0.5rem;
 }
 
@@ -489,10 +509,19 @@ html {
 
 /* PROXIMOS EVENTOS SECTION */
 
+.prox-color{
+background-color: var(--brown);
+}
 
 .proximos-eventos-container{
 padding: 1rem;
 text-align: center;
+}
+.title-prox{
+  text-align: center;
+  padding: 3rem;
+  font-weight: bold;
+  color: var(--background);
 }
 
 .proximos{
@@ -535,11 +564,13 @@ background-repeat: no-repeat;
 .contenido-prox{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 .contenido-prox p{
   width: 50rem;
+  color: var(--background);
+  margin-left: 2rem;
 }
 
 .btn-prox{
@@ -550,28 +581,30 @@ background-repeat: no-repeat;
 }
 
 .btn-prox button{
-  background-color: darkblue;
-  color: white;
+  background-color: var(--background);
+  color: var(--brown);
   padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
+  border: solid var(--brownSecondary);
+  border-radius: 10rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .btn-prox button:hover {
-  background-color: navy;
+  background-color:var(--brownSecondary) ;
+  color: var(--background);
 }
 
 
 /* FOOTER INICIO */
 .footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Información más ancha y newsletter más estrecha */
+  grid-template-columns: 2fr 1fr;  
   gap: 2rem;
-  background-color: #f5f5f5;
+  background-color: var(--background);
   color: #333;
+ margin: 4rem 0;
 }
 
 /* Sección de Información */
@@ -598,7 +631,7 @@ width: 40rem;
 
 .info ul li a {
   text-decoration: none;
-  color: #007BFF;
+  color: var(--nav);
   transition: color 0.3s ease;
 }
 
@@ -662,14 +695,14 @@ border-color: var(--primary);
 /* Responsivo */
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
   }
   .newsletter {
-    text-align: center; /* Centra la newsletter en pantallas pequeñas */
+    text-align: center; 
   }
   .newsletter input,
   .newsletter button {
-    margin: 0.5rem auto; /* Centra los elementos */
+    margin: 0.5rem auto;  
   }
 }
 
