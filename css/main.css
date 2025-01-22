@@ -1,10 +1,10 @@
 :root {
-  --naranjaPrimario: #ff9f21;
-  --marron: #d07a52;
-  --marronSecundario: #f0a26b;
-  --fondoPagina: #fffdd0;
-  --amarilloSecundario: #ffcd5f;
-  --botones: #fd5461;
+  --primary: #ff9f21;
+  --seconday: #ffcd5f;
+  --brown:  #d07a52;
+  --brownSecondary: #f0a26b;
+  --background: #fffdd0;
+  --botones: #e84954;
 }
 
 body {
@@ -228,22 +228,77 @@ html {
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Opcional: Centrar verticalmente */
   height: auto; /* Ajustar la altura según el contenido */
+  margin: 5rem;
 }
 
 .img-container {  
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Cuatro columnas uniformes */
   grid-template-rows: repeat(3, 1fr); /* Tres filas uniformes */
-  gap: 1rem; /* Espaciado entre elementos */
-  background-color: red; /* Fondo para depuración */
+  gap: 2rem; /* Espaciado entre elementos */
 }
 
 
 .galery-image {
   height: 17rem;
   width: 17rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: green;
+  border-radius: 10px;
 }
+
+/* IMAGENES DE CADA ELEMENTO DE LA GALERIA PRINCIPAL */
+.galery-image.a{
+   background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.b{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.c{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.d{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.e{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.f{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.g{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.h{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.i{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.j{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.k{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.l{
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+/* FIN DE LAS IMAGENES DE LA GALERÍA */
 
 .galery-button {
   margin: 2rem 0;
@@ -267,6 +322,93 @@ html {
 
 
 /* comentarios */
-.comments-container{
-  
+/* .comments-container{
+  background-color: blue;
+  margin: 5rem;
+  color: var(--fondoPagina);
 }
+
+.coments{
+  background-color: #d03f51;
+}
+
+.coment{
+  background-color:green;
+} */
+
+
+.comments-container {
+  /* text-align: center; */
+  padding: 2rem 0;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 3rem 0;
+}
+
+.comments-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #007BFF;
+  width: 30rem;
+  margin: 3rem 5rem;
+}
+
+.comments {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+}
+
+.comment {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  margin: 0 2rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px; 
+  animation: slide 10s linear infinite;
+}
+
+.comment img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin:1rem;
+  object-fit: cover;
+}
+
+.comment h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 1rem;
+  color: #007BFF;
+  font-weight: bold;
+  text-align: start ;
+}
+
+.comment p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: start;
+  margin: 0 1rem;
+}
+
+/* Animación para movimiento infinito */
+@keyframes slide {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+.comments:hover .comment {
+  animation-play-state: paused; 
+}
+
