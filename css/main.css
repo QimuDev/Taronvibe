@@ -321,7 +321,7 @@ html {
 }
 
 
-/* comentarios */
+/* COMENTARIOS ALEATORIOS */
 /* .comments-container{
   background-color: blue;
   margin: 5rem;
@@ -342,7 +342,7 @@ html {
   padding: 2rem 0;
   background-color: #f7f7f7;
   color: #333;
-  margin: 3rem 0;
+  margin-top: 3rem;
 }
 
 .comments-container h2 {
@@ -412,3 +412,151 @@ html {
   animation-play-state: paused; 
 }
 
+/* FINAL DE COMENTARIOS ALEATORIOS */
+
+
+
+/* IMAGENES CON MOVIEMIENTO  */
+
+/* Contenedor general */
+.dinamic-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden; /* Oculta contenido que sale del contenedor */
+  height: 500px; /* Altura total de la animación */
+  padding: 0.5rem;
+}
+
+/* Estilos de las columnas */
+.dinamic-column {
+  display: flex;
+  flex-direction: column;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.dinamic-left {
+  animation-name: move-up;
+}
+
+.dinamic-center {
+  animation-name: move-down;
+}
+
+.dinamic-right {
+  animation-name: move-up;
+}
+
+/* Imagenes */
+/* .dina-image{
+  width: 100px;
+} */
+
+.dina-image img {
+  width: 450px;
+  height: 300px;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+}
+
+/* Animaciones */
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+
+
+
+
+/* PROXIMOS EVENTOS SECTION */
+
+
+.proximos-eventos-container{
+padding: 1rem;
+text-align: center;
+}
+
+.proximos{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+
+.proximos-img {
+  width: 20rem;
+  height: 20rem;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.proximos-img.a{
+  background-image: url("../img/main/images/tazas.png");
+
+}
+
+.proximos-img.b{
+  background-image: url("../img/main/images/mercadillo.png");
+
+}
+
+.proximos-img.c{
+  background-image: url("../img/main/images/atracciones.png");
+
+}
+
+.proximos-img.d{
+  background-image: url("../img/main/images/festival.png");
+
+}
+
+
+
+.contenido-prox{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin: 2rem;
+}
+
+.contenido-prox p{
+  width: 50rem;
+}
+
+.btn-prox{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.btn-prox button{
+  background-color: darkblue;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-prox button:hover {
+  background-color: navy;
+}

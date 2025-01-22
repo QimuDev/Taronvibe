@@ -23,3 +23,13 @@ container.addEventListener('mouseleave',()=>{
 });
 })
     
+
+// CLONAR LAS IMAGENES ANIMADAS
+// document.querySelectorAll('.dinamic-column').forEach((column) => {
+//     const images = column.children;
+//     for (let i = 0; i < images.length; i++) {
+//       const clone = images[i].cloneNode(true);
+//       column.appendChild(clone); 
+//     }
+//   });
+  
