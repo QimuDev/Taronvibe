@@ -72,17 +72,36 @@ body {
   margin-top: 2rem;
 }
 
-.imgContainer {
+.logoContainer{
   height: 75vh;
   width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.imgContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
   background-image: url("/img/login/taronvibeLogo.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 45%;
+  position: absolute;
+}
+
+.textContainer{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/login/taronvibeText.png");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: 68%;
-  margin-right: 4rem;
+  position: absolute;
 }
 
 .loginContainer {
@@ -102,6 +121,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.loginContainerh1p{
+  
 }
 
 .loginContainer1 h1 {
