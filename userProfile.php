@@ -1,32 +1,26 @@
 <?php
-include_once('configuracion.php');
-include_once('config.php');
+include_once('./php/configuration.php');
 
-$sql = "SELECT 
-            e.ID_Equipo, 
-            e.Nombre_Equipo AS Nombre, 
-            e.Logo_Equipo AS Logo, 
-            e.Ciudad_Equipo AS Ciudad, 
-            COUNT(j.ID_Jugador) AS Cantidad_Jugadores,
-            COUNT(f.ID_Fav_Equipo) AS Favorito
-        FROM equipos e
-        LEFT JOIN jugadores j ON j.ID_Equipo = e.ID_Equipo
-        LEFT JOIN favoritos_equipos f ON f.ID_Fav_Equipo = e.ID_Equipo AND f.ID_Fav_Usuario = ?
-        GROUP BY e.ID_Equipo, e.Nombre_Equipo, e.Logo_Equipo, e.Ciudad_Equipo";
+$sql = "SELECT * FROM event";
 $result = $conn->query($sql);
 
-$tabla = "<div class='container mt-4'><div class='row justify-content-center'>"; // Inicio del contenedor y fila
+$tabla = "<div class='container'><div class='row'>"; // Inicio del contenedor y fila
 if ($result->num_rows > 0) {    
     // Generar las filas dentro del bucle
     while ($row = $result->fetch_assoc()) {
         $tabla .= "
-            <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center align-items-stretch'>
-                <div class='card shadow-sm' style='border-radius: 20px; max-width: 100%;'>
-                    <img src='./" . $row["Logo"] . "' alt='Imagen de " . $row["Nombre"] . "' class='img-fluid' style='max-height: 200px; object-fit: contain;'>
-                    <div class='card-body' style='border-radius: 0 0 20px 20px;'>
-                        <h5 class='card-title'>" . $row['Nombre'] . "</h5>
-                        <p class='card-text'>Nº Jugadores: <span class='price'>" . $row['Cantidad_Jugadores'] . "</span></p>
-                        <p style='margin-bottom: 0px;' class='card-text'>📍Ciudad: " . $row['Ciudad'] . "</p>
+            <div class='col col-12 col-sm-6 col-md-4 col-lg-3'>
+                <div class='card'>
+                    <img src='./" . $row["image"] . "' alt='Imagen de " . $row["name_event"] . "' class='img-fluid'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>" . $row['name_event'] . "</h5>
+                        <p class='card-text'><span class='price'>📍" . $row['postal_code'] . "</span></p>
+                        <p class='card-text'>📅: " . $row['date_event'] . "</p>
+                        <div class='event-icons'>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,6 +36,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edita tus datos</title>
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="./css/userProfile.css">
 </head>
 <body>
@@ -96,6 +91,16 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
             <button class="option active" onclick="toggleButton(event)">Favoritos</button>
             <button class="option" onclick="toggleButton(event)">Pasados</button>
             <div class="slider"></div>
+        </div>
+        <?php echo $tabla ?>
+        <div class="pagination">
+            <button class="page active" onclick="changePage(1)">1</button>
+            <button class="page" onclick="changePage(2)">2</button>
+            <button class="page" onclick="changePage(3)">3</button>
+            <button class="page" onclick="changePage(4)">4</button>
+            <button class="page" onclick="changePage(5)">5</button>
+            <span class="dots">...</span>
+            <button class="page" onclick="changePage(10)">10</button>
         </div>
     </div>
 
@@ -161,6 +166,11 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     } else {
         slider.style.transform = "translateX(100%)";
     }
+}
+
+function changePage(pageNumber) {
+    document.querySelectorAll('.page').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.page:nth-child(${pageNumber})`)?.classList.add('active');
 }
 </script>
 </html>
