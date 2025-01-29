@@ -56,7 +56,7 @@ if($result -> num_rows > 0) {
             <?=$lista?>
         </div>
     </div>
-
+    
     <div class="marquee-container">
         <div class="marquee">
             <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, </span>
