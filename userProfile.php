@@ -1,3 +1,41 @@
+<?php
+include_once('configuracion.php');
+include_once('config.php');
+
+$sql = "SELECT 
+            e.ID_Equipo, 
+            e.Nombre_Equipo AS Nombre, 
+            e.Logo_Equipo AS Logo, 
+            e.Ciudad_Equipo AS Ciudad, 
+            COUNT(j.ID_Jugador) AS Cantidad_Jugadores,
+            COUNT(f.ID_Fav_Equipo) AS Favorito
+        FROM equipos e
+        LEFT JOIN jugadores j ON j.ID_Equipo = e.ID_Equipo
+        LEFT JOIN favoritos_equipos f ON f.ID_Fav_Equipo = e.ID_Equipo AND f.ID_Fav_Usuario = ?
+        GROUP BY e.ID_Equipo, e.Nombre_Equipo, e.Logo_Equipo, e.Ciudad_Equipo";
+$result = $conn->query($sql);
+
+$tabla = "<div class='container mt-4'><div class='row justify-content-center'>"; // Inicio del contenedor y fila
+if ($result->num_rows > 0) {    
+    // Generar las filas dentro del bucle
+    while ($row = $result->fetch_assoc()) {
+        $tabla .= "
+            <div class='col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center align-items-stretch'>
+                <div class='card shadow-sm' style='border-radius: 20px; max-width: 100%;'>
+                    <img src='./" . $row["Logo"] . "' alt='Imagen de " . $row["Nombre"] . "' class='img-fluid' style='max-height: 200px; object-fit: contain;'>
+                    <div class='card-body' style='border-radius: 0 0 20px 20px;'>
+                        <h5 class='card-title'>" . $row['Nombre'] . "</h5>
+                        <p class='card-text'>Nº Jugadores: <span class='price'>" . $row['Cantidad_Jugadores'] . "</span></p>
+                        <p style='margin-bottom: 0px;' class='card-text'>📍Ciudad: " . $row['Ciudad'] . "</p>
+                    </div>
+                </div>
+            </div>
+        ";
+    }
+}
+$tabla .= "</div></div>"; // Cerrar el contenedor y la fila
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +89,16 @@
         <a style="text-decoration: none;" href="./userUpdate.html"><button class="btn-save"><img src="./img/img_userProfile/lapiz-negro.svg" alt="svg edit"> Mi Perfil</button></a>
     </div>
 
+    <!-- TUS GUSTOS -->
+    <div class="wrapper-container" style="margin-top: 150px;">
+        <h1>Tus gustos</h1>
+        <div class="wrapper">
+            <button class="option active" onclick="toggleButton(event)">Favoritos</button>
+            <button class="option" onclick="toggleButton(event)">Pasados</button>
+            <div class="slider"></div>
+        </div>
+    </div>
+
     <div class="marquee-container">
         <div class="marquee">
             <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop.</span>
@@ -99,5 +147,20 @@
     document.querySelector('.hamburger-menu').addEventListener('click', () => {
         document.querySelector('.mobile-nav').classList.toggle('active');
     });
+</script>
+<script>
+    function toggleButton(event) {
+    const buttons = document.querySelectorAll('.option');
+    const slider = document.querySelector('.slider');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    if (event.target.innerText === "Favoritos") {
+        slider.style.transform = "translateX(0%)";
+    } else {
+        slider.style.transform = "translateX(100%)";
+    }
+}
 </script>
 </html>
