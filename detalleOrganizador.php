@@ -1,28 +1,26 @@
 <?php
 require_once('./php/configuration.php');
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
 
-$sql = 'SELECT name_org AS nombre, id_org AS id, image_org AS imagen FROM organizer';
-
-$result = $conn->query($sql);
-$lista = "";
-if($result -> num_rows > 0) {
-    $lista = "<ul class='ulOrg'>";
-    while ($row = $result -> fetch_assoc()){
-        $lista .= "<li><a href='detalleOrganizador.php?id=".$row['id']."'><img src=.".$row['imagen']." loading='lazy' alt=".$row['nombre']." class='imgOrg'></a>    ".$row['nombre']."</li>";
+    $sqlOrganizador = 'SELECT name_org AS nombre, image_org AS imagen FROM organizer WHERE id_org = '.$id;
+    $resultOrganizador = $conn->query($sqlOrganizador);
+    if($resultOrganizador -> num_rows > 0){
+        $row = $resultOrganizador -> fetch_assoc();
+        $image = "<img src=.".$row['imagen']." loading='lazy' alt=".$row['nombre']." class='imgOrg'>";
+        $nombre = $row['nombre'];
     }
-    $lista .= "</ul>";
-}
 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista organizadores</title>
-    <link rel="stylesheet" href="./css/listadoOrganizadores.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/detalleOrganizador.css">
 </head>
-
 <body>
     <nav>
         <div class="nav-logo">
@@ -36,33 +34,20 @@ if($result -> num_rows > 0) {
             </ul>
         </div>
     </nav>
-    <div class="descubre">
-        <h1 class="texto">Descubre nuestros <br> organizadores ;)</h1>
-        <img src="./img/listadoOrg/text.png" alt="ola" class="ola">
+    <div class="organizador">
+        <?=$image?>
+        <div class="info">
+            <p class="nombre"><?=$nombre?></p>
+            <a href="#" class="btn-contacto">Nuestra web</a>
+            <p class="descripcion">Lorem ipsum odor amet, consectetuer adipiscing elit. Nascetur euismod orci auctor, malesuada urna ultricies imperdiet! Erat maximus tincidunt nullam augue semper luctus. Ante tortor tortor dis mi pulvinar tristique ligula integer id.</p>
+        </div>
     </div>
+    <p class="textoEvento">Eventos del organizador</p>
     <div class="marquee-container">
         <div class="marquee">
             <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, </span>
         </div>
     </div>
-        <div class="searchbar-container">
-            <div class="searchbar">
-                <img src="./img/listadoOrg/search.svg" alt="search" class="search-icon">
-                <input type="search" name="saerchOrg" class="search-input" placeholder="Busca un organizador">
-            </div>
-        </div>
-    <div class="listOrgContainer">
-        <div class="lista">
-            <?=$lista?>
-        </div>
-    </div>
-
-    <div class="marquee-container">
-        <div class="marquee">
-            <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, </span>
-        </div>
-    </div>
-    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
