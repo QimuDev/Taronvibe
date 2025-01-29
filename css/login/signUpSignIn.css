@@ -123,10 +123,6 @@ body {
   justify-content: space-between;
 }
 
-.loginContainerh1p{
-  
-}
-
 .loginContainer1 h1 {
   margin: 0;
   margin-top: 1rem;
@@ -162,6 +158,11 @@ body {
 .formButton button:hover {
   background-color: #ff9f21;
   color: #fff9f0;
+}
+
+#signIn, 
+#signUp {
+  cursor: pointer;
 }
 
 .loginContainer2 {
