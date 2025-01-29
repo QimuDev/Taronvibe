@@ -35,6 +35,7 @@ nav {
     padding: 20px 30px;
 }
 
+
 .nav-logo{
     margin-left: 5rem;
 }
@@ -251,7 +252,6 @@ nav {
 
 .imgOrg {
     width: 33rem;
-    height: 33rem;
     border-radius: 50%;
 }
 
@@ -278,7 +278,7 @@ nav {
 .textoEvento {
     font-size: 3rem;
     font-weight: bold;
-    margin-top: 10rem;
+    margin-top: rem;
     margin-left: 15rem;
 }
 

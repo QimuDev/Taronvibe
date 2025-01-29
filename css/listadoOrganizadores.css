@@ -74,6 +74,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .btn-profile {
     display: flex;
     align-items: center;
@@ -181,11 +182,9 @@ nav {
     border-radius: 50px;
     border-style: solid;
     padding: 1rem;
-    margin: 15px 20px;
 }
 
 .search-icon {
-    margin-top: 2rem;
     height: 2rem;
     width: 2rem;
 }
@@ -228,7 +227,6 @@ nav {
     width: 22rem;
     height: 22rem;
     border-radius: 50%;
-    object-fit: contain;
 }
 
 .ulOrg li:hover .imgOrg {
