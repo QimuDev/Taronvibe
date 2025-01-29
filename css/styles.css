@@ -21,7 +21,7 @@
 body {
     margin: 0;
     background-color: var(--principal);
-    padding-top: 60px; /* Added padding to create space below the navbar */
+    padding-top: 60px;
 }
 
 /* MENU */
@@ -41,13 +41,10 @@ body {
 }
 
 .nav-link {
-    margin-inline: 1rem;
-    font-size: 20px;
-}
-
-.nav-link {
     font-family: title;
     color: var(--secundario);
+    margin-inline: 1rem;
+    font-size: 20px;
 }
 
 .inicio {
@@ -61,13 +58,12 @@ body {
 }
 
 /* CONTENEDOR */
-
 .contenedor {
     display: flex;
     flex-wrap: row;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
+    padding: 4rem 2rem;
 }
 
 .imagen {
@@ -76,8 +72,13 @@ body {
 }
 
 .texto {
-    flex-basis: 60%;
+   
     margin: 20px;
+}
+
+.titulo {
+    font-size: 48px;
+    font-family: title;
 }
 
 h1,
@@ -92,15 +93,12 @@ p {
     font-family: text;
 }
 
-.title-org {
-    font-size: 30px;
+.texto p {
+    font-size: 20px;
 }
 
-.texto h1,
-.contenedor-mapa,
-.contenedor-organizador,
-.title-eventos {
-    font-family: title;
+.title-org {
+    font-size: 30px;
 }
 
 .img-fluid {
@@ -162,10 +160,10 @@ p {
     /* Hace que el enlace se comporte como un bloque */
     padding: 10px 25px;
     color: black;
-    /*CAMBIAR */
+    /*CAMBIAR color*/
     background-color: transparent;
     border: 2px solid var(--inicio);
-    border-radius: 25px;
+    border-radius: 50px;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
@@ -196,11 +194,9 @@ p {
 /* NO RESPONSIVE */
 .btn-event {
     margin-top: 15rem;
-
 }
 
 /* SECCION DEL MAPA Y ORGANIZADOR*/
-
 .contenedor-mapa,
 .contenedor-organizador {
     margin-left: 4rem;
@@ -217,7 +213,6 @@ p {
 
 .organizador-element {
     display: flex;
-
 }
 
 .organizador-img img,
@@ -249,12 +244,19 @@ p {
     font-family: title;
     color: var(--blanco);
     margin: 4rem;
+    font-size: 38px;
+}
+
+.descripcion-eventos  h1{
+    width: 45rem;
+    padding: 2rem 0;
 }
 
 .img-eventos {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 0 2rem;
 }
 
 .img-eventos img {
@@ -262,7 +264,6 @@ p {
 }
 
 /* FRASE ANIMADA SCROLLING */
-
 .scroll-text {
     width: 100%;
     overflow: hidden;
@@ -273,6 +274,7 @@ p {
     font-size: 2rem;
     font-family: Arial, sans-serif;
     padding: 10px 0;
+    font-family: title;
 }
 
 .scroll-text span {
@@ -292,7 +294,6 @@ p {
 }
 
 /* SECCION FOOTER */
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -300,12 +301,14 @@ p {
     padding: 70px 70px 0px 70px;
     background-color: var(--background);
     color: #000;
+
 }
 
 .footer-container {
     display: grid;
     grid-template-rows: auto auto;
     gap: 20px;
+    padding: 0 2rem
 }
 
 .footer-left {
@@ -346,8 +349,8 @@ p {
 .footer-links a {
     text-decoration: none;
     color: #FF6600;
-   font-family: title;
-   font-size: 20px;
+    font-family: title;
+    font-size: 20px;
 }
 
 .footer-social {
@@ -379,17 +382,19 @@ p {
 .input {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--secundario); /* Borde naranja */
-    border-radius: 2rem; /* Esquinas redondeadas */
-    outline: none; /* Quita el contorno azul por defecto */
-    transition: all 0.3s ease-in-out; /* Transición suave */
+    border: 1px solid var(--secundario);
+    border-radius: 2rem;
+    outline: none;
+    transition: all 0.3s ease-in-out;
     background: transparent;
+    padding: 1rem;
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .footer-policies {
@@ -405,4 +410,3 @@ p {
     color: #000;
     font-size: 14px;
 }
-
