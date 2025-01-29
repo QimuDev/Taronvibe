@@ -10,8 +10,43 @@ if(isset($_GET['id'])){
         $image = "<img src=.".$row['imagen']." loading='lazy' alt=".$row['nombre']." class='imgOrg'>";
         $nombre = $row['nombre'];
     }
+    
+    
+$sql = "SELECT event.* 
+        FROM event
+        JOIN event_org ON event.id_event = event_org.id_event
+        WHERE event_org.id_org = ".$id;
+$result = $conn->query($sql);
+
+$tabla = "<div class='container'><div class='row'>"; // Inicio del contenedor y fila
+if ($result->num_rows > 0) {    
+    // Generar las filas dentro del bucle
+    while ($row = $result->fetch_assoc()) {
+        $tabla .= "
+            <div class='col col-12 col-sm-6 col-md-4 col-lg-3'>
+                <div class='card'>
+                    <img src='./" . $row["image"] . "' alt='Imagen de " . $row["name_event"] . "' class='img-fluid'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>" . $row['name_event'] . "</h5>
+                        <p class='card-text'><span class='price'>📍" . $row['postal_code'] . "</span></p>
+                        <p class='card-text'>📅: " . $row['date_event'] . "</p>
+                        <div class='event-icons'>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                            <span class='icon'><img src='./img/img_userProfile/oso-naranja.svg'></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ";
+    }
+}
+$tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +78,7 @@ if(isset($_GET['id'])){
         </div>
     </div>
     <p class="textoEvento">Eventos del organizador</p>
+    <?=$tabla?>
     <div class="marquee-container">
         <div class="marquee">
             <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, </span>
