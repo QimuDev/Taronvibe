@@ -1,0 +1,409 @@
+@font-face {
+    font-family: title;
+    src: url('../fonts/Baloo_Tamma_2/BalooTamma2-VariableFont_wght.ttf');
+    font-weight: 48px;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: text;
+    src: url('../fonts/Varela_Round/VarelaRound-Regular.ttf');
+}
+
+:root {
+    --blanco: #ffff;
+    --principal: #fff9f0;
+    --secundario: #FF7700;
+    --terciario: #D07A52;
+    --inicio: #FF9F21;
+}
+
+body {
+    margin: 0;
+    background-color: var(--principal);
+    padding-top: 60px; /* Added padding to create space below the navbar */
+}
+
+/* MENU */
+.navbar {
+    background-color: var(--principal);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container-fluid {
+    margin-inline: 4rem;
+}
+
+.container-fluid img {
+    width: 5rem;
+}
+
+.nav-link {
+    margin-inline: 1rem;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-family: title;
+    color: var(--secundario);
+}
+
+.inicio {
+    color: var(--inicio);
+}
+
+.nav-link.inicio img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* CONTENEDOR */
+
+.contenedor {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+.imagen {
+    flex-basis: 40%;
+    margin: 20px;
+}
+
+.texto {
+    flex-basis: 60%;
+    margin: 20px;
+}
+
+h1,
+.iconos,
+p {
+    margin-bottom: 1rem;
+    /* Espacio después del nombre del evento */
+}
+
+.texto p,
+.organizador-info p {
+    font-family: text;
+}
+
+.title-org {
+    font-size: 30px;
+}
+
+.texto h1,
+.contenedor-mapa,
+.contenedor-organizador,
+.title-eventos {
+    font-family: title;
+}
+
+.img-fluid {
+    max-width: 565px;
+    /*imagen responsive */
+    height: auto;
+}
+
+/* ESPACIO ENTRE 2 ELEMENTOS DE MANERA RESPONSIVE */
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.descripcion .imagen {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.descripcion .texto {
+    width: 50%;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .descripcion {
+        flex-direction: column;
+    }
+
+    .descripcion .imagen {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .descripcion .texto {
+        width: 100%;
+    }
+}
+
+/* ICONOS */
+.iconos img {
+    width: 3rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+/* Si prefieres usar gap (para contenedores flexibles) */
+.iconos {
+    display: flex;
+    gap: 10px;
+    /* Espacio entre los iconos */
+}
+
+/* BOTONES */
+.btn-custom {
+    /* Hace que el enlace se comporte como un bloque */
+    padding: 10px 20px;
+    color: black;
+    /*CAMBIAR */
+    background-color: transparent;
+    border: 2px solid var(--secundario);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Efecto de transición suave */
+    font-size: 20px;
+    font-family: title;
+}
+
+.btn-custom:hover {
+    background-color: var(--secundario);
+    color: white;
+}
+
+.btn-custom,
+.fav {
+    float: right;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* NO RESPONSIVE */
+.btn-event {
+    margin-top: 15rem;
+
+}
+
+/* SECCION DEL MAPA Y ORGANIZADOR*/
+
+.contenedor-mapa,
+.contenedor-organizador {
+    margin-left: 4rem;
+}
+
+/* SECCION DEL ORGANIZADOR */
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.organizador-element {
+    display: flex;
+
+}
+
+.organizador-img img,
+.organizador-info {
+    margin: 4rem;
+}
+
+.organizador-img img {
+    width: 200px;
+    height: auto;
+}
+
+/* SECCION EVENTOS RELACIONADOS */
+
+.seccion-eventos {
+    background-color: var(--terciario);
+    padding-top: 2rem;
+}
+
+.title-eventos {
+    text-align: center;
+    width: 100%;
+    color: var(--blanco);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.descripcion-eventos {
+    font-family: title;
+    color: var(--blanco);
+    margin: 4rem;
+}
+
+.img-eventos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.img-eventos img {
+    width: 20%;
+}
+
+/* FRASE ANIMADA SCROLLING */
+
+.scroll-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+}
+
+.scroll-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* SECCION FOOTER */
+
+.seccion-footer {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 20%;
+}
+
+/* Nav-footer */
+.nav-footer {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-footer img {
+    width: 127px;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para los botones del footer */
+.btn-footer {
+    font-family: title;
+    font-size: 20px;
+    color: var(--secundario);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: fit-content;
+}
+
+.btn-footer:hover {
+    color: var(--inicio);
+}
+
+/* Logos footer */
+.logos-footer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 4rem;
+}
+
+.logo-footer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.logo-footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form-footer */
+
+.form-footer h1 {
+    font-family: title;
+}
+
+.form-btn-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.name {
+    padding: 15px 20px;
+}
+
+.mail {
+    padding: 15px 50px;
+}
+
+.form-footer input {
+    background-color: transparent;
+    border: 1px solid var(--secundario);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+.copy {
+    flex: 1;
+    text-align: left;
+}
+
+.avisos {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex: 1;
+}
