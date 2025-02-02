@@ -28,45 +28,39 @@
 
     <!-- seccion del carrousel para imagenes de los eventos -->
     <div class="container-carousel">
-      <div class="carousel">
-        <div class="slide">
-          <div class="slide-image">
-            <img src="img/main/images/albufera.webp" alt="imagen1" />
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/albufera.webp" alt="imagen1" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Saber más</button>
+            </div>
           </div>
-          <div class="slide-content">
-            <p class="slider-content">
-              frase de marketing para que la gente haga click en botón
-            </p>
-            <button class="btn-slider">Saber más</button>
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/ciudad-artes.webp" alt="imagen2" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Saber más</button>
+            </div>
           </div>
-        </div>
-        <div class="slide">
-          <div class="slide-image">
-            <img src="img/main/images/ciudad-artes.webp" alt="imagen1" />
-          </div>
-          <div class="slide-content">
-            <p class="slider-content">
-              frase de marketing para que la gente haga click en botón
-            </p>
-            <button class="btn-slider">Saber más</button>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-image">
-            <img
-              src="img/main/images/valencia_mercado-central_888.webp"
-              alt="imagen1"
-            />
-          </div>
-          <div class="slide-content">
-            <p class="slider-content">
-              frase de marketing para que la gente haga click en botón
-            </p>
-            <button class="btn-slider">Saber más</button>
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/valencia_mercado-central_888.webp" alt="imagen3" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Saber más</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
 
     <div class="scroll-container">
       <div class="scroll-content">
@@ -94,8 +88,8 @@
     </div>
 
     <!-- section de eventos pasados y activos -->
-    <section class="wraper">
-      <h3 class="title-wrap">encuentra el <span>evento</span> que más va contigo</h3>
+    <!-- <section class="wraper">
+      <h3 class="title-wrap">Encuentra el <span>evento</span> que más va contigo</h3>
 
       <div class="wrapper">
         <div class="option">
@@ -116,7 +110,22 @@
             <span class="span">pasados</span>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
+<!-- PRUEBA BOTON -->
+
+<div class="wraper">
+  <h3 class="title-wrap">Encuentra el <span>evento</span> que va contigo</h3>
+
+  <div class="wrapper">
+    <button class="option active" onclick="toggleButton(event)">Favoritos</button>
+    <button class="option" onclick="toggleButton(event)">Pasados</button>
+    <div class="slider"></div>
+  </div>
+</div>
+
+
 
       <!--imagenes de los eventos disponibles  -->
       <section>
@@ -203,34 +212,35 @@
 
     <section>
       <div class="dinamic-container">
+        <!-- Columna Izquierda -->
         <div class="dinamic-column dinamic-left">
-          <div class="dina-image">
-            <img src="img/main/images/restaurante.png" alt="imagen" />
-          </div>
-          <div class="dina-image">
-            <img src="img/main/images/restaurante.png" alt="imagen" />
-          </div>
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
         </div>
-
+    
+        <!-- Columna Centro -->
         <div class="dinamic-column dinamic-center">
-          <div class="dina-image">
-            <img src="img/main/images/discos.png" alt="imagen" />
-          </div>
-          <div class="dina-image">
-            <img src="img/main/images/discos.png" alt="imagen" />
-          </div>
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
         </div>
-
+    
+        <!-- Columna Derecha -->
         <div class="dinamic-column dinamic-right">
-          <div class="dina-image">
-            <img src="img/main/images/botanic.png" alt="imagen" />
-          </div>
-          <div class="dina-image">
-            <img src="img/main/images/botanic.png" alt="imagen" />
-          </div>
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
         </div>
       </div>
     </section>
+    
 
     <!-- section eventos proximos -->
     <section class="prox-color">
