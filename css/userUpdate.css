@@ -45,7 +45,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 40px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -130,9 +130,6 @@ nav {
     width: 20px;
 }
 
-.btn-profile:hover {
-    scale: 1.03;
-}
 
 .profile-container {
     display: grid;
@@ -143,38 +140,37 @@ nav {
 }
 
 .profile-text {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    margin: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-button {
     grid-column: 2 / 2;
     grid-row: 1 / 2;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 95.8%;
+    justify-content: end;
+    align-items: end;
 }
 
 .profile-image {
-    grid-column: 1 / 2;
-    grid-row: 2 / 2;
-    margin-left: 40px;
+    width: 38%;
+    margin-left: 3rem;
 }
 
 .profile-form {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 90%;
-    justify-content: center;
+    width: 58vw;
+    justify-content: end;
 }
 
 .text-line-group {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     gap: 20px;
 }
 
@@ -188,21 +184,21 @@ nav {
     color: black;
     border: 2px solid var(--primary);
     border-radius: 50px;
-    font-weight: bold;
+    font-family: "Varela Round";
     font-size: 15px;
     cursor: pointer;
-    margin-left: 65%;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .btn-save:hover {
     background-color: var(--primary);
     color: white;
-    scale: 1.03;
+
 }
 
 input[id="name"], input[type="email"], input[type="password"] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     font-size: 16px;
     border: 2px solid var(--primary);
@@ -214,7 +210,7 @@ input[id="postal-code"], input[name="birth-date"] {
     width: 100%;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 50px;
     background-color: var(--background);
 }
@@ -463,7 +459,7 @@ label{
     width: 60%;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 50px;
     background-color: var(--background);
 }
