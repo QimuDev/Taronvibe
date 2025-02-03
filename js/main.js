@@ -27,18 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // BOTONES CON SLIDER
-function toggleButton(event) {
-    const buttons = document.querySelectorAll('.option');
+function toggleButton(event, index) {
+    const options = document.querySelectorAll('.option');
     const slider = document.querySelector('.slider');
   
-    buttons.forEach(btn => btn.classList.remove('active'));
+    options.forEach(option => option.classList.remove('active'));
     event.target.classList.add('active');
   
-    if (event.target.innerText === "Favoritos") {
-        slider.style.transform = "translateX(0%)";
-    } else {
-        slider.style.transform = "translateX(100%)";
-    }
+    slider.style.transform = index === 0 ? "translateX(0)" : "translateX(100%)";
   }
 
 

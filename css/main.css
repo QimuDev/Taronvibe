@@ -16,11 +16,15 @@ html {
 }
 
 .nav-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
   background-color: var(--background);
 }
 
 .items-container {
-  width: 90%;
+  width: 77%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,10 +41,29 @@ html {
 
 .items p {
   cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.items p img {
+  height: 1.2rem;
+  width: auto;
+  margin-right: 0.5rem; 
+}
+
+.items p:hover img {
+  filter: brightness(0) saturate(100%) invert(1); /* Cambia el color del SVG */
+}
+
+
+.items p:hover{
+  color: var(--background);
+  background-color: var(--nav);
+  border-radius: 20px;
 }
 
 .logo-nav img {
-  margin-left: 3rem;
   height: 5rem;
   width: 5rem;
 }
@@ -110,16 +133,17 @@ html {
 
 .btn-slider {
   background-color:var(--background) ;
-  color: var(--primary);
-  border: solid var(--primary);
+  color: black;
+  border: solid var(--primary) 2px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 20px;
+  transition: background-color 0.3 ease;
 }
 
 .btn-slider:hover {
-  background-color: var(--seconday);
+  background-color: var(--primary);
   color: var(--background);
 }
 
@@ -251,7 +275,8 @@ html {
 } */
 
 /* PRUEBA BOTON */
-.wraper {
+/* Contenedor general */
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,11 +284,13 @@ html {
   margin-top: 5rem;
 }
 
+/* Estilo del título */
 .title-wrap {
   margin: 3%;
 }
 
-.wrapper {
+/* Contenedor del toggle */
+.toggle-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -277,46 +304,50 @@ html {
   padding: 2px;
 }
 
+/* Botones */
 .option {
-  flex: 1;
-  /* padding: 0px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background: none;
   border-radius: 20px;
-  color: var(--primary);
+  color: black;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s ease, box-shadow 0.3s ease-in-out;
   position: relative;
   z-index: 2;
-  text-align: center;
+  width: 50%;
+  height: 100%;
 }
 
-/* Efecto de sombra al pasar el mouse, pero no en el botón seleccionado */
+/* Hover en botones no activos */
 .option:not(.active):hover {
-  background-color: var(--seconday);
-  color: var(--brown);
-  width: 48.8%;
-  height: 95%;
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+  background-color: var(--background);
+  color: black;
+  border: solid var(--primary) 2px;
 }
 
+/* Slider animado */
 .slider {
   position: absolute;
-  width: 48.8%;
+  width: 48%; /* Ajustado para que se vea centrado */
   height: 85%;
   background-color: var(--primary);
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-  left: 3px;
+  left: 4px; /* Ajustado para centrarlo bien */
 }
 
-.wrapper .option.active {
+/* Color del botón activo */
+.toggle-wrapper .option.active {
   color: var(--background);
 }
 
 /* GALERIA DE IMAGENES */
+
 
 .galery-container {
   display: flex;
@@ -326,6 +357,7 @@ html {
   margin: 5rem;
 }
 
+
 .img-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -333,15 +365,64 @@ html {
   gap: 2rem;
 }
 
+/* Contenedor de cada imagen */
 .galery-image {
+  position: relative;
   height: 17rem;
   width: 17rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: green;
   border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
 }
+
+/* Contenedor del contenido del evento */
+.contenido-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Texto del evento */
+.contenido ul {
+ list-style-type: none;
+ padding-left: 0;
+}
+
+.contenido li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  text-decoration: none;
+  list-style: none;
+}
+
+.imagenes-contenido img {
+  width: 30px; 
+  height: 30px;
+  margin: 10px 5px; 
+}
+
+.contenido li .imagenes-contenido {
+  width: 50px;
+  height: 10px;
+}
+
+/* Hover: oscurece la imagen y muestra el contenido */
+.galery-image:hover .contenido-container {
+  background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+  opacity: 1; /* Muestra el texto */
+}
+
 
 /* IMAGENES DE CADA ELEMENTO DE LA GALERIA PRINCIPAL */
 .galery-image.a {
@@ -403,15 +484,16 @@ html {
   background-color: var(--background);
   color: black;
   padding: 0.75rem 1.5rem;
-  border: solid var(--primary);
+  border: solid var(--primary) 2px;
   border-radius: 10rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .galery-button button:hover {
   background-color: var(--primary);
+  color: var(--background);
 }
 
 /* COMENTARIOS ALEATORIOS */
@@ -501,9 +583,9 @@ html {
   }
 }
 
-.comments:hover .comment {
+/* .comments:hover .comment {
   animation-play-state: paused;
-}
+} */
 
 /* FINAL DE COMENTARIOS ALEATORIOS */
 
@@ -632,16 +714,17 @@ html {
   background-color: var(--background);
   color: var(--brown);
   padding: 0.75rem 1.5rem;
-  border: solid var(--brownSecondary);
+  border: solid var(--brownSecondary) 2px;
   border-radius: 10rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .btn-prox button:hover {
-  background-color: var(--brownSecondary);
+  background-color: var(--brown);
   color: var(--background);
+  border: solid var(--background) 2px;
 }
 
 /* FOOTER INICIO */
@@ -683,7 +766,7 @@ html {
 }
 
 .info ul li a:hover {
-  color: #0056b3;
+  text-decoration: underline;
 }
 
 /* Íconos de Redes Sociales */
@@ -719,15 +802,16 @@ html {
 .footer-input input {
   width: 15rem;
   border-radius: 30px;
-  border-color: var(--primary);
+  border:  solid var(--primary) 2px;
+  background-color: var(--background);
 }
 
 .footer-btn button {
   display: block;
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--background);
+  color: black;
   padding: 0.75rem 1.5rem;
-  border: none;
+  border: solid var(--primary) 2px;
   border-radius: 40rem;
   font-size: 1rem;
   cursor: pointer;
@@ -736,7 +820,8 @@ html {
 }
 
 .footer-btn button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary);
+  color: var(--background);
 }
 
 /* Responsivo */
