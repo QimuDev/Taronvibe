@@ -50,6 +50,7 @@ nav {
 }
 
 .nav-item a {
+    padding: 15px 20px;
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
@@ -59,7 +60,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center; 
-    padding: 15px 20px;
     background-color: var(--primary); 
     color: white; 
     border: none; 
@@ -67,7 +67,6 @@ nav {
     font-size: 16px;
     font-weight: bold; 
     cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-menu {
@@ -192,7 +191,6 @@ nav {
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-left: 65%;
     width: 100%;
 }
@@ -200,7 +198,6 @@ nav {
 .btn-save:hover {
     background-color: var(--primary);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scale: 1.03;
 }
 
@@ -208,7 +205,7 @@ input[id="name"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 50px;
     background-color: var(--background);
 }
@@ -245,7 +242,6 @@ input[id="postal-code"], input[name="birth-date"] {
     font-size: 16px;
     font-weight: bold; 
     cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 label{
@@ -501,12 +497,10 @@ label{
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scale: 1.03;
 }

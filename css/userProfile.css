@@ -66,8 +66,7 @@ nav {
     border-radius: 50px;
     font-size: 16px;
     font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .hamburger-menu {
@@ -237,7 +236,7 @@ nav {
     width: 60%;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 50px;
     background-color: var(--background);
 }
@@ -271,13 +270,11 @@ nav {
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     scale: 1.03;
 }
 
@@ -392,7 +389,6 @@ nav {
 .btn-edit:hover {
     background-color: #ff6600;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transform: scale(1.03);
 }
 
@@ -406,7 +402,7 @@ nav {
     height: 40px;
     position: relative;
     background-color: var(--secondary);
-    border: 3px solid var(--primary);
+    border: 2px solid var(--primary);
     border-radius: 34px;
     overflow: hidden;
     padding: 2px;
