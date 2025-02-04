@@ -1,0 +1,875 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Varela+Round&display=swap');
+
+
+:root {
+  --primary: #ff9f21;
+  --seconday: #ffcd5f;
+  --brown: #d07a52;
+  --brownSecondary: #f0a26b;
+  --background: #fffdd0;
+  --botones: #e84954;
+  --nav: #ff7700;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+}
+html {
+}
+
+.nav-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.items-container {
+  width: 77%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+  gap: 5rem;
+  color: var(--nav);
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 800;
+}
+
+.items p {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.items p img {
+  height: 1.2rem;
+  width: auto;
+  margin-right: 0.5rem; 
+}
+
+.items p:hover img {
+  filter: brightness(0) saturate(100%) invert(1); /* Cambia el color del SVG */
+}
+
+
+.items p:hover{
+  color: var(--background);
+  background-color: var(--nav);
+  border-radius: 20px;
+}
+
+.logo-nav img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/* Contenedor principal del carrusel */
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: none;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+.slide-image {
+  width: 35rem;
+  height: 30rem;
+  margin-right: 10rem;
+}
+
+/* Imagen */
+.slide-image img {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Contenido */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slider-content {
+  font-size: 1.2rem;
+  text-decoration: bold;
+  font-weight: 300;
+  font-size: 40px;
+  color: #333;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+}
+
+.btn-slider {
+  background-color:var(--background) ;
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  color: black;
+  border: solid var(--primary) 2px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3 ease;
+}
+
+.btn-slider:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/*  parte del scroll inicio */
+
+.scroll-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 100px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.scroll-content {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  height: 100px;
+  animation: scroll-horizontal 20s linear infinite;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+.scroll-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 2rem;
+  color: var(--background);
+  height: 100%;
+}
+
+/* Animación de desplazamiento */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* scroll final */
+
+/* aventos pasados y activos inicio */
+/* .wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  margin:3rem;
+}
+.title-wrap{
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: var(--background);
+  border: 2px solid var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  margin-top: 1rem;
+}
+
+.option {
+  margin-right: 5px;
+  width: 80.5px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 34px;
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.option:last-child {
+  margin-right: 4px;
+}
+
+.option:hover {
+  background-color: var(--seconday);
+}
+
+.option:hover .span {
+  color: var(--background);
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span {
+  color: var(--primary);
+}
+
+.input:checked + .btn {
+  background-color: var(--primary);
+  transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.input:checked + .btn .span {
+  color: var(--background);
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+} */
+
+/* PRUEBA BOTON */
+/* Contenedor general */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+/* Estilo del título */
+.title-wrap {
+  margin: 3%;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.title-wrap span{
+  color: var(--nav);
+}
+
+/* Contenedor del toggle */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 65px;
+  position: relative;
+  background-color: var(--secondary);
+  border: 3px solid var(--primary);
+  border-radius: 34px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+/* Botones */
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  height: 89%;
+}
+
+/* Hover en botones no activos */
+.option:not(.active):hover {
+  background-color: var(--background);
+  color: black;
+  border: solid var(--primary) 2px;
+}
+
+/* Slider animado */
+.slider {
+  position: absolute;
+  width: 48%; /* Ajustado para que se vea centrado */
+  height: 85%;
+  background-color: var(--primary);
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  left: 4px; /* Ajustado para centrarlo bien */
+}
+
+/* Color del botón activo */
+.toggle-wrapper .option.active {
+  color: var(--background);
+}
+
+/* GALERIA DE IMAGENES */
+
+
+.galery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 5rem;
+}
+
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Contenedor de cada imagen */
+.galery-image {
+  position: relative;
+  height: 17rem;
+  width: 17rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Contenedor del contenido del evento */
+.contenido-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Texto del evento */
+.contenido ul {
+ list-style-type: none;
+ padding-left: 0;
+}
+
+.contenido li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  text-decoration: none;
+  list-style: none;
+}
+
+.imagenes-contenido img {
+  width: 30px; 
+  height: 30px;
+  margin: 10px 5px; 
+}
+
+.contenido li .imagenes-contenido {
+  width: 50px;
+  height: 10px;
+}
+
+/* Hover: oscurece la imagen y muestra el contenido */
+.galery-image:hover .contenido-container {
+  background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+  opacity: 1; /* Muestra el texto */
+}
+
+
+/* IMAGENES DE CADA ELEMENTO DE LA GALERIA PRINCIPAL */
+.galery-image.a {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.b {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.c {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.d {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.e {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.f {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.g {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.h {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.i {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.j {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.k {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.l {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+/* FIN DE LAS IMAGENES DE LA GALERÍA */
+
+.galery-button {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.galery-button button {
+  background-color: var(--background);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: solid var(--primary) 2px;
+  border-radius: 10rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.galery-button button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* COMENTARIOS ALEATORIOS */
+/* .comments-container{
+  background-color: blue;
+  margin: 5rem;
+  color: var(--fondoPagina);
+}
+
+.coments{
+  background-color: #d03f51;
+}
+
+.coment{
+  background-color:green;
+} */
+
+.comments-container {
+  /* text-align: center; */
+  padding: 2rem 0;
+  background-color: var(--brown);
+  color: #333;
+  margin-top: 3rem;
+}
+
+.comments-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--background);
+  font-family: "Baloo tamma 2", serif;
+  font-weight: 900;
+  width: 30rem;
+  margin: 1rem 5rem;
+}
+
+.comments {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.comment {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 2rem;
+  padding: 0.5rem;
+  background-color: var(--background);
+  border-radius: 8px;
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  width: 400px;
+  animation: slide 10s linear infinite;
+  height: auto;
+}
+
+.comment img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+.comment h3 {
+  font-size: 1.1rem;
+  margin: 0.3rem 1rem;
+  color: black;
+  font-weight: bold;
+  text-align: start;
+}
+
+.comment p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: start;
+  margin: 0 1rem;
+}
+
+/* Animación para movimiento infinito */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* .comments:hover .comment {
+  animation-play-state: paused;
+} */
+
+/* FINAL DE COMENTARIOS ALEATORIOS */
+
+/* IMAGENES CON MOVIEMIENTO  */
+
+.dinamic-container {
+  display: flex;
+  justify-content: center;
+  gap: 4.65rem;
+  overflow: hidden;
+  height: 600px; /* Ajusta según el tamaño de las imágenes */
+  margin: 0 9.5rem;
+}
+
+.dinamic-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: move-up 10s linear infinite;
+}
+
+/* Animaciones */
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Columnas con distintas animaciones */
+.dinamic-left,
+.dinamic-right {
+  animation-name: move-up;
+}
+
+.dinamic-center {
+  animation-name: move-down;
+  animation-duration: 14s;
+}
+
+/* Imagenes */
+.dina-image img {
+  width: 350px;
+  height: 350px;
+  margin-bottom: 3rem;
+}
+
+/* PROXIMOS EVENTOS SECTION */
+
+.prox-color {
+  background-color: var(--brown);
+}
+
+.proximos-eventos-container {
+  padding: 1rem;
+  text-align: center;
+}
+.title-prox {
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem;
+  color: var(--background);
+}
+
+.proximos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.proximos-img {
+  width: 20rem;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.proximos-img.a {
+  background-image: url("../img/main/images/tazas.png");
+}
+
+.proximos-img.b {
+  background-image: url("../img/main/images/mercadillo.png");
+}
+
+.proximos-img.c {
+  background-image: url("../img/main/images/atracciones.png");
+}
+
+.proximos-img.d {
+  background-image: url("../img/main/images/festival.png");
+}
+
+.contenido-prox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+}
+
+.contenido-prox p {
+  font-family: "Varela Round", serif;
+  font-weight: 400;
+  width: 50rem;
+  color: var(--background);
+  margin-left: 2rem;
+}
+
+.btn-prox {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.btn-prox button {
+  background-color: var(--background);
+  color: var(--brown);
+  padding: 0.75rem 1.5rem;
+  border: solid var(--brownSecondary) 2px;
+  border-radius: 10rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-prox button:hover {
+  background-color: var(--brown);
+  color: var(--background);
+  border: solid var(--background) 2px;
+}
+
+/* FOOTER INICIO */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  background-color: var(--background);
+  color: #333;
+  margin: 4rem 0;
+}
+
+/* Sección de Información */
+.info {
+  margin-left: 6rem;
+  width: 40rem;
+}
+
+.info img {
+  height: 10rem;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.info ul li {
+  margin: 0.5rem 0;
+}
+
+.info ul li a {
+  text-decoration: none;
+  color: var(--nav);
+  transition: color 0.3s ease;
+  font-family: "varela round", serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.info ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Íconos de Redes Sociales */
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
+
+/* SECCION NEWSLETTER */
+.newsleter {
+  text-align: end;
+  margin-right: 6rem;
+  width: 40rem;
+}
+
+.newsleter h1 {
+  margin-bottom: 1rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.footer-input {
+  display: inline-block;
+  width: 40rem; /* Ancho ajustable */
+}
+
+.footer-input input {
+  width: 15rem;
+  border-radius: 30px;
+  border:  solid var(--primary) 2px;
+  background-color: var(--background);
+}
+
+.footer-btn button {
+  display: block;
+  background-color: var(--background);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: solid var(--primary) 2px;
+  border-radius: 40rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1rem 0 0 auto; /* Alinea el botón a la derecha */
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .newsletter {
+    text-align: center;
+  }
+  .newsletter input,
+  .newsletter button {
+    margin: 0.5rem auto;
+  }
+}

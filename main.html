@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Taron vibe inicio</title>
+  </head>
+  <body>
+    <section class="nav-container">
+      <nav class="items-container">
+        <div class="logo-nav">
+          <img src="./img/main/icons/TARONVIBE Logo.svg" alt="logo-taronvibe" />
+        </div>
+        <div class="items">
+          <p>Eventos</p>
+          <p>Organizadores</p>
+          <p><img src="./img/main/icons/iniciosesi.svg" alt="inicio-sesion">Iniciar sesión</p>
+        </div>
+      </nav>
+    </section>
+
+    <!-- seccion del carrousel para imagenes de los eventos -->
+    <div class="container-carousel">
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/albufera.webp" alt="imagen1" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Descubre más eventos</button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/ciudad-artes.webp" alt="imagen2" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Descubre más eventos</button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-image">
+              <img src="img/main/images/valencia_mercado-central_888.webp" alt="imagen3" />
+            </div>
+            <div class="slide-content">
+              <p class="slider-content">Frase de marketing para que la gente haga click en el botón</p>
+              <button class="btn-slider">Descubre más eventos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+      </div>
+      <div class="scroll-content">
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+      </div>
+    </div>
+
+    <!-- section de eventos pasados y activos -->
+    <!-- <section class="wraper">
+      <h3 class="title-wrap">Encuentra el <span>evento</span> que más va contigo</h3>
+
+      <div class="wrapper">
+        <div class="option">
+          <input
+            checked=""
+            value="option1"
+            name="btn"
+            type="radio"
+            class="input"
+          />
+          <div class="btn">
+            <span class="span">activos</span>
+          </div>
+        </div>
+        <div class="option">
+          <input value="option2" name="btn" type="radio" class="input" />
+          <div class="btn">
+            <span class="span">pasados</span>
+          </div>
+        </div>
+      </div> -->
+
+
+<!-- PRUEBA BOTON -->
+
+<div class="wrapper">
+  <h3 class="title-wrap">Encuentra el <span>evento</span> que va contigo</h3>
+
+  <div class="toggle-wrapper">
+    <button class="option active" onclick="toggleButton(event, 0)">Favoritos</button>
+    <button class="option" onclick="toggleButton(event, 1)">Pasados</button>
+    <div class="slider"></div>
+  </div>
+</div>
+
+
+
+      <!--imagenes de los eventos disponibles  -->
+      <section>
+        <div class="galery-container">
+          <div class="img-container">
+
+            <div class="galery-image a">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image b">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image c">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image d">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image e">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image f">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image g">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image h">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image i">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image j">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image k">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="galery-image l">
+              <div class="contenido-container">
+                  <div class="contenido">
+                    <ul>
+                      <li>Nombre del evento</li>
+                      <li>Ubicacion del evento</li>
+                      <li>Fecha del evento</li>
+                      <li class="imagenes-contenido">
+                        <img src="./img/main/icons/oso.svg" alt="oso">
+                        <img src="./img/main/icons/arbol.svg" alt="arbol">
+                        <img src="./img/main/icons/libro.svg" alt="libro">
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="galery-button"><button>Ver mas eventos</button></div>
+      </section>
+
+    <!--seccion de comentarios aleatorios de los clientes   -->
+    <section class="comments-container">
+      <h2>¿Qué opinan los usuarios sobre nosotros y los eventos?</h2>
+      <div class="comments">
+        <div class="comment">
+          <img
+            src="./img/main/images/fotosDePerfil/1654986672153 2 (1).png"
+            alt="Foto de usuario"
+          />
+          <h3>luz</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            vero ipsum labore sequi est necessitatibus a atque quas maiores
+            dolores quod inventore incidunt quam consequatur quasi voluptatum,
+            perferendis commodi harum?
+          </p>
+        </div>
+        <div class="comment">
+          <img
+            src="./img/main/images/fotosDePerfil/1654986672153 2 (2).png"
+            alt="Foto de usuario"
+          />
+          <h3>Chiara</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+            harum ab provident iure nostrum omnis eveniet maxime molestiae
+            officiis autem? Illo quod nemo neque. Ipsa maiores ipsum enim
+            obcaecati similique.
+          </p>
+        </div>
+        <div class="comment">
+          <img
+            src="./img/main/images/fotosDePerfil/1654986672153 2.png"
+            alt="Foto de usuario"
+          />
+          <h3>Angie</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            ipsa, deserunt, voluptatibus ab impedit magnam ut similique quaerat
+            ipsam vel, reiciendis corrupti illo dignissimos earum modi iure nam
+            delectus tempore?
+          </p>
+        </div>
+        <div class="comment">
+          <img
+            src="./img/main/images/fotosDePerfil/1654986672153 2 (2).png"
+            alt="Foto de usuario"
+          />
+          <h3>salvador</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum iure
+            quam iusto, corrupti qui, in tenetur veritatis optio voluptate,
+            accusantium omnis animi recusandae culpa. Esse ratione voluptas
+            eaque hic sequi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- imagenes con movimiento arriba y abajo -->
+
+    <section>
+      <div class="dinamic-container">
+        <!-- Columna Izquierda -->
+        <div class="dinamic-column dinamic-left">
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/restaurante.png" alt="imagen" /></div>
+        </div>
+    
+        <!-- Columna Centro -->
+        <div class="dinamic-column dinamic-center">
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/discos.png" alt="imagen" /></div>
+        </div>
+    
+        <!-- Columna Derecha -->
+        <div class="dinamic-column dinamic-right">
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <!-- Duplicado -->
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+          <div class="dina-image"><img src="img/main/images/botanic.png" alt="imagen" /></div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- section eventos proximos -->
+    <section class="prox-color">
+      <h3 class="title-prox">Próximos eventos destacados</h3>
+      <div class="proximos-eventos-contianer">
+        <div class="proximos">
+          <div class="proximos-img a"></div>
+          <div class="proximos-img b"></div>
+          <div class="proximos-img c"></div>
+          <div class="proximos-img d"></div>
+        </div>
+      </div>
+      <div class="contenido-prox">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quasi
+          ipsum ipsa nemo blanditiis quas consequuntur iure esse. Amet odio
+          nesciunt corporis! Consequuntur ducimus veniam distinctio sint
+          quibusdam accusamus impedit?
+        </p>
+        <div class="btn-prox">
+          <button>Otros eventos destacados</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+      </div>
+      <div class="scroll-content">
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+        <div class="scroll-item">
+          La mejor forma de conocer la ciudad de valencia a tan solo un click
+        </div>
+      </div>
+    </div>
+
+    <!-- footer de la pagina -->
+    <footer>
+      <div class="footer-container">
+        <div class="info">
+          <img src="./img/main/icons/TARONVIBE Logo.svg" alt="logoFooter" />
+          <ul>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Organizadores</a></li>
+            <li><a href="#">Iniciar sesión</a></li>
+          </ul>
+            <h1>nuestras redes sociales</h1>
+            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+
+        </div>
+        <div class="newsleter">
+          <h1>Unete a nuestra newsletter</h1>
+          <div class="footer-input">
+            <input type="text" placeholder="Nombre" />
+            <input type="text" placeholder="Correo electronico" />
+          </div>
+          <div class="footer-btn"><button>Suscribete</button></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
