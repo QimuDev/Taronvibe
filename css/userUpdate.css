@@ -28,11 +28,11 @@ h1 {
 }
 
 nav {
+    width: 94.9vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
-    padding: 20px 30px;
 }
 
 .nav-logo img {
@@ -163,7 +163,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 58vw;
+    width: 66vw;
     justify-content: end;
 }
 
@@ -171,7 +171,6 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 20px;
 }
 
 .text-line-group .text-line {
@@ -198,7 +197,7 @@ nav {
 }
 
 input[id="name"], input[type="email"], input[type="password"] {
-    width: 90%;
+    width: 96.7%;
     padding: 15px;
     font-size: 16px;
     border: 2px solid var(--primary);
@@ -207,7 +206,7 @@ input[id="name"], input[type="email"], input[type="password"] {
 }
 
 input[id="postal-code"], input[name="birth-date"] {
-    width: 100%;
+    width: 83%;
     padding: 15px;
     font-size: 16px;
     border: 2px solid var(--primary);
@@ -215,10 +214,12 @@ input[id="postal-code"], input[name="birth-date"] {
     background-color: var(--background);
 }
 
+
+
 .text-line-group {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .text-line-group .text-line {
@@ -354,7 +355,7 @@ label{
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 40s linear infinite;
+    animation: marquee 180s linear infinite;
 }
 
 .marquee span {
