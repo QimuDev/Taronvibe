@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reanudar animación cuando el mouse sale
     carousel.addEventListener('mouseleave', () => {
-        interval = setInterval(nextSlide, 5000);
+        interval = setInterval(nextSlide, 6000);
     });
 });
 
