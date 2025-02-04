@@ -107,7 +107,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite</span>
+            <span>Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite. &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite</span>
         </div>
     </div>
 
@@ -118,7 +118,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
                 <ul class="footer-links">
                     <li><a href="#">Eventos</a></li>
                     <li><a href="#">Organizadores</a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
+                    <li><a href="signIn.html">Iniciar sesión</a></li>
                 </ul>
                 <div class="footer-social">
                     <span class="circle"></span>
