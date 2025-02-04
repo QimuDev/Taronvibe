@@ -16,87 +16,61 @@ body {
     background-color: var(--background);
 }
 
-nav {
+.nav-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction:row;
+    justify-content: center;
     align-items: center;
     background-color: var(--background);
-    padding: 20px 30px;
-}
-
-.nav-logo{
-    margin-left: 5rem;
-}
-
-.nav-logo img {
-    height: 60px;
-    margin-left: px;
-}
-
-.nav-list {
+  }
+  
+  .items-container {
+    width: 77%;
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 40px;
+    flex-direction: row;
     align-items: center;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.nav-item a:hover {
+    justify-content: space-between;
+  }
+  .items {
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 15px 20px;
-    background-color: var(--primary); 
-    color: white; 
-    border: none; 
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-profile {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    gap: 10px; 
-    padding: 15px 20px;
-    color: var(--primary); 
-    border: none; 
-    background-color: transparent;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    margin-right: 5rem;;
-}
-
-.btn-profile:hover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-    background-color: #FF7700;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-profile:hover .profile-icon {
-    filter: brightness(0) invert(1);
-}
+    align-items: right;
+    gap: 5rem;
+    color: var(--nav);
+    font-family: "Baloo Tamma 2", serif;
+    font-weight: 800;
+  }
+  
+  .items p {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .items p img {
+    height: 1.2rem;
+    width: auto;
+    margin-right: 0.5rem; 
+  }
+  
+  .items p:hover img {
+    filter: brightness(0) saturate(100%) invert(1); /* Cambia el color del SVG */
+  }
+  
+  
+  .items p:hover{
+    color: var(--background);
+    background-color: var(--nav);
+    border-radius: 20px;
+  }
+  
+  .logo-nav img {
+    height: 5rem;
+    width: 5rem;
+  }
 
 /* SECCIÓN DESCRUBRE */
 .descubre {

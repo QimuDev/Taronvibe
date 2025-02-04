@@ -24,27 +24,18 @@ if($result -> num_rows > 0) {
   </head>
 
   <body>
-    <nav>
-      <div class="nav-logo">
-        <img src="./img/listadoOrg/taronvibeLogo.png" alt="Logo" />
-      </div>
-      <div class="nav-profile">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#Eventos">Eventos</a></li>
-          <li class="nav-item"><a href="#Organizadores">Organizadores</a></li>
-          <li>
-            <button class="btn-profile">
-              <img
-                src="./img/listadoOrg/iniciar.svg"
-                class="profile-icon"
-                alt="svg perfil"
-              />
-              Mi Perfil
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <section class="nav-container">
+      <nav class="items-container">
+        <div class="logo-nav">
+          <img src="./img/listadoOrg/taronvibeLogo.png" alt="logo-taronvibe" />
+        </div>
+        <div class="items">
+          <p>Eventos</p>
+          <p>Organizadores</p>
+          <p><img src="./img/main/icons/iniciosesi.svg" alt="inicio-sesion">Iniciar sesión</p>
+        </div>
+      </nav>
+    </section>
     <section>
         <div class="descubre">
             <h1 class="texto">Descubre nuestros <br>organizadores ;)</h1>
