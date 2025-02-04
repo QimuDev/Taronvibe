@@ -7,6 +7,19 @@
     --botones: #e84954;
   }
 
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  html{
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
 /* General */
 @font-face {
     font-family: 'Varela Round';
