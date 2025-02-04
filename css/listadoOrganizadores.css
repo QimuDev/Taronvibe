@@ -4,11 +4,12 @@
 :root {
     --primary: #ff9f21;
     --seconday: #ffcd5f;
-    --brown:  #d07a52;
+    --brown: #d07a52;
     --brownSecondary: #f0a26b;
     --background: #fffdd0;
     --botones: #e84954;
-}
+    --nav: #ff7700;
+  }
 
 body {
     margin: 0;
@@ -77,6 +78,8 @@ body {
     position: relative;
     display: flex;
     align-items: flex-start;
+    font-family: "baloo tamma 2", serif;
+    font-weight: 900;
     margin: 5rem;
     padding-left: 2rem;
 }
@@ -148,6 +151,8 @@ body {
 .marquee span {
     display: inline-block;
     color: #FFF;
+    font-family: "baloo tamma 2",serif;
+    font-weight: 800;
     font-size: 40px;
     font-weight: bold;
     line-height: 140%;
@@ -247,6 +252,8 @@ body {
     text-align: center;
     padding: 1rem;
     width: 88%;
+    font-family: "varela round", serif;
+    font-weight: 900;
     margin-top: 1rem;
     cursor: pointer;
     transition: transform 1s ease-in;
