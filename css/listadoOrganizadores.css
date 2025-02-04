@@ -1,11 +1,5 @@
 /* General */
-@font-face {
-    font-family: 'Varela Round';
-    src: url('./fonts/VarelaRound-Regular.ttf') format('woff2'),
-        url('./fonts/VarelaRound-Regular.ttf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Varela+Round&display=swap');
 
 :root {
     --primary: #ff9f21;
@@ -104,27 +98,65 @@ nav {
     filter: brightness(0) invert(1);
 }
 
+/* SECCIÓN DESCRUBRE */
 .descubre {
+    position: relative;
     display: flex;
-    justify-content: left;
-    margin-left: 7rem;
-    align-items: center;
-    margin-bottom: 2rem; /* Añadir margen inferior */
+    align-items: flex-start;
+    margin: 5rem;
+    padding-left: 2rem;
 }
 
 .texto {
     font-size: 60px;
-    font-weight:bold;
+    font-weight: bold;
     line-height: 120%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
 }
 
 .ola {
     position: relative;
     top: -4rem;
     left: -2rem;
-    display: flex;
+    width: 8rem;
+    height: 8rem;
+    /* transform: rotate(-10deg); */
+    z-index: 0;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .descubre {
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+    
+    .texto {
+        font-size: 3rem;
+    }
+    
+    .ola {
+        width: 8rem;
+        right: -1.5rem;
+        bottom: -1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto {
+        font-size: 2.2rem;
+    }
+    
+    .ola {
+        width: 6rem;
+        right: -1rem;
+        bottom: -0.5rem;
+    }
+}
+
+/* FIN SECCION DESCUBRE */
 .marquee-container {
     width: 100%;
     overflow: hidden;
