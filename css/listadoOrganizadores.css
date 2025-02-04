@@ -197,6 +197,97 @@ nav {
     padding: 0 5px;
 }
 
+
+/* INICIO DE LA GALERIA DE IMAGENES */
+.card {
+    width: 17rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover .galery-image{
+    opacity: 0.5 ;
+
+}
+
+.card:hover .texto-container{
+    text-decoration: underline;
+    
+}
+
+.galery-image {
+    position: relative;
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,opacity 0.3s ease-in;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.contenido-container {
+    display: none; 
+}
+
+.texto-container {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 1s ease-in;
+}
+
+
+
+.texto-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto-container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mantener grid original */
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galery-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+
+.galery-image.a { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.b { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.c { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.d { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.e { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.f { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.g { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.h { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.i { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.j { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.k { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.l { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+  /* FIN DE LA GALERIA DE IMAGENES */
+
 .lista {
     display: flex;
     justify-content: center;
