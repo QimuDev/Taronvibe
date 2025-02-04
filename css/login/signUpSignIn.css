@@ -205,7 +205,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr; 
   margin-top: 0.5rem;
-  gap: 15px;
+  gap: 15px;  
 }
 
 .loginContainerInputs2{
@@ -220,8 +220,15 @@ body {
   align-items: center;
 }
 
-.terms span{
-  color:#D07A52;
+.terms span {
+  color: #D07A52;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.terms span:hover {
+  border-bottom-color: #D07A52; 
+  cursor: pointer;
 }
 
 .loginContainerInputs2 button{
@@ -266,4 +273,12 @@ input[type="checkbox"]:checked::after {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg); 
+}
+
+input{
+  transition: background-color 0.25s ease;
+}
+
+input:hover{
+  background-color: rgb(255, 228, 200);
 }
