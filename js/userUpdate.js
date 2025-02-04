@@ -17,7 +17,7 @@ document.querySelectorAll('.gusto-item img').forEach(img => {
             setTimeout(() => {
                 img.setAttribute('src', altSrc);  // Cambiar a la imagen alternativa
                 img.style.opacity = 1;  // Volver a hacer visible la imagen con la transición
-            }, 50);
+            }, 100);
         }
     });
 
@@ -29,7 +29,7 @@ document.querySelectorAll('.gusto-item img').forEach(img => {
             setTimeout(() => {
                 img.setAttribute('src', originalSrc);  // Volver a la imagen original
                 img.style.opacity = 1;  // Volver a hacer visible la imagen con la transición
-            }, 50);
+            }, 100);
         }
     });
 
