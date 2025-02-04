@@ -35,6 +35,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/login/taronvibeLogo.png" type="image/png">
     <title>Perfil</title>
     <!-- CSS personalizado -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Happy+Monkey&family=Lora:ital,wght@0,400..700;1,400..700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Varela+Round&display=swap" rel="stylesheet">
@@ -44,7 +45,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     <!-- NAV MENÚ -->
     <nav>
         <div class="nav-logo">
-            <img src="./img/img_userProfile/TARONVIBE Logo.png" alt="Logo">
+            <img src="img\login\TaronvibeLogoNav.png" alt="Logo">
         </div>
         <div class="nav-profile">
             <ul class="nav-list">
@@ -114,7 +115,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
-                <img src="./img/img_userProfile/TARONVIBE Logo.png" alt="Logo TaronVibe" class="logo">
+                <img src="img\login\TaronvibeLogo+.png" alt="Logo TaronVibe" class="logo">
                 <ul class="footer-links">
                     <li><a href="#">Eventos</a></li>
                     <li><a href="#">Organizadores</a></li>

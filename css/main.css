@@ -1,0 +1,1256 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Varela+Round&display=swap');
+
+
+:root {
+  --primary: #ff9f21;
+  --seconday: #ffcd5f;
+  --brown: #d07a52;
+  --brownSecondary: #f0a26b;
+  --background: #fffdd0;
+  --botones: #e84954;
+  --nav: #ff7700;
+} 
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html {
+}
+
+.nav-container {
+  width: 91%;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.items-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: right;
+  gap: 5rem;
+  color: var(--nav);
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 800;
+}
+
+.items p {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.items p img {
+  height: 1.2rem;
+  width: auto;
+  margin-right: 0.5rem; 
+}
+
+.items p:hover img {
+  filter: brightness(0) saturate(100%) invert(1); /* Cambia el color del SVG */
+}
+
+
+.items p:hover{
+  color: var(--background);
+  background-color: var(--nav);
+  border-radius: 20px;
+}
+
+
+/* Contenedor principal del carrusel */
+.container-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;  
+  position: relative;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.carousel {
+  height: 100vh;
+  display: flex;
+  transition: transform 2s ease;
+  overflow: visible;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: none;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+.slide-image {
+  width: 27rem;
+  height: 27rem;
+}
+
+.slide-image img {
+  width: 100%;        /* Ajusta el ancho al 100% del contenedor */
+  height: 100%;       /* Ajusta la altura al 100% del contenedor */
+  object-fit: cover;  /* Ajusta la imagen para cubrir el área sin distorsión */
+}
+
+/* Imagen */
+.slide-image img {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+}
+
+/* Contenido */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 30vh;
+  width: 53vw;
+}
+
+.slider-content {
+  text-decoration: bold;
+  font-weight: 300;
+  font-size: 50px;
+  color: #333;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+}
+
+
+.btn-slider {
+  background-color:var(--background) ;
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  color: black;
+  border: solid var(--primary) 2px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Baloo Tamma 2";
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-slider:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/*  parte del scroll inicio */
+
+.scroll-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 100px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.scroll-content {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  height: 100px;
+  animation: scroll-horizontal 20s linear infinite;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+
+/* scroll final */
+
+/* aventos pasados y activos inicio */
+/* .wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  margin:3rem;
+}
+.title-wrap{
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: var(--background);
+  border: 2px solid var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  margin-top: 1rem;
+}
+
+.option {
+  margin-right: 5px;
+  width: 80.5px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 34px;
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.option:last-child {
+  margin-right: 4px;
+}
+
+.option:hover {
+  background-color: var(--seconday);
+}
+
+.option:hover .span {
+  color: var(--background);
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.span {
+  color: var(--primary);
+}
+
+.input:checked + .btn {
+  background-color: var(--primary);
+  transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.input:checked + .btn .span {
+  color: var(--background);
+  transition: 0.25s cubic-bezier(0, 0, 0, 1);
+} */
+
+/* PRUEBA BOTON */
+/* Contenedor general */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+/* Estilo del título */
+.title-wrap {
+  margin: 3%;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.title-wrap span{
+  color: var(--nav);
+}
+
+/* Contenedor del toggle */
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 65px;
+  position: relative;
+  background-color: var(--secondary);
+  border: 3px solid var(--primary);
+  border-radius: 34px;
+  overflow: hidden;
+  padding: 2px;
+}
+
+
+
+/* Botones */
+.option {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  background: none;
+  border-radius: 20px;
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover en botones no activos */
+
+/* Slider animado */
+.slider {
+  position: absolute;
+  height: 75%;
+  width: 46.5%;
+  background-color: var(--primary);
+  border-radius: 32px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  left: 8px;
+}
+
+/* Color del botón activo */
+.toggle-wrapper .option.active {
+  color: var(--background);
+}
+
+/* GALERIA DE IMAGENES */
+
+
+.galery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 5rem;
+}
+
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Contenedor de cada imagen */
+.galery-image {
+  position: relative;
+  height: 17rem;
+  width: 17rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 19px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Contenedor del contenido del evento */
+.contenido-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Texto del evento */
+.contenido ul {
+ list-style-type: none;
+ padding-left: 0;
+}
+
+.contenido li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  text-decoration: none;
+  list-style: none;
+}
+
+.imagenes-contenido img {
+  width: 30px; 
+  height: 30px;
+  margin: 10px 5px; 
+}
+
+.contenido li .imagenes-contenido {
+  width: 50px;
+  height: 10px;
+}
+
+/* Hover: oscurece la imagen y muestra el contenido */
+.galery-image:hover .contenido-container {
+  background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+  opacity: 1; /* Muestra el texto */
+}
+
+
+/* IMAGENES DE CADA ELEMENTO DE LA GALERIA PRINCIPAL */
+.galery-image.a {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.b {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.c {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.d {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.e {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.f {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.g {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.h {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.i {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.j {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.k {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+.galery-image.l {
+  background-image: url("../img/main/images/albufera.webp");
+}
+
+/* FIN DE LAS IMAGENES DE LA GALERÍA */
+
+.galery-button {
+  margin-top:2rem;
+  margin-bottom:5rem;
+  text-align: center;
+}
+
+.galery-button button {
+  background-color: var(--background);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: solid var(--primary) 2px;
+  border-radius: 10rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.galery-button button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* COMENTARIOS ALEATORIOS */
+/* .comments-container{
+  background-color: blue;
+  margin: 5rem;
+  color: var(--fondoPagina);
+}
+
+.coments{
+  background-color: #d03f51;
+}
+
+.coment{
+  background-color:green;
+} */
+
+.comments-container {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  background-color: var(--brown);
+  color: #333;
+  margin-top: 3rem;
+}
+
+.comments-container h2 {
+  font-size: 45px;
+  margin-bottom: 1.5rem;
+  color: var(--background);
+  font-family: "Baloo tamma 2", serif;
+  font-weight: 900;
+  width: 50rem;
+  margin-top:3.4rem;
+  margin-bottom:3.4rem;
+  margin-left:3rem;
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin-bottom: 8rem;
+}
+
+.comment {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+  background-color: var(--background);
+  border-radius: 28px;
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  width: 400px;
+  animation: slide 10s linear infinite;
+  height: auto;
+}
+
+.comment img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+.comment h3 {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: bold;
+  text-align: start;
+  margin-left:1rem;
+}
+
+.comment p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: start;
+  margin: 1rem;
+}
+
+/* Animación para movimiento infinito */
+
+/*@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* .comments:hover .comment {
+  animation-play-state: paused;
+} */
+
+/* FINAL DE COMENTARIOS ALEATORIOS */
+
+/* IMAGENES CON MOVIEMIENTO  */
+
+.dinamic-container {
+  display: flex;
+  justify-content: center;
+  gap: 4.65rem;
+  overflow: hidden;
+  height: 600px; /* Ajusta según el tamaño de las imágenes */
+  margin: 0 9.5rem;
+}
+
+.dinamic-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: move-up 10s linear infinite;
+}
+
+/* Animaciones */
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Columnas con distintas animaciones */
+.dinamic-left,
+.dinamic-right {
+  animation-name: move-up;
+}
+
+.dinamic-center {
+  animation-name: move-down;
+  animation-duration: 14s;
+}
+
+/* Imagenes */
+.dina-image img {
+  width: 350px;
+  height: 350px;
+  margin-bottom: 3rem;
+}
+
+/* PROXIMOS EVENTOS SECTION */
+
+.prox-color {
+  background-color: var(--brown);
+}
+
+.proximos-eventos-container {
+  padding: 1rem;
+  text-align: center;
+}
+.title-prox {
+  font-family: "Varela Round", serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 3rem;
+  color: var(--background);
+}
+
+.proximos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.proximos-img {
+  width: 20rem;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.proximos-img.a {
+  background-image: url("../img/main/images/tazas.png");
+}
+
+.proximos-img.b {
+  background-image: url("../img/main/images/mercadillo.png");
+}
+
+.proximos-img.c {
+  background-image: url("../img/main/images/atracciones.png");
+}
+
+.proximos-img.d {
+  background-image: url("../img/main/images/festival.png");
+}
+
+.contenido-prox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+}
+
+.contenido-prox p {
+  font-family: "Varela Round", serif;
+  font-weight: 400;
+  width: 50rem;
+  color: var(--background);
+  margin-left: 2rem;
+}
+
+.btn-prox {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.btn-prox button {
+  background-color: var(--background);
+  color: var(--brown);
+  padding: 0.75rem 1.5rem;
+  border: solid var(--brownSecondary) 2px;
+  border-radius: 10rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-prox button:hover {
+  background-color: var(--brown);
+  color: var(--background);
+  border: solid var(--background) 2px;
+}
+
+
+
+/* Sección de Información */
+.info {
+  margin-left: 6rem;
+  width: 40rem;
+}
+
+.info img {
+  height: 10rem;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.info ul li {
+  margin: 0.5rem 0;
+}
+
+.info ul li a {
+  text-decoration: none;
+  color: var(--nav);
+  transition: color 0.3s ease;
+  font-family: "varela round", serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.info ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Íconos de Redes Sociales */
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
+
+/* SECCION NEWSLETTER */
+.newsleter {
+  text-align: end;
+  margin-right: 6rem;
+  width: 40rem;
+}
+
+.newsleter h1 {
+  margin-bottom: 1rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.footer-input {
+  display: inline-block;
+  width: 40rem; /* Ancho ajustable */
+}
+
+.footer-input input {
+  width: 15rem;
+  border-radius: 30px;
+  border:  solid var(--primary) 2px;
+  background-color: var(--background);
+}
+
+.footer-btn button {
+  display: block;
+  background-color: var(--background);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: solid var(--primary) 2px;
+  border-radius: 40rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1rem 0 0 auto; /* Alinea el botón a la derecha */
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .newsletter {
+    text-align: center;
+  }
+  .newsletter input,
+  .newsletter button {
+    margin: 0.5rem auto;
+  }
+}
+
+:root {
+  --primary: #ff9f21;
+  --seconday: #ffcd5f;
+  --brown:  #d07a52;
+  --brownSecondary: #f0a26b;
+  --background: #fffdd0;
+  --botones: #e84954;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+html{
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* General */
+@font-face {
+  font-family: 'Varela Round';
+  src: url('../fonts/VarelaRound-Regular.ttf') format('woff2'),
+       url('../fonts/VarelaRound-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  background-color: var(--background);
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+nav {
+  font-family: "Baloo Tamma 2";
+  font-size: 19px;
+  height: 12vh;
+  width: 94.9vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.nav-logo img {
+  height: 60px;
+  margin-left: 68px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-item a {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.nav-item a:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: var(--primary); 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+}
+
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  height: 3px;
+  width: 25px;
+  background: var(--primary);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
+  width: 100%;
+}
+
+.mobile-nav .nav-list {
+  flex-direction: column;
+}
+
+.mobile-nav .nav-item {
+  margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-profile {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .mobile-nav {
+      display: none;
+  }
+
+  .mobile-nav.active {
+      display: flex;
+  }
+}
+
+.profile-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+}
+
+.btn-profile img {
+  height: 20px;
+  width: 20px;
+}
+
+.btn-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  padding: 15px 20px;
+  background-color: var(--primary); 
+  color: white; 
+  border: none; 
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold; 
+  font-family:"Varela Round"; 
+  cursor: pointer; 
+}
+
+
+.btn-profile{
+  padding: 13px 20px;
+}
+
+.marqueeContainer1{
+  margin-top:60px;
+}
+
+.marquee-container1,
+.marquee-container2 {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FF7700;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 20px 0px;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 50s linear infinite;
+}
+
+
+.marquee span {
+  display: inline-block;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 70px 70px 0px 70px;
+  background-color: var(--background);
+  color: #000;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.footer-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.footer-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: right;
+}
+
+.footer-right h2 {
+  font-size: 55px;
+  font-weight: bold;
+  text-align: end;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.footer-links li {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #FF6600;
+  font-weight: bold;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.form-input {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 71.3%;
+}
+
+.input {
+  width: 60%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-policies {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-policies a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.btn-footer {
+  padding: 15px 20px;
+  background-color: var(--background);
+  color: black;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.btn-footer:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+input{
+  transition: background-color 0.3s ease;
+}
+
+input:hover{
+  background-color:rgb(255, 228, 200);
+  
+}
+
+
+.footer-left a:hover {
+  border-bottom: 2px solid var(--primary); 
+}
+
+.footer-bottom a:hover {
+  border-bottom: 2px solid black; 
+}
+
+.wrapper h3{
+  width: 90vw;
+}
+
+.wrapper-text{
+  display:flex;
+  width: 40vw;
+  justify-content: start;
+  align-self: start;
+  margin-top:4rem;
+  margin-left:3.3rem;
+  margin-bottom: 5rem;
+}
+
+.wrapper-text h3{
+  font-size:53px;
+}
+
+.slide{
+  overflow: visible;
+}
+
+.slide-image {
+  position: relative;
+}
+
+
+.gotasContainer {
+  position: absolute;  /* Esto saca el div de su flujo normal */
+  height: 10rem;       /* Define la altura del contenedor de las gotas */
+  width: 10rem;        /* Define el ancho del contenedor de las gotas */
+  background-image: url("../img/login/TaronvibeGotas.png");/* Asegúrate de que la ruta sea correcta */
+  background-size: contain;  /* Asegura que la imagen se ajuste dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  top: -5rem;              /* Alinea el contenedor con el borde superior */
+  right:-5rem;          /* Alinea el contenedor con el borde derecho */
+  z-index: 5;     
+ transform: rotate(45deg);   /* Asegura que las gotas estén por encima de la imagen base */
+}
+
+.galery-button button{
+  font-family: "Baloo Tamma 2";
+  font-weight: 800;
+}
