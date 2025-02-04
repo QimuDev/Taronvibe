@@ -17,7 +17,7 @@
   }
   
   html{
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
   }
 
 /* General */
@@ -41,6 +41,9 @@ h1 {
 }
 
 nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
     width: 94.9vw;
     display: flex;
     justify-content: space-between;
@@ -58,12 +61,13 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
 .nav-item a {
-    padding: 15px 20px;
+    display: flex;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     color: var(--primary);
@@ -78,9 +82,6 @@ nav {
     background-color: var(--primary); 
     color: white; 
     border: none; 
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
     cursor: pointer; 
 }
 
@@ -156,6 +157,7 @@ nav {
 }
 
 .profile-text {
+    font-family: "Baloo Tamma 2";
     display:flex;
     justify-content: center;
     align-items: center;
@@ -232,7 +234,8 @@ input[id="postal-code"], input[name="birth-date"] {
     background-color: var(--background);
 }
 
-.text-line1, .text-line2{
+.text-line1, 
+.text-line2{
     width: 53%;
 }
 
@@ -384,7 +387,7 @@ label{
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 180s linear infinite;
+    animation: marquee 90s linear infinite;
 }
 
 .marquee span {
@@ -484,7 +487,11 @@ label{
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-    width: 70%;
+    width: 71%;
+}
+
+.form-input input{
+    width: 100%;
 }
 
 .input {

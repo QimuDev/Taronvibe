@@ -35,8 +35,9 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edita tus datos</title>
+    <title>Perfil</title>
     <!-- CSS personalizado -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Happy+Monkey&family=Lora:ital,wght@0,400..700;1,400..700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/userProfile.css">
 </head>
 <body>
@@ -69,19 +70,19 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     <!-- CONTENIDO PÁGINA -->
     <div class="profile-container">
         <div class="profile-image">
-            <img height="400px" width="400px" src="./img/img_userProfile/Property 1=Rectangle 40.png" alt="Imagen del usuario">
+            <img height="370px" width="370px" src="./img/img_userProfile/Property 1=Rectangle 40.png" alt="Imagen del usuario">
         </div>
         <div class="profile-details">
-            <h2>Nombre del usuario</h2>
+            <h2>María Ferrer García</h2>
             <div class="profile-icons">
-                <span class="icon"><img src="./img/img_userProfile/oso-naranja.svg"></span>
-                <span class="icon"><img src="./img/img_userProfile/oso-naranja.svg"></span>
-                <span class="icon"><img src="./img/img_userProfile/oso-naranja.svg"></span>
+                <span class="icon"><img src="./img/img_userUpdate/svg/arbol-naranja.svg"></span>
+                <span class="icon"><img src="./img/img_userUpdate/svg/comida-naranja.svg"></span>
+                <span class="icon"><img src="./img/img_userUpdate/svg/libro-naranja.svg"></span>
             </div>
-            <p>correousuario@gmail.com</p>
-            <p>26/05/1990</p>
+            <p>mariafg98@gmail.com</p>
+            <p>23/08/1998</p>
         </div>
-        <a style="text-decoration: none;" href="./userUpdate.html"><button class="btn-save"><img src="./img/img_userProfile/lapiz-negro.svg" alt="svg edit"> Mi Perfil</button></a>
+        <a style="text-decoration: none;" href="./userUpdate.html"><button class="btn-save"><img src="./img/img_userProfile/lapiz-negro.svg" alt=./img/img_userProfile/lapiz-blanco.svg>Editar datos</button></a>
     </div>
 
     <!-- TUS GUSTOS -->
@@ -106,7 +107,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop.</span>
+            <span>Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite</span>
         </div>
     </div>
 
@@ -173,4 +174,5 @@ function changePage(pageNumber) {
     document.querySelector(`.page:nth-child(${pageNumber})`)?.classList.add('active');
 }
 </script>
+<script src="js/userProfile.js"></script>
 </html>

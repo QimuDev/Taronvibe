@@ -17,7 +17,7 @@
   }
   
   html{
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
   }
 
 /* General */
@@ -41,16 +41,20 @@ h1 {
 }
 
 nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
+    width: 94.9vw;
+    margin-bottom: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
-    padding: 20px 30px;
 }
 
 .nav-logo img {
     height: 60px;
-    margin-left: 40px;
+    margin-left: 68px;
 }
 
 .nav-list {
@@ -58,27 +62,27 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 40px;
+    gap: 15px;
     align-items: center;
 }
 
 .nav-item a {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .nav-item a:hover {
     display: flex;
     align-items: center;
     justify-content: center; 
-    padding: 15px 20px;
     background-color: var(--primary); 
     color: white; 
     border: none; 
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
     cursor: pointer;
 }
 
@@ -144,7 +148,7 @@ nav {
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 40s linear infinite;
+    animation: marquee 90s linear infinite;
 }
 
 .marquee span {
@@ -242,7 +246,7 @@ nav {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-    width: 70%;
+    width: 71.3%;
 }
 
 .input {
@@ -283,12 +287,30 @@ nav {
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    scale: 1.03;
+}
+
+input{
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color:rgb(255, 228, 200);
+    
+}
+
+
+.footer-left a:hover {
+    border-bottom: 2px solid var(--primary); 
+}
+
+.footer-bottom a:hover {
+    border-bottom: 2px solid black; 
 }
 
 .btn-save {
@@ -302,8 +324,9 @@ nav {
     color: black; 
     border-radius: 50px;
     font-size: 16px;
-    font-weight: bold; 
+    font-family: "Varela Round";
     cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-save:hover {
@@ -331,16 +354,12 @@ nav {
     width: 20px;
 }
 
-.btn-profile:hover {
-    scale: 1.03;
-}
 
 .profile-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 50px;
-    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 91%;
     margin: 0 auto;
 }
 
@@ -351,22 +370,27 @@ nav {
 
 .profile-details {
     display: flex;
+    justify-content: space-between;
+    margin-top:1.9rem;
+    width: 40%;
     flex-direction: column;
-    gap: 10px;
+    margin-right:12rem;
 }
 
 .profile-details h2 {
+    font-family: "Baloo Tamma 2";
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 0;
     color: #000;
+    margin:0;
 }
 
 .profile-icons {
     display: flex;
     gap: 40px;
-    margin: 45px 15px;
+    margin-left:0.7rem;
+    margin-top:2rem;   
+    margin-bottom:2rem;
 }
 
 .icon {
@@ -381,8 +405,7 @@ nav {
 
 .profile-details p {
     font-size: 16px;
-    color: #555;
-    margin: 0;
+    margin:0.5rem;
 }
 
 .edit-button {
@@ -407,14 +430,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 40px;
+    width: 240px;
+    height: 60px;
     position: relative;
     background-color: var(--secondary);
     border: 2px solid var(--primary);
     border-radius: 34px;
     overflow: hidden;
-    padding: 2px;
 }
 
 .option {
@@ -433,13 +455,13 @@ nav {
 
 .slider {
     position: absolute;
-    width: 48.5%; 
-    height: 85%; 
+    height: 75%;
+    width: 46.5%;
     background-color: var(--primary);
-    border-radius: 20px;
+    border-radius: 32px;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
-    left: 3px;
+    left: 8px;
 }
 
 .wrapper .option.active {
@@ -449,13 +471,14 @@ nav {
 .wrapper-container {
     align-items: center;
     gap: 50px;
-    width: 80%;
+    width: 89%;
     margin: 0 auto;
 }
 
 .wrapper-container h1 {
+    font-family: "Baloo Tamma 2";
     font-size: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 
@@ -541,16 +564,20 @@ h5{
     border-radius: 12px;
     background-color: var(--secondary);
     color: var(--text-color);
+    font-family: "Varela Round";
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .page.active {
     background-color: var(--primary);
+    color:white;
 }
 
 .page:hover {
     background-color: var(--primary);
+    color:white;
 }
 
 .dots {
