@@ -51,9 +51,11 @@ nav {
 
 .nav-item a {
     padding: 15px 20px;
+    border-radius: 50px;
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .nav-item a:hover {
@@ -68,6 +70,7 @@ nav {
     font-weight: bold; 
     cursor: pointer; 
 }
+
 
 .hamburger-menu {
     display: none;
@@ -155,8 +158,10 @@ nav {
 }
 
 .profile-image {
-    width: 38%;
-    margin-left: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .profile-form {
@@ -164,7 +169,7 @@ nav {
     flex-direction: column;
     gap: 20px;
     width: 66vw;
-    justify-content: end;
+    justify-content: center;
 }
 
 .text-line-group {
@@ -187,7 +192,7 @@ nav {
     font-size: 15px;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .btn-save:hover {
@@ -206,7 +211,7 @@ input[id="name"], input[type="email"], input[type="password"] {
 }
 
 input[id="postal-code"], input[name="birth-date"] {
-    width: 83%;
+    width: 90%;
     padding: 15px;
     font-size: 16px;
     border: 2px solid var(--primary);
@@ -214,6 +219,14 @@ input[id="postal-code"], input[name="birth-date"] {
     background-color: var(--background);
 }
 
+.text-line1, .text-line2{
+    width: 53%;
+}
+
+.text-line2{
+    display:flex;
+    justify-content: end;
+}
 
 
 .text-line-group {
@@ -298,12 +311,15 @@ label{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .gusto-item img {
     width: 70px;
     height: 70px;
+    border-radius:50px;
 }
+
 
 .gusto-item p {
     margin-top: 5px;
@@ -494,10 +510,28 @@ label{
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    scale: 1.03;
+}
+
+input{
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color:rgb(255, 228, 200);
+    
+}
+
+
+.footer-left a:hover {
+    border-bottom: 2px solid var(--primary); 
+}
+
+.footer-bottom a:hover {
+    border-bottom: 2px solid black; 
 }

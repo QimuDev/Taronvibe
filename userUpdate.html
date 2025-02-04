@@ -42,7 +42,7 @@
             <a style="text-decoration: none;" href="./userProfile.php"><button class="btn-save">Guardar cambios</button></a>
         </div>
         <div class="profile-image">
-            <img height="300px" width="300px" src="./img/img_userUpdate/Property 1=Rectangle 40.png" alt="Profile">
+            <img height="338px" width="338px" src="./img/img_userUpdate/Property 1=Rectangle 40.png" alt="Profile">
         </div>
         <div class="profile-form">
             <div class="text-line">
@@ -55,10 +55,10 @@
                 <input type="password" id="password" name="password" placeholder="Contraseña">
             </div>
             <div class="text-line-group">
-                <div class="text-line">
+                <div class="text-line1">
                     <input type="text" id="postal-code" name="postal-code" placeholder="CP">
                 </div>
-                <div class="text-line">
+                <div class="text-line2">
                     <input type="text" id="birth-date" name="birth-date" placeholder="Fecha de nacimiento">
                 </div>
             </div>
@@ -71,15 +71,15 @@
         </div>
         <div class="gustos">
             <div class="gusto-item">
-                <img src="./img/img_userUpdate/svg/arbol-blanco.svg" data-alt-src="./img/img_userUpdate/svg/arbol-naranja.svg" alt="">
+                <img src="./img/img_userUpdate/svg/arbol-blanco.svg" id="item1" data-alt-src="./img/img_userUpdate/svg/arbol-naranja.svg" alt="">
                 <p>Naturaleza y aire libre</p>
             </div>
             <div class="gusto-item">
-                <img src="./img/img_userUpdate/svg/arte-blanco.svg" data-alt-src="./img/img_userUpdate/svg/arte-naranja.svg" alt="">
+                <img src="./img/img_userUpdate/svg/arte-blanco.svg" id="item2" data-alt-src="./img/img_userUpdate/svg/arte-naranja.svg" alt="">
                 <p>Arte</p>
             </div>
             <div class="gusto-item">
-                <img src="./img/img_userUpdate/svg/cine-blanco.svg" data-alt-src="./img/img_userUpdate/svg/cine-naranja.svg" alt="">
+                <img src="./img/img_userUpdate/svg/cine-blanco.svg" id="item3" data-alt-src="./img/img_userUpdate/svg/cine-naranja.svg" alt="">
                 <p>Cine</p>
             </div>
             <div class="gusto-item">
@@ -176,4 +176,6 @@
         document.querySelector('.mobile-nav').classList.toggle('active');
     });
 </script>
+
+<script src="js\userUpdate.js"></script>
 </html>
