@@ -1,20 +1,15 @@
 /* General */
-@font-face {
-    font-family: 'Varela Round';
-    src: url('./fonts/VarelaRound-Regular.ttf') format('woff2'),
-        url('./fonts/VarelaRound-Regular.ttf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Varela+Round&display=swap');
 
 :root {
     --primary: #ff9f21;
     --seconday: #ffcd5f;
-    --brown:  #d07a52;
+    --brown: #d07a52;
     --brownSecondary: #f0a26b;
     --background: #fffdd0;
     --botones: #e84954;
-}
+    --nav: #ff7700;
+  }
 
 body {
     margin: 0;
@@ -22,109 +17,123 @@ body {
     background-color: var(--background);
 }
 
-nav {
+.nav-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction:row;
+    justify-content: center;
     align-items: center;
     background-color: var(--background);
-    padding: 20px 30px;
-}
-
-.nav-logo{
-    margin-left: 5rem;
-}
-
-.nav-logo img {
-    height: 60px;
-    margin-left: px;
-}
-
-.nav-list {
+  }
+  
+  .items-container {
+    width: 77%;
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 40px;
+    flex-direction: row;
     align-items: center;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.nav-item a:hover {
+    justify-content: space-between;
+  }
+  .items {
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 15px 20px;
-    background-color: var(--primary); 
-    color: white; 
-    border: none; 
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-profile {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    gap: 10px; 
-    padding: 15px 20px;
-    color: var(--primary); 
-    border: none; 
-    background-color: transparent;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    margin-right: 5rem;;
-}
+    align-items: right;
+    gap: 5rem;
+    color: var(--nav);
+    font-family: "Baloo Tamma 2", serif;
+    font-weight: 800;
+  }
+  
+  .items p {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .items p img {
+    height: 1.2rem;
+    width: auto;
+    margin-right: 0.5rem; 
+  }
+  
+  .items p:hover img {
+    filter: brightness(0) saturate(100%) invert(1); /* Cambia el color del SVG */
+  }
+  
+  
+  .items p:hover{
+    color: var(--background);
+    background-color: var(--nav);
+    border-radius: 20px;
+  }
+  
+  .logo-nav img {
+    height: 5rem;
+    width: 5rem;
+  }
 
-.btn-profile:hover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-    background-color: #FF7700;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-profile:hover .profile-icon {
-    filter: brightness(0) invert(1);
-}
-
+/* SECCIÓN DESCRUBRE */
 .descubre {
+    position: relative;
     display: flex;
-    justify-content: left;
-    margin-left: 7rem;
-    align-items: center;
-    margin-bottom: 2rem; /* Añadir margen inferior */
+    align-items: flex-start;
+    font-family: "baloo tamma 2", serif;
+    font-weight: 900;
+    margin: 5rem;
+    padding-left: 2rem;
 }
 
 .texto {
     font-size: 60px;
-    font-weight:bold;
+    font-weight: bold;
     line-height: 120%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
 }
 
 .ola {
     position: relative;
     top: -4rem;
     left: -2rem;
-    display: flex;
+    width: 8rem;
+    height: 8rem;
+    /* transform: rotate(-10deg); */
+    z-index: 0;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .descubre {
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+    
+    .texto {
+        font-size: 3rem;
+    }
+    
+    .ola {
+        width: 8rem;
+        right: -1.5rem;
+        bottom: -1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto {
+        font-size: 2.2rem;
+    }
+    
+    .ola {
+        width: 6rem;
+        right: -1rem;
+        bottom: -0.5rem;
+    }
+}
+
+/* FIN SECCION DESCUBRE */
 .marquee-container {
     width: 100%;
     overflow: hidden;
@@ -142,6 +151,8 @@ nav {
 .marquee span {
     display: inline-block;
     color: #FFF;
+    font-family: "baloo tamma 2",serif;
+    font-weight: 800;
     font-size: 40px;
     font-weight: bold;
     line-height: 140%;
@@ -158,47 +169,144 @@ nav {
 
 .listOrgContainer {
     width: 90vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Añadir align-items center */
-    margin: 5rem 7rem 7rem; /* Reduce el margen superior */
+    margin: 5rem auto; /* Centrado más seguro */
 }
 
 .searchbar-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 5rem 7rem;
+    justify-content: flex-end; /* Alinea todo a la derecha */
+    width: 100%;
+    padding: 0 20px; /* Padding opcional para no pegarse a los bordes */
 }
 
 .searchbar {
-    border: 3px var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre icono y input */
+    border: 3px solid var(--primary);
     border-radius: 50px;
-    border-style: solid;
-    padding: 1rem;
-    margin: 15px 20px;
+    margin-top: 6rem;
+    margin-right: 5rem;
+    padding: 0.8rem 1.5rem; /* Padding más proporcional */
+    max-width: 600px; /* Ancho máximo controlado */
+    width: auto; /* Ancho según contenido */
 }
 
 .search-icon {
-    height: 2rem;
-    width: 2rem;
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0; /* Evita que se encoja */
 }
 
 .search-input {
-    width: 50rem;
-    height: 2rem;
     background: transparent;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     outline: none;
+    width: 100%; 
+    min-width: 250px; 
+    padding: 0 5px;
 }
 
-.lista {
+
+/* INICIO DE LA GALERIA DE IMAGENES */
+.card {
+    width: 17rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover .galery-image::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.card:hover .texto-container{
+    text-decoration: underline;
+    
+}
+
+.galery-image {
+    position: relative;
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    overflow: hidden; 
+    cursor: pointer;
+    background: rgb(0, 0, 0, 0.5);
+    transition: transform 0.3s ease,opacity 0.3s ease-in;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.contenido-container {
+    display: none; 
+}
+
+.texto-container {
+    text-align: center;
+    padding: 1rem;
+    width: 88%;
+    font-family: "varela round", serif;
+    font-weight: 900;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 1s ease-in;
+}
+
+
+
+.texto-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto-container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mantener grid original */
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galery-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
+    width: 100%;
+    margin: 3rem 0;
 }
+
+
+.galery-image.a { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.b { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.c { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.d { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.e { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.f { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.g { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.h { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.i { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.j { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.k { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.l { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+  /* FIN DE LA GALERIA DE IMAGENES */
+
 
 .ulOrg {
     display: flex;
@@ -233,6 +341,9 @@ nav {
     text-decoration-line: underline;
 }
 
+
+
+/* INICIO DEL FOOTER */
 
 .footer {
     display: flex;
