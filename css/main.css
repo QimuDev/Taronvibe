@@ -18,8 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-html {
-}
+
 
 .nav-container {
   width: 91%;
@@ -1267,4 +1266,8 @@ input:hover{
 
 .nav-list{
   margin-right:5.5rem;
+}
+
+a {
+  text-decoration:none; 
 }

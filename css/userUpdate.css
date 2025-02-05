@@ -566,3 +566,6 @@ input:hover {
   margin-right: 5.5rem;
 }
 
+a {
+  text-decoration:none; 
+}

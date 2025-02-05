@@ -593,3 +593,8 @@ h5{
 .nav-list{
     margin-right:5.5rem;
   }
+
+  
+a {
+    text-decoration:none; 
+  }
