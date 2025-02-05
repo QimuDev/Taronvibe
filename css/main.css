@@ -19,7 +19,6 @@ body {
   justify-content: center;
 }
 
-
 .nav-container {
   width: 91%;
   display: flex;
@@ -821,7 +820,7 @@ body {
   width: 40rem; /* Ancho ajustable */
 }
 
-.footer-input input {
+.footer-input {
   width: 15rem;
   border-radius: 30px;
   border:  solid var(--primary) 2px;
@@ -1155,13 +1154,21 @@ nav {
   width: 71.3%;
 }
 
-.input {
-  width: 60%;
+.input1,
+.input2{
   padding: 15px;
   font-size: 16px;
   border: 2px solid var(--primary);
   border-radius: 50px;
   background-color: var(--background);
+}
+
+.input1{
+  width: 38%;
+}
+
+.input2{
+  width: 62%;
 }
 
 .footer-bottom {

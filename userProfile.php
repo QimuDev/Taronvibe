@@ -133,8 +133,8 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
                 <h2>Únete a nuestra newsletter</h2>
                 <form class="newsletter-form">
                     <div class="form-input">
-                        <input type="text" placeholder="Nombre" class="input">
-                        <input type="email" placeholder="Correo electrónico" class="input">
+                        <input type="text" placeholder="Nombre" class="input1">
+                        <input type="email" placeholder="Correo electrónico" class="input2">
                     </div>
                     <div class="form-btn">
                         <button type="submit" class="btn-footer">Suscribete</button>
