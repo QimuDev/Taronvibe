@@ -105,21 +105,36 @@ body {
 .titulo {
     font-size: 48px;
     font-family: title;
-}
+}   
 /* ICONO FAVORITO */
 
 .icon-container {
     position: relative;
     display: inline-block;
+    width: 50px;  /* Definir un ancho fijo */
+    height: 50px; /* Definir una altura fija */
 }
 
+.icon-normal,
 .icon-relleno {
     position: absolute;
     top: 0;
     left: 0;
+    width: 64%;  /* Asegura que ambas imágenes tengan el mismo tamaño */
+    height: 64%; /* Asegura que ambas imágenes cubran todo el espacio del contenedor */
+}
+
+.icon-relleno {
     opacity: 0; /* Ocultar el icono relleno por defecto */
     transition: opacity 0.3s; /* Transición suave */
+    z-index: 1; /* Asegúrate de que esté por encima del icono normal cuando se haga hover */
 }
+
+.icon-container:hover .icon-relleno {
+    opacity: 1; /* Mostrar el icono relleno cuando se hace hover */
+    z-index: 2; /* Esto asegura que el icono relleno quede por encima */
+}
+
 
 .icon-container:hover .icon-relleno {
     opacity: 1; /* Mostrar el icono relleno al hacer hover */
@@ -140,6 +155,8 @@ p {
 .organizador-info p {
     font-family: text;
 }
+
+
 
 .organizador-info p {
     width: 40rem;
@@ -242,10 +259,11 @@ p {
     align-items: flex-end;
     margin-top: auto;
     width: 100%;
+
 }
 
 .btn-event {
-    margin-top: 10rem;
+    margin-top: 7.3rem;
 }
 
 /* SECCION DEL MAPA Y ORGANIZADOR*/
@@ -607,4 +625,30 @@ margin: 4rem 4rem;
 
   .nav-logo{
     margin-right:37.3rem;
+}
+
+.text{
+    height: 60vh;
+}
+.textP{
+    width: 83%;
+}
+
+.iconos{
+    margin-bottom:2.5rem;
+}
+
+.texto a{
+    margin-bottom:1.3rem;
+}
+
+.texto{height: 70vh;}
+
+.contenedor{
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-weight: 900;
 }
