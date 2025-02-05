@@ -10,15 +10,6 @@
     src: url('../fonts/Varela_Round/VarelaRound-Regular.ttf');
 }
 
-/* :root {
-    --black:#000;
-    --blanco: #ffff;
-    --principal: #fff9f0; ya
-    --secundario: #FF7700;
-    --terciario: #D07A52; ya
-    --inicio: #FF9F21; ya
-} */
-
 :root {
     --black: #000;
     --blanco: #ffff;
@@ -30,7 +21,6 @@
     --background: #fffdd0;
     --botones: #e84954;
 }
-
 
 body {
     margin: 0;
@@ -85,17 +75,45 @@ body {
     margin: 20px;
 }
 
-.imagen img{
+.imagen img {
     border-radius: 2rem;
 }
 
 .texto {
-    margin: 20px;
+   margin-left: 20px;
+  margin-right: 2rem;
+}
+
+.texto p{
+    font-family: text;
+    font-size: 20px;
 }
 
 .titulo {
     font-size: 48px;
     font-family: title;
+}
+/* ICONO FAVORITO */
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-relleno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Ocultar el icono relleno por defecto */
+    transition: opacity 0.3s; /* Transición suave */
+}
+
+.icon-container:hover .icon-relleno {
+    opacity: 1; /* Mostrar el icono relleno al hacer hover */
+}
+
+.icon-container:hover .icon-normal {
+    opacity: 0; /* Ocultar el icono normal al hacer hover */
 }
 
 h1,
@@ -118,7 +136,7 @@ p {
     font-size: 30px;
 }
 
-.text-org{
+.text-org {
     font-size: 20px;
 }
 
@@ -201,7 +219,7 @@ p {
 }
 
 .btn-custom,
-.fav {
+.icon-container {
     float: right;
 }
 
@@ -213,13 +231,15 @@ p {
     width: 100%;
 }
 
-/* NO RESPONSIVE */
 .btn-event {
-    margin-top: 15rem;
+    margin-top: 10rem;
 }
 
 /* SECCION DEL MAPA Y ORGANIZADOR*/
-.contenedor-mapa,
+.contenedor-mapa{
+margin: 4rem 4rem;
+}
+
 .contenedor-organizador {
     margin: 7rem 4rem;
 }
@@ -227,7 +247,7 @@ p {
 .contenedor-mapa img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
+    object-fit: contain;
     border-radius: 2rem;
 }
 
@@ -242,7 +262,7 @@ p {
 
 .organizador-element {
     display: flex;
-    padding: 2rem 2rem;
+    padding: 2rem 0;
     gap: 2rem;
 }
 
