@@ -11,19 +11,95 @@
     --nav: #ff7700;
   }
 
+  html{
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
 body {
     margin: 0;
     font-family: 'Varela Round', sans-serif;
     background-color: var(--background);
+    overflow-x:hidden;
 }
 
-.nav-container {
+nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
+    width: 100vw;
+    margin-bottom: 6rem;
     display: flex;
-    flex-direction:row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--background);
-  }
+    position:fixed;
+    top:0;
+    z-index:10; 
+}
+
+.nav-logo img {
+    height: 60px;
+    margin-left: 68px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-item a {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.nav-item a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}
+
+.btn-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-family:"Varela Round"; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.btn-profile img {
+    height: 20px;
+    width: 20px;
+}
   
   .items-container {
     width: 77%;
@@ -68,10 +144,6 @@ body {
     border-radius: 20px;
   }
   
-  .logo-nav img {
-    height: 5rem;
-    width: 5rem;
-  }
 
 /* SECCIÓN DESCRUBRE */
 .descubre {
@@ -82,6 +154,7 @@ body {
     font-weight: 900;
     margin: 5rem;
     padding-left: 2rem;
+    margin-top:12rem;   
 }
 
 .texto {
@@ -134,12 +207,15 @@ body {
 }
 
 /* FIN SECCION DESCUBRE */
+
 .marquee-container {
     width: 100%;
     overflow: hidden;
-    background-color: var(--primary);
+    background-color: #FF7700;
     white-space: nowrap;
     box-sizing: border-box;
+    margin-top: 100px;
+    padding: 20px 0px;
 }
 
 .marquee {
@@ -151,8 +227,6 @@ body {
 .marquee span {
     display: inline-block;
     color: #FFF;
-    font-family: "baloo tamma 2",serif;
-    font-weight: 800;
     font-size: 40px;
     font-weight: bold;
     line-height: 140%;
@@ -180,17 +254,19 @@ body {
 }
 
 .searchbar {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    justify-content: start;
+    align-items: start;
     gap: 10px; /* Espacio entre icono y input */
     border: 3px solid var(--primary);
     border-radius: 50px;
     margin-top: 6rem;
-    margin-right: 5rem;
-    padding: 0.8rem 1.5rem; /* Padding más proporcional */
+    margin-right: 3rem;
+    padding: 0.8rem 12rem; /* Padding más proporcional */
     max-width: 600px; /* Ancho máximo controlado */
     width: auto; /* Ancho según contenido */
 }
+
 
 .search-icon {
     height: 24px;
@@ -205,7 +281,7 @@ body {
     outline: none;
     width: 100%; 
     min-width: 250px; 
-    padding: 0 5px;
+    padding: 0 5px; 
 }
 
 
@@ -423,7 +499,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-    width: 70%;
+    width: 71.3%;
 }
 
 .input {
@@ -464,12 +540,200 @@ body {
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scale: 1.03;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    width: 143.75vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 70px 0px 70px;
+    background-color: var(--background);
+    color: #000;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.footer-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.footer-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: right;
+}
+
+.footer-right h2 {
+    font-size: 55px;
+    font-weight: bold;
+    text-align: end;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-links li {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.form-input {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 71.3%;
+}
+
+.input {
+    width: 60%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    background-color: var(--background);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-policies {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-policies a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.btn-footer {
+    padding: 15px 20px;
+    background-color: var(--background);
+    color: black;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.btn-footer:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+input{
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color:rgb(255, 228, 200);
+    
+}
+
+
+.footer-left a:hover {
+    border-bottom: 2px solid var(--primary); 
+}
+
+.footer-bottom a:hover {
+    border-bottom: 2px solid black; 
+}
+
+.btn-save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    border: 2px solid var(--primary);
+    background-color: var(--background); 
+    color: black; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Varela Round";
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.input1,
+.input2{
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+.input1{
+  width: 38%;
+}
+
+.input2{
+  width: 62%;
 }

@@ -52,7 +52,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
         <div class="nav-profile">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#Eventos">Eventos</a></li>
-                <li class="nav-item"><a href="#Organizadores">Organizadores</a></li>
+                <li class="nav-item"><a href="listadoOrganizadores.html">Organizadores</a></li>
                 <li><button class="btn-profile"><img src="./img/img_userProfile/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
             </ul>
         </div>
