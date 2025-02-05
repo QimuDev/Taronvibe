@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/login/TaronvibeLogo.png" type="image/png">
+    <link rel="stylesheet" href="css/login/signUpSignIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Happy+Monkey&family=Lora:ital,wght@0,400..700;1,400..700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <div class="loginPage">
+        <nav class="navBar">
+            <a href=""><div class="navBarImg"></div>Inicio</a>
+        </nav>
+        <div class="mainContainer">
+            <div class="logoContainer">
+                <div class="imgContainer"></div>
+                <div class="textContainer"></div>
+            </div>
+            <form class="loginContainer" id="loginForm" action="php/register.php" method="POST">
+                <div class="loginContainer1">
+                    <h1>Hola ;)</h1>
+                    <p>Completa tus datos para registrarte.</p>
+                    <input type="text" name="name" id="name" placeholder="Nombre">
+                    <div class="loginContainerInputs">
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                        <input type="text" name="postaCode" id="postalCode" placeholder="Codigo Postal">
+                        <input type="text" name="birthDate" id="birthDate" placeholder="Fecha de nacimiento">
+                    </div>
+
+                    <div class="loginContainerInputs2">
+                        <div class="terms">
+                            <input type="checkbox"><p>He leido y acepto la <span>Política de Privacidad</span></p>
+                        </div>
+                        <button type="submit" id="signUp">Registrar</button>
+                    </div>
+                </div>
+                <div class="loginContainer2">  
+                    <a href="signIn.html">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/signInSignUp.js"></script>
+</body>
+</html>

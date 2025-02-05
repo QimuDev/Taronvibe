@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Iniciar la animación automática
-    let interval = setInterval(nextSlide, 5000);
+    let interval = setInterval(nextSlide, 3000);
 
     // Detener animación cuando el mouse entra
     carousel.addEventListener('mouseenter', () => clearInterval(interval));
 
     // Reanudar animación cuando el mouse sale
     carousel.addEventListener('mouseleave', () => {
-        interval = setInterval(nextSlide, 6000);
+        interval = setInterval(nextSlide, 3000);
     });
 });
 

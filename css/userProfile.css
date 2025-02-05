@@ -1,0 +1,595 @@
+:root {
+    --primary: #ff9f21;
+    --seconday: #ffcd5f;
+    --brown:  #d07a52;
+    --brownSecondary: #f0a26b;
+    --background: #fffdd0;
+    --botones: #e84954;
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  html{
+    animation: fadeIn 1s ease-in-out;
+  }
+
+/* General */
+@font-face {
+    font-family: 'Varela Round';
+    src: url('../fonts/VarelaRound-Regular.ttf') format('woff2'),
+         url('../fonts/VarelaRound-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    background-color: var(--background);
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
+    width: 100vw;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    position:fixed;
+    top:0;
+    z-index:10; 
+}
+
+.nav-logo img {
+    height: 60px;
+    margin-left: 68px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-item a {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.nav-item a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: var(--primary);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    width: 100%;
+}
+
+.mobile-nav .nav-list {
+    flex-direction: column;
+}
+
+.mobile-nav .nav-item {
+    margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-profile {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #FF7700;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-top: 140px;
+    padding: 20px 0px;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 50s linear infinite;
+}
+
+.marquee span {
+    display: inline-block;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 70px 0px 70px;
+    background-color: var(--background);
+    color: #000;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.footer-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.footer-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: right;
+}
+
+.footer-right h2 {
+    font-size: 55px;
+    font-weight: bold;
+    text-align: end;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-links li {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.form-input {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 71.3%;
+}
+
+.input {
+    width: 60%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    background-color: var(--background);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-policies {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-policies a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.btn-footer {
+    padding: 15px 20px;
+    background-color: var(--background);
+    color: black;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+.btn-footer:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+input{
+    transition: background-color 0.3s ease;
+}
+
+input:hover{
+    background-color:rgb(255, 228, 200);
+    
+}
+
+
+.footer-left a:hover {
+    border-bottom: 2px solid var(--primary); 
+}
+
+.footer-bottom a:hover {
+    border-bottom: 2px solid black; 
+}
+
+.btn-save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    border: 2px solid var(--primary);
+    background-color: var(--background); 
+    color: black; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Varela Round";
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-family:"Varela Round"; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.btn-profile img {
+    height: 20px;
+    width: 20px;
+}
+
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 91%;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top:1.9rem;
+    width: 40%;
+    flex-direction: column;
+    margin-right:12rem;
+}
+
+.profile-details h2 {
+    font-family: "Baloo Tamma 2";
+    font-size: 50px;
+    font-weight: bold;
+    color: #000;
+    margin:0;
+}
+
+.profile-icons {
+    display: flex;
+    gap: 40px;
+    margin-left:0.7rem;
+    margin-top:2rem;   
+    margin-bottom:2rem;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ff6600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin:0.5rem;
+}
+
+.edit-button {
+    display: flex;
+    align-items: center;
+}
+
+.btn-edit img {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-edit:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+
+/* BOTON CAMBIO */
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 60px;
+    position: relative;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 34px;
+    overflow: hidden;
+}
+
+.option {
+    flex: 1;
+    padding: 8px 0;
+    border: none;
+    background: none;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.slider {
+    position: absolute;
+    height: 75%;
+    width: 46.5%;
+    background-color: var(--primary);
+    border-radius: 32px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    left: 8px;
+}
+
+.wrapper .option.active {
+    color: white;
+}
+
+.wrapper-container {
+    align-items: center;
+    gap: 50px;
+    width: 89%;
+    margin: 0 auto;
+}
+
+.wrapper-container h1 {
+    font-family: "Baloo Tamma 2";
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+
+/* EVENTOS */
+/* EVENTOS */
+.container {
+    margin-top: 5rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(3, auto); /* 3 filas */
+    gap: 1rem;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card img {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Mantener proporción 1:1 */
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-body {
+    background-color: #fffdd0;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.card-text {
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+.price {
+    font-weight: bold;
+}
+
+h5{
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.event-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* PAGINACION */
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--secondary);
+    color: var(--text-color);
+    font-family: "Varela Round";
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page.active {
+    background-color: var(--primary);
+    color:white;
+}
+
+.page:hover {
+    background-color: var(--primary);
+    color:white;
+}
+
+.dots {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.nav-list{
+    margin-right:5.5rem;
+  }
