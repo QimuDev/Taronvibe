@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- dimensiones pantalla 1280 x 768 px -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <img src="./img/img-eventos/logo.png">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Organizadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link inicio" href="#">
+                            <img src="./img/img-eventos/inicio.png" alt="Icono de grupo" class="icono-grupo"> Iniciar
+                            sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contenedor">
+        <div class="imagen">
+            <img src="./img/img-eventos/event1.png" class="img-fluid">
+        </div>
+        <div class="texto">
+            <div class="icon-container">
+                <img src="./img/img-eventos/principal.svg" alt="Icono Normal" class="icon-normal">
+                <img src="./img/img-eventos/hover.svg" alt="Icono Relleno" class="icon-relleno">
+            </div>
+            <h1 class="titulo">Nombre del evento</h1>
+
+            <div class="descripcion">
+                <a href="#">Ubicacion del evento</a>
+                <p>26/04/2025</p>
+            </div>
+
+            <div class="iconos">
+                <img src="./img/img-eventos/icono.png">
+                <img src="./img/img-eventos/icono.png">
+                <img src="./img/img-eventos/icono.png">
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur aliquid repellat veniam eos
+                ipsam nobis, ducimus voluptates doloribus repudiandae? Distinctio illo, inventore officiis nulla quo vero
+                quisquam veniam fuga.</p>
+
+            <div class="boton-container">
+                <a href="#" class="btn-custom btn-event">Asistir al evento</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapa">
+        <div class="contenedor-mapa">
+            <h1 class="titulo">Descubre dónde es el evento</h1>
+            <img src="./img/img-eventos/map.png">
+        </div>
+    </section>
+
+    <section class="organizador">
+        <div class="contenedor-organizador">
+            <h1 class="titulo">Conoce al organizador</h1>
+
+            <div class="organizador-element">
+                <div class="organizador-img">
+                    <img src="./img/img-eventos/perfil.png" class="profile-img">
+                </div>
+
+                <div class="organizador-info">
+                    <p class="title-org">Nombre del organizador</p>
+                    <p class="text-org">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae mollitia
+                        praesentium saepe,
+                        corporis
+                        provident aliquid magnam exercitationem soluta nulla, placeat eum esse animi ex itaque aliquam
+                        amet
+                        recusandae! Provident, ratione?</p>
+                </div>
+
+                <div class="boton-container">
+                    <a href="#" class="btn-custom">Otros eventos del organizador</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="seccion-eventos">
+            <div class="title-eventos">
+                <h1 class="titulo">Eventos relacionados</h1>
+            </div>
+
+            <div class="img-eventos">
+                <img src="./img/img-eventos/img-eventos.png">
+                <img src="./img/img-eventos/img-eventos.png">
+                <img src="./img/img-eventos/img-eventos.png">
+                <img src="./img/img-eventos/img-eventos.png">
+            </div>
+            <div class="descripcion-eventos">
+                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quod aliquid ipsa exercitationem.
+                </h1>
+            </div>
+            <div class="scroll-text">
+                <span>Una super frase animada scrolling non stop . </span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="./img/login/taronvibeLogo.png" alt="Logo TaronVibe" class="logo">
+                <ul class="footer-links">
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Organizadores</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+                <div class="footer-social">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h1 class="titulo">Únete a nuestra newsletter</h1>
+                <form class="newsletter-form">
+                    <div class="form-input">
+                        <input type="text" placeholder="Nombre" class="input">
+                        <input type="email" placeholder="Correo electrónico" class="input">
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="btn-custom">Suscríbete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2025 - TARONVIBE</p>
+            <ul class="footer-policies">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+                <li><a href="#">Aviso Legal</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
