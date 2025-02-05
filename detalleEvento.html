@@ -9,31 +9,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preload" href="css/styles.css" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Happy+Monkey&family=Lora:ital,wght@0,400..700;1,400..700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Varela+Round&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- dimensiones pantalla 1280 x 768 px -->
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <img src="./img/img-eventos/logo.png">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Organizadores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link inicio" href="#">
-                            <img src="./img/img-eventos/inicio.png" alt="Icono de grupo" class="icono-grupo"> Iniciar
-                            sesión</a>
-                    </li>
-                </ul>
-            </div>
+    <nav>
+        <div class="nav-logo">
+          <a href="main.html">
+              <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
+          </a>
+      </div>
+        <div class="nav-profile">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="listadoEventos.php">Eventos</a></li>
+            <li class="nav-item"><a href="listadoOrganizadores.php">Organizadores</a></li>
+            <li>
+              <a href="userProfile.php">
+                  <button class="btn-profile">
+                      <img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil
+                  </button>
+              </a>
+          </li>
+          </ul>
         </div>
-    </nav>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
 
     <section class="contenedor">
         <div class="imagen">
@@ -116,50 +121,65 @@
                 <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quod aliquid ipsa exercitationem.
                 </h1>
             </div>
-            <div class="scroll-text">
-                <span>Una super frase animada scrolling non stop . </span>
-            </div>
+            <div class="marquee-container2">
+                <div class="marquee">
+                  <span
+                    >Descubre, disfruta y repite
+                    &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y
+                    repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre,
+                    disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;
+                    Descubre, disfruta y repite</span
+                  >
+                </div>
+              </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-left">
-                <img src="./img/login/taronvibeLogo.png" alt="Logo TaronVibe" class="logo">
-                <ul class="footer-links">
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Organizadores</a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
-                </ul>
-                <div class="footer-social">
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                </div>
+          <div class="footer-left">
+            <img
+              src="img\login\TaronvibeLogo+.png"
+              alt="Logo TaronVibe"
+              class="logo"
+            />
+            <ul class="footer-links">
+              <li><a href="listadoEventos.php">Eventos</a></li>
+              <li><a href="listadoOrganizadores.php">Organizadores</a></li>
+              <li><a href="signIn.html">Iniciar sesión</a></li>
+            </ul>
+            <div class="footer-social">
+              <span class="circle"></span>
+              <span class="circle"></span>
+              <span class="circle"></span>
             </div>
-
-            <div class="footer-right">
-                <h1 class="titulo">Únete a nuestra newsletter</h1>
-                <form class="newsletter-form">
-                    <div class="form-input">
-                        <input type="text" placeholder="Nombre" class="input">
-                        <input type="email" placeholder="Correo electrónico" class="input">
-                    </div>
-                    <div class="form-btn">
-                        <button type="submit" class="btn-custom">Suscríbete</button>
-                    </div>
-                </form>
-            </div>
+          </div>
+          <div class="footer-right">
+            <h2>Únete a nuestra newsletter</h2>
+            <form class="newsletter-form">
+              <div class="form-input">
+                <input type="text" placeholder="Nombre" class="input1" />
+                <input
+                  type="email"
+                  placeholder="Correo electrónico"
+                  class="input2"
+                />
+              </div>
+              <div class="form-btn">
+                <button type="submit" class="btn-footer">Suscribete</button>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="footer-bottom">
-            <p>Copyright © 2025 - TARONVIBE</p>
-            <ul class="footer-policies">
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Cookies</a></li>
-                <li><a href="#">Aviso Legal</a></li>
-            </ul>
+          <p>Copyright © 2025 - TARONVIBE</p>
+          <ul class="footer-policies">
+            <li><a href="politicas.html">Política de Privacidad</a></li>
+            <li><a href="cookies.html">Política de Cookies</a></li>
+            <li><a href="#">Aviso Legal</a></li>
+          </ul>
         </div>
-    </footer>
+      </footer>
 </body>
 
 </html>
