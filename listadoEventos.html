@@ -1,10 +1,26 @@
+<!-- <?php
+require_once('./php/configuration.php');
+
+$sql = 'SELECT name_org AS nombre, image_org AS imagen FROM organizer';
+
+$result = $conn->query($sql);
+$lista = "";
+if($result -> num_rows > 0) {
+    $lista = "<ul class='ulOrg'>";
+    while ($row = $result -> fetch_assoc()){
+        $lista .= "<li><img src=.".$row['imagen']." loading='lazy' alt=".$row['nombre']." class='imgOrg'>".$row['nombre']."</li>";
+    }
+    $lista .= "</ul>";
+}
+
+?> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista organizadores</title>
-    <link rel="stylesheet" href="./css/listadoOrganizadores.css" />
+    <link rel="stylesheet" href="./css/listadoEventos.css" />
   </head>
 
   <body>
@@ -16,18 +32,22 @@
         <div class="items">
           <p>Eventos</p>
           <p>Organizadores</p>
-          <p><img src="./img/main/icons/iniciosesi.svg" alt="inicio-sesion">Iniciar sesión</p>
+          <p>
+            <img
+              src="./img/main/icons/iniciosesi.svg"
+              alt="inicio-sesion"
+            />Iniciar sesión
+          </p>
         </div>
       </nav>
     </section>
     <section>
-        <div class="descubre">
-            <h1 class="texto">Descubre nuestros <br>eventos ;)</h1>
-            <img src="./img/listadoOrg/text.png" alt="ola" class="ola">
-        </div>
+      <div class="descubre">
+        <h1 class="texto">Descubre nuestros <br />eventos ;)</h1>
+        <img src="./img/listadoOrg/text.png" alt="ola" class="ola" />
+      </div>
     </section>
 
-    
     <div class="marquee-container">
       <div class="marquee">
         <span
@@ -53,138 +73,232 @@
         />
       </div>
     </div>
-    
-        <!-- <?=$lista?> -->
-        <section>
-            <div class="galery-container">
-                <div class="img-container">
-                    <!-- Tarjeta ejemplo - repetir estructura -->
-                    <div class="card">
-                        <div class="galery-image a">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-        
-                    <!-- Repetir para todas las imágenes -->
-                    <div class="card">
-                        <div class="galery-image b">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- ... resto de las tarjetas con misma estructura ... -->
-                    <div class="card">
-                        <div class="galery-image c">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
 
-
-
-                    <div class="card">
-                        <div class="galery-image d">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="card">
-                        <div class="galery-image e">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-
-                    <div class="card">
-                        <div class="galery-image f">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-
-                    <div class="card">
-                        <div class="galery-image g">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-
-                    <div class="card">
-                        <div class="galery-image h">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="galery-image i">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-                    <div class="card">
-                        <div class="galery-image j">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-                    <div class="card">
-                        <div class="galery-image k">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-
-
-                    <div class="card">
-                        <div class="galery-image l">
-                            <div class="contenido-container"></div>
-                        </div>
-                        <div class="texto-container">
-                            <h3>Nombre del evento</h3>
-                        </div>
-                    </div>
-                </div>
+    <!-- <?=$lista?> -->
+    <section>
+      <div class="galery-container">
+        <div class="img-container">
+          <!-- Tarjeta ejemplo - repetir estructura -->
+          <div class="card">
+            <div class="galery-image a">
+              <div class="contenido-container"></div>
             </div>
-        </section>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Repetir para todas las imágenes -->
+          <div class="card">
+            <div class="galery-image b">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ... resto de las tarjetas con misma estructura ... -->
+          <div class="card">
+            <div class="galery-image c">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image d">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image e">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image f">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image g">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image h">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image i">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image j">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image k">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="galery-image l">
+              <div class="contenido-container"></div>
+            </div>
+            <div class="texto-container">
+              <ul>
+                <li class="nombre-evento">Nombre del evento</li>
+                <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
+                <li>Fecha del evento</li>
+                <li class="imagenes-contenido">
+                  <img src="./img/main/icons/oso.svg" alt="oso" />
+                  <img src="./img/main/icons/arbol.svg" alt="arbol" />
+                  <img src="./img/main/icons/libro.svg" alt="libro" />
+                </li>
+              </ul>
+            </div>
+          </div>    
+        </div>
+      </div>
+    </section>
 
     <div class="marquee-container">
       <div class="marquee">

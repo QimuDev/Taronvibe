@@ -15,6 +15,7 @@ body {
     margin: 0;
     font-family: 'Varela Round', sans-serif;
     background-color: var(--background);
+    overflow-x: hidden;
 }
 
 .nav-container {
@@ -226,10 +227,17 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
-.card:hover .texto-container{
+.card:hover .nombre-evento {
+    text-decoration: underline;
+}
+.ubicacion-evento a{
+text-decoration: none;
+color:blue;
+}
+.ubicacion-evento:hover{
     text-decoration: underline;
     
 }
@@ -238,7 +246,7 @@ body {
     position: relative;
     height: 17rem;
     width: 17rem;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden; 
     cursor: pointer;
     background: rgb(0, 0, 0, 0.5);
@@ -264,9 +272,30 @@ body {
     cursor: pointer;
     transition: transform 1s ease-in;
 }
+.texto-container ul {
+    list-style-type: none;
+    padding-left: 0;
+   }
+   
+   .texto-container li{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: black;
+     text-decoration: none;
+     list-style: none;
+   }
 
-
-
+   .imagenes-contenido img {
+    width: 30px; 
+    height: 30px;
+    margin: 10px 5px; 
+  }
+  
+  .contenido li .imagenes-contenido {
+    width: 50px;
+    height: 10px;
+  }
 .texto-container h3 {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
@@ -293,18 +322,54 @@ body {
 }
 
 
-.galery-image.a { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.b { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.c { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.d { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.e { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.f { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.g { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.h { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.i { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.j { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.k { background-image: url("../img/listadoOrg/Fondoimg.png"); }
-.galery-image.l { background-image: url("../img/listadoOrg/Fondoimg.png"); }
+.galery-image.a {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.b {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.c {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.d {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.e {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.f {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.g {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.h {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.i {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.j {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.k {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.l {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
   /* FIN DE LA GALERIA DE IMAGENES */
 
 
