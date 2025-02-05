@@ -306,7 +306,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto; 
 }
 
 .toggle-wrapper {
@@ -321,6 +320,7 @@ body {
   border-radius: 34px;
   overflow: hidden;
   padding: 2px;
+  margin-left:4.3rem;
 }
 
 
@@ -367,7 +367,7 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin: 5rem;
+  margin-top: 5rem;
 }
 
 
@@ -376,13 +376,14 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
+  margin-bottom:2.3rem;
 }
 
 /* Contenedor de cada imagen */
 .galery-image {
   position: relative;
-  height: 17rem;
-  width: 17rem;
+  height: 20rem;
+  width: 20rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1254,6 +1255,7 @@ input:hover{
 }
 
 .wrapper-text h3{
+  display:inline;
   font-size:53px;
 }
 
