@@ -105,6 +105,7 @@ html {
   background: none;
   border-radius: 50px;
   padding: 1rem;
+  margin-top:6rem;
 }
 
 .slide-image {
@@ -560,13 +561,13 @@ html {
   width: 400px;
   animation: slide 10s linear infinite;
   height: auto;
+  padding:2rem;
 }
 
 .comment img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin: 1rem;
   object-fit: cover;
 }
 
@@ -575,14 +576,14 @@ html {
   color: black;
   font-weight: bold;
   text-align: start;
-  margin-left:1rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
 }
 
 .comment p {
   font-size: 0.9rem;
   color: #555;
   text-align: start;
-  margin: 1rem;
 }
 
 /* Animación para movimiento infinito */
@@ -668,11 +669,14 @@ html {
   text-align: center;
 }
 .title-prox {
-  font-family: "Varela Round", serif;
-  font-weight: 700;
+  font-family: "Baloo Tamma 2";
+  font-weight: 900;
+  font-size:41px;
   text-align: center;
   padding: 3rem;
   color: var(--background);
+  margin-top:1rem;
+  margin-bottom:1rem;
 }
 
 .proximos {
@@ -712,17 +716,21 @@ html {
 }
 
 .contenido-prox p {
-  font-family: "Varela Round", serif;
-  font-weight: 400;
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 32px;
   width: 50rem;
   color: var(--background);
+  margin-top:2.5rem;  
   margin-left: 2rem;
+  margin-right:20rem; 
+  margin-bottom: 2.5rem;  
 }
 
 .btn-prox {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  align-items: center;
   text-align: center;
 }
 
@@ -744,7 +752,6 @@ html {
   color: var(--background);
   border: solid var(--background) 2px;
 }
-
 
 
 /* Sección de Información */
@@ -902,11 +909,14 @@ nav {
   font-family: "Baloo Tamma 2";
   font-size: 19px;
   height: 12vh;
-  width: 94.9vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background);
+  position:fixed;
+  top:0;
+  z-index:10; 
 }
 
 .nav-logo img {
@@ -1253,4 +1263,8 @@ input:hover{
 .galery-button button{
   font-family: "Baloo Tamma 2";
   font-weight: 800;
+}
+
+.nav-list{
+  margin-right:5.5rem;
 }

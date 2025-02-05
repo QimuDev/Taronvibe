@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['name'] = $row['name'];
             $_SESSION['rol'] = $row['rol'];
 
-            header("Location: ../main.php");
+            header("Location: ../main.html");
             exit();
         } else {
             echo "<script>alert('Correo o contraseña incorrectos'); window.location.href='../signIn.html';</script>";

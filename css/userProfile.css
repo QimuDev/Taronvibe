@@ -44,12 +44,15 @@ nav {
     font-family: "Baloo Tamma 2";
     font-size: 19px;
     height: 12vh;
-    width: 94.9vw;
+    width: 100vw;
     margin-bottom: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
+    position:fixed;
+    top:0;
+    z-index:10; 
 }
 
 .nav-logo img {
@@ -148,7 +151,7 @@ nav {
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 90s linear infinite;
+    animation: marquee 50s linear infinite;
 }
 
 .marquee span {
@@ -362,6 +365,7 @@ input:hover{
     align-items: start;
     width: 91%;
     margin: 0 auto;
+    margin-top: 7rem;
 }
 
 .profile-image img {
@@ -585,3 +589,7 @@ h5{
     font-weight: bold;
     color: var(--primary);
 }
+
+.nav-list{
+    margin-right:5.5rem;
+  }
