@@ -220,6 +220,7 @@ body {
 
 .card:hover .galery-image{
     opacity: 0.5 ;
+    background: rgba(0, 0, 0, 0.1);
 
 }
 
@@ -235,6 +236,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     opacity: 1;
+    background: rgba(0, 0, 0, 0);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease,opacity 0.3s ease-in;
     background-size: cover;
@@ -301,12 +303,6 @@ body {
 .galery-image.l { background-image: url("../img/listadoOrg/Fondoimg.png"); }
   /* FIN DE LA GALERIA DE IMAGENES */
 
-.lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-}
 
 .ulOrg {
     display: flex;
@@ -341,6 +337,9 @@ body {
     text-decoration-line: underline;
 }
 
+
+
+/* INICIO DEL FOOTER */
 
 .footer {
     display: flex;
