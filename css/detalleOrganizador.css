@@ -7,6 +7,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: text;
+    src: url('../fonts/Varela_Round/VarelaRound-Regular.ttf');
+}
+
 :root {
     --primary: #ff9f21;
     --seconday: #ffcd5f;
@@ -104,6 +109,264 @@ nav {
 .btn-profile:hover .profile-icon {
     filter: brightness(0) invert(1);
 }
+
+/* Contenedor info organizador*/
+.contenedor {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    padding: 6rem 2rem;
+}
+
+.imagen {
+    flex-basis: 40%;
+    margin: 20px;
+}
+
+.imagen img {
+    border-radius: 2rem;
+    width: 50rem;
+    height: 45rem;
+}
+
+.img-fluid {
+    height: auto;
+}
+
+.texto {
+    margin-left: 5rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+
+.nombreOrganizador {
+    font-size: 60px;
+    font-family: title;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+
+.info a{
+    margin-top: 0;
+    text-decoration: none;
+    font-family: text;
+}
+
+.info p{
+    width: 50%;
+    margin-top: 40px;
+}
+
+/*Sección eventos*/
+
+.eventos-container {
+    margin: 4rem 4rem;
+}
+
+.eventos-container h1{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/*Parte eventos*/
+/* INICIO DE LA GALERIA DE IMAGENES */
+.card {
+    width: 17rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover .galery-image::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.card:hover .nombre-evento {
+    text-decoration: underline;
+}
+.ubicacion-evento a{
+text-decoration: none;
+color:blue;
+}
+.ubicacion-evento:hover{
+    text-decoration: underline;
+    
+}
+
+.galery-image {
+    position: relative;
+    height: 17rem;
+    width: 17rem;
+    border-radius: 20px;
+    overflow: hidden; 
+    cursor: pointer;
+    background: rgb(0, 0, 0, 0.5);
+    transition: transform 0.3s ease,opacity 0.3s ease-in;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+.contenido-container {
+    display: none; 
+}
+
+.texto-container {
+    text-align: center;
+    padding: 1rem;
+    width: 88%;
+    font-family: "varela round", serif;
+    font-weight: 900;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 1s ease-in;
+}
+.texto-container ul {
+    list-style-type: none;
+    padding-left: 0;
+   }
+   
+   .texto-container li{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: black;
+     text-decoration: none;
+     list-style: none;
+   }
+
+   .imagenes-contenido img {
+    width: 30px; 
+    height: 30px;
+    margin: 10px 5px; 
+  }
+  
+  .contenido li .imagenes-contenido {
+    width: 50px;
+    height: 10px;
+  }
+.texto-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto-container p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mantener grid original */
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galery-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+
+.galery-image.a {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.b {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.c {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.d {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.e {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.f {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.g {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.h {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.i {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.j {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.k {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.l {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  /* FIN DE LA GALERIA DE IMAGENES */
+
+
+.ulOrg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 7rem;
+}
+
+.ulOrg li {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.imgOrg {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+}
+
+.ulOrg li:hover .imgOrg {
+    transition: transform 0.3s;
+    filter: brightness(0.9);
+}
+
+.ulOrg li:hover {
+    text-decoration-line: underline;
+}
+
+
 
 /*Marquee*/
 
