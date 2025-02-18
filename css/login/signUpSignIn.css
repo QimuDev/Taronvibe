@@ -86,7 +86,7 @@ body {
 }
 
 .logoContainer{
-  height: 75vh;
+  height: 60vh;
   width: 40%;
   display: flex;
   justify-content: center;
@@ -118,7 +118,7 @@ body {
 }
 
 .loginContainer {
-  height: 75vh;
+  height: 70vh;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -129,16 +129,17 @@ body {
 }
 
 .loginContainer1 {
-  height: 100%;
+  height: 75%;
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
+  gap:1.2rem;
 }
 
 .loginContainer1 h1 {
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
   font-family: "Baloo Tamma 2";
   font-size: 58px;
   font-weight: 800;
@@ -149,6 +150,14 @@ body {
   border: 2px solid #ff9f21;
   border-radius: 2rem;
   font-family: "Varela Round";
+}
+
+.loginContainer1 input::placeholder{
+  color:#1c1c1c;
+}
+
+.loginContainer1 p{
+  margin:0;
 }
 
 .formButton {
@@ -192,12 +201,12 @@ body {
 .loginContainer a {
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
 }
 
 .loginContainer a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 /* SIGN IN */
@@ -281,4 +290,27 @@ input{
 
 input:hover{
   background-color: rgb(255, 228, 200);
+}
+
+.loginContainerFix{
+  height: 75vh;
+}
+
+.loginContainerFix p{
+ margin-bottom:0.8rem; 
+
+}
+
+.loginContainer1Fix{
+  gap:0.5rem;
+}
+
+.loginContainer2Fix{
+  margin-top:2rem;
+}
+
+.termsFix p{
+  margin-top:0.8rem;
+  margin-left:0.45rem;  
+
 }
