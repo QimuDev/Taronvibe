@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once('./php/configuration.php');
 
 $sql = 'SELECT name_org AS nombre, image_org AS imagen FROM organizer';
@@ -13,33 +13,44 @@ if($result -> num_rows > 0) {
     $lista .= "</ul>";
 }
 
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista organizadores</title>
+    <link rel="icon" href="img/login/taronvibeLogo.png" type="image/png" />
+    <title>Lista Eventos</title>
     <link rel="stylesheet" href="./css/listadoEventos.css" />
   </head>
 
   <body>
     <section class="nav-container">
-      <nav class="items-container">
-        <div class="logo-nav">
-          <img src="./img/listadoOrg/taronvibeLogo.png" alt="logo-taronvibe" />
-        </div>
-        <div class="items">
-          <p>Eventos</p>
-          <p>Organizadores</p>
-          <p>
-            <img
-              src="./img/main/icons/iniciosesi.svg"
-              alt="inicio-sesion"
-            />Iniciar sesión
-          </p>
-        </div>
-      </nav>
+    <nav>
+      <div class="nav-logo">
+        <a href="main.html">
+            <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
+        </a>
+    </div>
+      <div class="nav-profile">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="listadoEventos.php">Eventos</a></li>
+          <li class="nav-item"><a href="listadoOrganizadores.php">Organizadores</a></li>
+          <li>
+            <a href="userProfile.php">
+                <button class="btn-profile">
+                    <img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil
+                </button>
+            </a>
+        </li>
+        </ul>
+      </div>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
     </section>
     <section>
       <div class="descubre">
@@ -48,14 +59,15 @@ if($result -> num_rows > 0) {
       </div>
     </section>
 
-    <div class="marquee-container">
+    <div class="marquee-container1">
       <div class="marquee">
         <span
-          >Una súper frase animada scrolling non stop, Una súper frase animada
-          non stop, Una súper frase animada scrolling non stop, Una súper frase
-          animada non stop, Una súper frase animada scrolling non stop, Una
-          súper frase animada non stop,
-        </span>
+          >Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y
+          repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre,
+          disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;
+          Descubre, disfruta y repite</span
+        >
       </div>
     </div>
     <div class="searchbar-container">
@@ -300,14 +312,15 @@ if($result -> num_rows > 0) {
       </div>
     </section>
 
-    <div class="marquee-container">
+    <div class="marquee-container1">
       <div class="marquee">
         <span
-          >Una súper frase animada scrolling non stop, Una súper frase animada
-          non stop, Una súper frase animada scrolling non stop, Una súper frase
-          animada non stop, Una súper frase animada scrolling non stop, Una
-          súper frase animada non stop,
-        </span>
+          >Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y
+          repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre,
+          disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;
+          Descubre, disfruta y repite</span
+        >
       </div>
     </div>
 
@@ -315,14 +328,14 @@ if($result -> num_rows > 0) {
       <div class="footer-container">
         <div class="footer-left">
           <img
-            src="./img/listadoOrg/taronvibeLogo.png"
+            src="img\login\TaronvibeLogo+.png"
             alt="Logo TaronVibe"
             class="logo"
           />
           <ul class="footer-links">
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Organizadores</a></li>
-            <li><a href="#">Iniciar sesión</a></li>
+            <li><a href="listadoEventos.php">Eventos</a></li>
+            <li><a href="listadoOrganizadores.php">Organizadores</a></li>
+            <li><a href="signIn.html">Iniciar sesión</a></li>
           </ul>
           <div class="footer-social">
             <span class="circle"></span>
@@ -334,11 +347,11 @@ if($result -> num_rows > 0) {
           <h2>Únete a nuestra newsletter</h2>
           <form class="newsletter-form">
             <div class="form-input">
-              <input type="text" placeholder="Nombre" class="input" />
+              <input type="text" placeholder="Nombre" class="input1" />
               <input
                 type="email"
                 placeholder="Correo electrónico"
-                class="input"
+                class="input2"
               />
             </div>
             <div class="form-btn">
@@ -350,8 +363,8 @@ if($result -> num_rows > 0) {
       <div class="footer-bottom">
         <p>Copyright © 2025 - TARONVIBE</p>
         <ul class="footer-policies">
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Política de Cookies</a></li>
+          <li><a href="politicas.html">Política de Privacidad</a></li>
+          <li><a href="cookies.html">Política de Cookies</a></li>
           <li><a href="#">Aviso Legal</a></li>
         </ul>
       </div>

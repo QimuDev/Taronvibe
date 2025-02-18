@@ -365,7 +365,7 @@ input:hover{
     align-items: start;
     width: 91%;
     margin: 0 auto;
-    margin-top: 7rem;
+    margin-top: 12rem;
 }
 
 .profile-image img {
@@ -593,3 +593,25 @@ h5{
 .nav-list{
     margin-right:5.5rem;
   }
+
+  
+a {
+    text-decoration:none; 
+  }
+
+  .input1,
+.input2{
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+.input1{
+  width: 38%;
+}
+
+.input2{
+  width: 62%;
+}

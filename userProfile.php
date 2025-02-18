@@ -44,13 +44,15 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
 <body>
     <!-- NAV MENÚ -->
     <nav>
-        <div class="nav-logo">
-            <img src="img\login\TaronvibeLogoNav.png" alt="Logo">
-        </div>
+    <div class="nav-logo">
+        <a href="main.html">
+            <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
+        </a>
+    </div>
         <div class="nav-profile">
             <ul class="nav-list">
-                <li class="nav-item"><a href="#Eventos">Eventos</a></li>
-                <li class="nav-item"><a href="#Organizadores">Organizadores</a></li>
+                <li class="nav-item"><a href="listadoEventos.php">Eventos</a></li>
+                <li class="nav-item"><a href="listadoOrganizadores.php">Organizadores</a></li>
                 <li><button class="btn-profile"><img src="./img/img_userProfile/Vector.svg" alt="svg perfil"> Mi Perfil</button></li>
             </ul>
         </div>
@@ -117,8 +119,8 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
             <div class="footer-left">
                 <img src="img\login\TaronvibeLogo+.png" alt="Logo TaronVibe" class="logo">
                 <ul class="footer-links">
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Organizadores</a></li>
+                    <li><a href="listadoEventos.php">Eventos</a></li>
+                    <li><a href="listadoOrganizadores.php">Organizadores</a></li>
                     <li><a href="signIn.html">Iniciar sesión</a></li>
                 </ul>
                 <div class="footer-social">
@@ -131,8 +133,8 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
                 <h2>Únete a nuestra newsletter</h2>
                 <form class="newsletter-form">
                     <div class="form-input">
-                        <input type="text" placeholder="Nombre" class="input">
-                        <input type="email" placeholder="Correo electrónico" class="input">
+                        <input type="text" placeholder="Nombre" class="input1">
+                        <input type="email" placeholder="Correo electrónico" class="input2">
                     </div>
                     <div class="form-btn">
                         <button type="submit" class="btn-footer">Suscribete</button>
@@ -143,8 +145,8 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
         <div class="footer-bottom">
             <p>Copyright © 2025 - TARONVIBE</p>
             <ul class="footer-policies">
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Cookies</a></li>
+                <li><a href="politicas.html">Política de Privacidad</a></li>
+                <li><a href="cookies.html">Política de Cookies</a></li>
                 <li><a href="#">Aviso Legal</a></li>
             </ul>
         </div>

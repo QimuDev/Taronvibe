@@ -11,14 +11,30 @@
     --nav: #ff7700;
   }
 
+  html{
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 body {
     margin: 0;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
     font-family: 'Varela Round', sans-serif;
     background-color: var(--background);
     overflow-x: hidden;
 }
 
 .nav-container {
+    width: 91%;
     display: flex;
     flex-direction:row;
     justify-content: center;
@@ -82,6 +98,7 @@ body {
     font-family: "baloo tamma 2", serif;
     font-weight: 900;
     margin: 5rem;
+    margin-top:13rem;
     padding-left: 2rem;
 }
 
@@ -135,38 +152,43 @@ body {
 }
 
 /* FIN SECCION DESCUBRE */
-.marquee-container {
+.marqueeContainer1{
+    margin-top:60px;
+  }
+  
+  .marquee-container1,
+  .marquee-container2 {
     width: 100%;
     overflow: hidden;
-    background-color: var(--primary);
+    background-color: #FF7700;
     white-space: nowrap;
     box-sizing: border-box;
-}
-
-.marquee {
+    padding: 20px 0px;
+  }
+  
+  .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 20s linear infinite;
-}
-
-.marquee span {
+    animation: marquee 50s linear infinite;
+  }
+  
+  
+  .marquee span {
     display: inline-block;
     color: #FFF;
-    font-family: "baloo tamma 2",serif;
-    font-weight: 800;
     font-size: 40px;
     font-weight: bold;
     line-height: 140%;
-}
-
-@keyframes marquee {
+  }
+  
+  @keyframes marquee {
     0% {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
-}
+  }
 
 .listOrgContainer {
     width: 90vw;
@@ -529,12 +551,155 @@ color:blue;
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-footer:hover {
     background-color: var(--primary);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scale: 1.03;
 }
+
+
+nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    position:fixed;
+    top:0;
+    z-index:10; 
+  }
+  
+  .nav-logo img {
+    height: 60px;
+    margin-left: 68px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .nav-item a {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+  
+  .nav-item a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+  }
+
+  .form-input {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 71.3%;
+  }
+  
+  .input1,
+  .input2{
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    background-color: var(--background);
+  }
+  
+  .input1{
+    width: 38%;
+  }
+  
+  .input2{
+    width: 62%;
+  }
+
+  .searchbar-container {
+    display: flex;
+    justify-content: flex-end; /* Cambiado de flex-end a flex-start */
+    width: 100%;
+    padding: 0 20px;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: start;
+    align-items: center; /* Mejor alineación vertical */
+    gap: 10px;
+    border: 3px solid var(--primary);
+    border-radius: 50px;
+    margin-top: 6rem;
+    margin-right:5rem;
+    padding-top:1.1rem; 
+    padding-bottom:1.1rem;
+    padding-left:0.9rem;    /* Reducido para evitar que crezca demasiado */
+    max-width: 600px;
+    width: 100%; /* Esto lo hace más adaptable */
+}
+
+.profile-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+  }
+  
+  .btn-profile img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .btn-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold; 
+    font-family:"Varela Round"; 
+    cursor: pointer; 
+  }
+  
+  
+  .btn-profile{
+    padding: 13px 20px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+.nav-logo{
+    margin-left:4.7rem;
+    margin-right:47rem;
+}
+
+.footer-left a:hover {
+    border-bottom: 2px solid var(--primary); 
+  }
+  
+  .footer-bottom a:hover {
+    border-bottom: 2px solid black; 
+  }
