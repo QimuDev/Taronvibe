@@ -22,7 +22,7 @@
     </nav> 
     <section class="contenedor">
         <div class="imagen">
-            <img src="./img/img-eventos/perfil.png" class="img-fluid">
+            <img src="./img/org/beWine.jpg" class="img-fluid">
         </div>
         <div class="texto">
             <h1 class="nombreOrganizador">Nombre del organizador</h1>
