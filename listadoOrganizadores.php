@@ -63,8 +63,90 @@ if ($result->num_rows > 0) {
     </section>
     <div class="marquee-container">
         <div class="marquee">
-            <span>Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite</span>
-        </div>
+        <span>
+          Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>        </div>
     </div>
     <div class="searchbar-container">
         <div class="searchbar">
@@ -81,13 +163,100 @@ if ($result->num_rows > 0) {
     </section>
     <div class="marquee-container">
         <div class="marquee">
-            <span>Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite</span>
-        </div>
+        <span>
+          Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>        </div>
     </div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
-                <img src="img\login\TaronvibeLogo+.png" alt="Logo TaronVibe" class="logo">
+            <img
+            src="img\login\TaronvibeLogoNav.png"
+            style="height: 3.9rem; width: 11.2rem;"
+            alt="Logo TaronVibe"
+            class="logo"
+          />
                 <ul class="footer-links">
                     <li><a href="listadoEventos.php">Eventos</a></li>
                     <li><a href="listadoOrganizadores.php">Organizadores</a></li>

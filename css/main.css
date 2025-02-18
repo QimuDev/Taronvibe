@@ -1368,3 +1368,12 @@ h3{
   left: 48.5rem;
 }
 
+
+input::placeholder{
+  color: #1c1c1c;
+}
+
+
+.footer-bottom a:hover {
+  border-bottom: 1px solid black; 
+}

@@ -278,7 +278,7 @@
   .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 50s linear infinite;
+    animation: marquee 180s linear infinite;
   }
   
   .marquee span {
@@ -477,5 +477,31 @@
   width: 53%;
 }
 
-.input2{
+.footer-container {
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+input::placeholder{
+  color: #1c1c1c;
+}
+
+
+.footer-bottom a:hover {
+  border-bottom: 1px solid black; 
 }

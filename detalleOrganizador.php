@@ -272,8 +272,91 @@
     </section>
     <div class="marquee-container">
         <div class="marquee">
-            <span>Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, Una súper frase animada scrolling non stop, Una súper frase animada non stop, </span>
-        </div>
+        <span>
+          Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="img\login\TaronvibeLogoNav.png"
+            style="height: 3.9rem; width: 11.2rem;"
+            alt="Logo TaronVibe"
+            class="logo"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </span>        </div>
     </div>
     <footer class="footer">
         <div class="footer-container">
