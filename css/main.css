@@ -120,15 +120,19 @@ body {
 }
 
 .slide-image {
+  position: relative;
   width: 27rem;
   height: 27rem;
+  margin-top: 8rem;
 }
 
 .slide-image img {
-  width: 100%;        /* Ajusta el ancho al 100% del contenedor */
-  height: 100%;       /* Ajusta la altura al 100% del contenedor */
-  object-fit: cover;  /* Ajusta la imagen para cubrir el área sin distorsión */
+  width: 100%;        
+  position: relative;
+  height: 100%;       
+  object-fit: cover;  
   transition: opacity 1s ease-in-out;
+  border-radius: 38px;
 }
 
 /* Imagen */
@@ -1287,8 +1291,18 @@ input:hover{
 
 .slide-image {
   position: relative;
+  width: 27rem;
+  height: 27rem;
 }
 
+.slide-image img {
+  width: 100%;        
+  position: relative;
+  height: 100%;       
+  object-fit: cover;  
+  transition: opacity 1s ease-in-out;
+  border-radius: 38px;
+}
 
 .gotasContainer {
   position: absolute;  /* Esto saca el div de su flujo normal */
