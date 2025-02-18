@@ -89,32 +89,50 @@ body {
 }
 
 .carousel {
+  position: relative;
   height: 100vh;
+  width: 100%;
   display: flex;
   transition: transform 2s ease;
   overflow: visible;
 }
 
 .slide {
-  flex: 0 0 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background: none;
   border-radius: 50px;
   padding: 1rem;
-  margin-top:6rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(0.95);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .slide-image {
+  position: relative;
   width: 27rem;
   height: 27rem;
+  margin-top: 8rem;
 }
 
 .slide-image img {
-  width: 100%;        /* Ajusta el ancho al 100% del contenedor */
-  height: 100%;       /* Ajusta la altura al 100% del contenedor */
-  object-fit: cover;  /* Ajusta la imagen para cubrir el área sin distorsión */
+  width: 100%;        
+  position: relative;
+  height: 100%;       
+  object-fit: cover;  
+  transition: opacity 1s ease-in-out;
+  border-radius: 38px;
 }
 
 /* Imagen */
@@ -141,6 +159,7 @@ body {
   color: #333;
   font-family: "Baloo Tamma 2", serif;
   font-weight: 900;
+  transition: opacity 1s ease-in-out;
 }
 
 
@@ -287,7 +306,8 @@ body {
 }
 
 /* Estilo del título */
-.title-wrap {
+/* .title-wrap {
+  
   margin: 3%;
   display: flex;
   flex-direction: column;
@@ -296,6 +316,12 @@ body {
   font-family: "Baloo Tamma 2", serif;
   font-weight: 900;
   font-size: 2.5rem;
+} */
+.title-wrap {
+  display: inline-block; /* Cambiamos a bloque en línea */
+  white-space: nowrap; /* Evita el salto de línea */
+  font-size: 2.5rem;
+  margin: 3%;
 }
 .title-wrap span{
   color: var(--nav);
@@ -444,11 +470,11 @@ body {
 }
 
 .galery-image.b {
-  background-image: url("../img/main/images/albufera.webp");
+  background-image: url("../img/main/images/ciudad-artes.webp");
 }
 
 .galery-image.c {
-  background-image: url("../img/main/images/albufera.webp");
+  background-image: url("../img/main/images/valencia_mercado-central_888.webp");
 }
 
 .galery-image.d {
@@ -1265,8 +1291,18 @@ input:hover{
 
 .slide-image {
   position: relative;
+  width: 27rem;
+  height: 27rem;
 }
 
+.slide-image img {
+  width: 100%;        
+  position: relative;
+  height: 100%;       
+  object-fit: cover;  
+  transition: opacity 1s ease-in-out;
+  border-radius: 38px;
+}
 
 .gotasContainer {
   position: absolute;  /* Esto saca el div de su flujo normal */
