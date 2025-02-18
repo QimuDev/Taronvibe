@@ -1,58 +1,36 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
-    const totalSlides = slides.length;
-  
-    // Función para cambiar de slide
-    const nextSlide = () => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    };
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
 
-    // Iniciar la animación automática
-    let interval = setInterval(nextSlide, 3000);
-
-    // Detener animación cuando el mouse entra
-    carousel.addEventListener('mouseenter', () => clearInterval(interval));
-
-    // Reanudar animación cuando el mouse sale
-    carousel.addEventListener('mouseleave', () => {
-        interval = setInterval(nextSlide, 3000);
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
     });
-});
-
-    
-
-
-// BOTONES CON SLIDER
-function toggleButton(event, index) {
-    const options = document.querySelectorAll('.option');
-    const slider = document.querySelector('.slider');
-  
-    options.forEach(option => option.classList.remove('active'));
-    event.target.classList.add('active');
-  
-    slider.style.transform = index === 0 ? "translateX(0)" : "translateX(100%)";
   }
 
+  function changeSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+    setTimeout(changeSlide, 4000);
+  }
 
+  showSlide(currentIndex);
+  changeSlide();
 
-
-
-
-// function toggleButton(event) {
-//     const buttons = document.querySelectorAll('.option');
-//     const slider = document.querySelector('.slider');
- 
-//     buttons.forEach(btn => btn.classList.remove('active'));
-//     event.target.classList.add('active');
- 
-//     if (event.target.innerText === "Favoritos") {
-//         slider.style.transform = "translateX(0%)";
-//     } else {
-//         slider.style.transform = "translateX(100%)";
-//     }
-// }
-  
+  // Toggle button functionality
+  document.querySelectorAll('.option').forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+      document.querySelectorAll('.option').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      if (index === 0) {
+        document.querySelector('.slider').style.transform = "translateX(0)";
+      } else {
+        document.querySelector('.slider').style.transform = "translateX(100%)";
+      }
+    });
+  });
+});

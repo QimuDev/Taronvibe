@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "taronvibeBuena";
+$dbname = "taronvibe";
 
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
