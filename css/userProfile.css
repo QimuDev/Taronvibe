@@ -566,8 +566,8 @@ h5{
     height: 36px;
     border: none;
     border-radius: 12px;
-    background-color: var(--secondary);
-    color: var(--text-color);
+    background-color:#FFCF91;
+    color: white;
     font-family: "Varela Round";
     font-weight: bold;
     cursor: pointer;
@@ -577,11 +577,13 @@ h5{
 .page.active {
     background-color: var(--primary);
     color:white;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .page:hover {
-    background-color: var(--primary);
+    background-color:#ffb95e;
     color:white;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dots {
