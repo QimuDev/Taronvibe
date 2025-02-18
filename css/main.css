@@ -559,7 +559,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90vh;
+  height: 98vh;
   background-color: var(--brown);
   color: #333;
   margin-top: 3rem;
@@ -574,7 +574,7 @@ body {
   width: 50rem;
   margin-top:3.4rem;
   margin-bottom:3.4rem;
-  margin-left:3rem;
+  margin-left:5rem;
 }
 
 .comments {
@@ -596,9 +596,10 @@ body {
   border-radius: 28px;
   font-family: "Varela Round", serif;
   font-weight: 700;
-  width: 400px;
+  
+  width: 445px;
   animation: slide 10s linear infinite;
-  height: auto;
+  height: 330px;
   padding:2rem;
 }
 
@@ -646,17 +647,17 @@ body {
 .dinamic-container {
   display: flex;
   justify-content: center;
-  gap: 4.65rem;
+  gap: 3.9rem;
   overflow: hidden;
   height: 600px; /* Ajusta según el tamaño de las imágenes */
-  margin: 0 9.5rem;
+
 }
 
 .dinamic-column {
   display: flex;
   flex-direction: column;
   position: relative;
-  animation: move-up 10s linear infinite;
+  animation: move-up 20s linear infinite;
 }
 
 /* Animaciones */
@@ -665,13 +666,13 @@ body {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-50%);
+    transform: translateY(-79%);
   }
 }
 
 @keyframes move-down {
   from {
-    transform: translateY(-50%);
+    transform: translateY(-79%);
   }
   to {
     transform: translateY(0);
@@ -686,14 +687,14 @@ body {
 
 .dinamic-center {
   animation-name: move-down;
-  animation-duration: 14s;
+  animation-duration: 20s;
 }
 
 /* Imagenes */
 .dina-image img {
-  width: 350px;
-  height: 350px;
-  margin-bottom: 3rem;
+  width: 410px;
+  height: 410px;
+  margin-bottom: 3.9rem;
 }
 
 /* PROXIMOS EVENTOS SECTION */
@@ -721,6 +722,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-left:3.8rem;
+  margin-right:3.8rem;
 }
 
 .proximos-img {
@@ -767,9 +770,10 @@ body {
 
 .btn-prox {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   text-align: center;
+  margin-right:5rem;
 }
 
 .btn-prox button {
@@ -1091,7 +1095,7 @@ nav {
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 50s linear infinite;
+  animation: marquee 180s linear infinite;
 }
 
 
@@ -1123,14 +1127,17 @@ nav {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 20px;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-left {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .footer-right {
@@ -1198,7 +1205,7 @@ nav {
 .input2{
   padding: 15px;
   font-size: 16px;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 50px;
   background-color: var(--background);
 }
@@ -1214,7 +1221,7 @@ nav {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .footer-policies {
@@ -1235,7 +1242,7 @@ nav {
   padding: 15px 20px;
   background-color: var(--background);
   color: black;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 50px;
   font-weight: bold;
   font-size: 17px;
@@ -1263,7 +1270,7 @@ input:hover{
 }
 
 .footer-bottom a:hover {
-  border-bottom: 2px solid black; 
+  border-bottom: 1px solid black; 
 }
 
 .wrapper h3{
@@ -1328,4 +1335,35 @@ input:hover{
 
 a {
   text-decoration:none; 
+}
+
+h3{
+  font-family: "Baloo Tamma 2";
+  font-weight: 800;
+}
+
+.h2o{
+  margin-left:10rem;
+}
+
+.containerpGotas{
+  height: 15rem;
+  margin-left:2.8rem;
+  position: relative;
+}
+
+.pgotas{
+  position:absolute;
+}
+
+.gotasP{
+  position: absolute;
+  height: 4.2rem;
+  width: 4.2rem;
+  background-image: url("../img/login/TaronvibeGotas.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(45deg);
+  left: 48.5rem;
 }
