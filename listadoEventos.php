@@ -55,7 +55,7 @@ if($result -> num_rows > 0) {
     <section>
       <div class="descubre">
         <h1 class="texto">Descubre nuestros <br />eventos ;)</h1>
-        <img src="./img/listadoOrg/text.png" alt="ola" class="ola" />
+        <img src="img/listadoOrg/text.png" alt="ola" class="ola" />
       </div>
     </section>
 

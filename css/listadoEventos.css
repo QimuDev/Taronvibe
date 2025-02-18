@@ -287,7 +287,7 @@ color:blue;
 .texto-container {
     text-align: center;
     padding: 1rem;
-    width: 88%;
+    width: 60%;
     font-family: "varela round", serif;
     font-weight: 900;
     margin-top: 1rem;
@@ -299,13 +299,15 @@ color:blue;
     padding-left: 0;
    }
    
+   
    .texto-container li{
      display: flex;
-     justify-content: center;
+     justify-content: start;
      align-items: center;
      color: black;
      text-decoration: none;
      list-style: none;
+     margin
    }
 
    .imagenes-contenido img {
