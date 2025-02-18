@@ -259,6 +259,15 @@
           </div>    
         </div>
       </div>
+      <div class="pagination">
+            <button class="page active" onclick="changePage(1)">1</button>
+            <button class="page" onclick="changePage(2)">2</button>
+            <button class="page" onclick="changePage(3)">3</button>
+            <button class="page" onclick="changePage(4)">4</button>
+            <button class="page" onclick="changePage(5)">5</button>
+            <span class="dots">...</span>
+            <button class="page" onclick="changePage(10)">10</button>
+        </div>
     </section>
     </section>
     <div class="marquee-container">
@@ -304,4 +313,10 @@
         </div>
     </footer>
 </body>
+<script>
+  function changePage(pageNumber) {
+    document.querySelectorAll('.page').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.page:nth-child(${pageNumber})`)?.classList.add('active');
+}
+</script>
 </html>

@@ -38,6 +38,18 @@
         height: 30rem; /* Ajusta la altura para que sea igual al ancho */
     }
 
+    .card {
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 17rem;
+    }
+
+    .galery-image {
+        height: 17rem;
+        width: 17rem;
+    }
+    
+
 }
 
 @media only screen and (min-width: 1281px){
@@ -57,6 +69,18 @@
     .imagen img {
         width: 40rem;
         height: 38rem; /* Ajusta la altura para que sea igual al ancho */
+    }
+
+    .card {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25rem;
+    }
+
+    .galery-image {
+        height: 25rem;
+        width: 25rem;
     }
 
 }
@@ -211,8 +235,6 @@ nav {
 /*Parte eventos*/
 /* INICIO DE LA GALERIA DE IMAGENES */
 .card {
-    width: 17rem;
-    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,8 +265,6 @@ color:blue;
 
 .galery-image {
     position: relative;
-    height: 17rem;
-    width: 17rem;
     border-radius: 20px;
     overflow: hidden; 
     cursor: pointer;
@@ -405,7 +425,51 @@ color:blue;
     text-decoration-line: underline;
 }
 
+/*Paginacion*/
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 150px;
+}
 
+.page {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #FFCF91;
+    font-family: "Varela Round";
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page.active {
+    background-color: var(--primary);
+    color:white;
+}
+
+.page:hover {
+    background-color: #FFBA5F;
+    color:white;
+}
+
+.dots {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #FFCF91;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 12px;
+}
 
 /*Marquee*/
 
