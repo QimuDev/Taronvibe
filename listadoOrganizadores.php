@@ -7,7 +7,7 @@ $lista = "";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $lista .= "<div class='card'>";
-        $lista .= "<div class='galery-image' style='background-image: url(" . $row['imagen'] . ")'>";
+        $lista .= "<div class='galery-image' style='background-image: url(" . $row['imagen'] . ")' onclick='window.open(\"detalleOrganizador.php\", \"_self\");'>";
         $lista .= "<div class='contenido-container'></div>";
         $lista .= "</div>";
         $lista .= "<div class='texto-container'>";
@@ -16,6 +16,7 @@ if ($result->num_rows > 0) {
         $lista .= "</div>";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
