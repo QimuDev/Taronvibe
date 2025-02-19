@@ -1377,3 +1377,19 @@ input::placeholder{
 .footer-bottom a:hover {
   border-bottom: 1px solid black; 
 }
+
+.btn-profile:hover {
+    align-items: center;
+    justify-content: center;
+    background-color: #FF7700;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.btn-profile:hover .profile-icon {
+    filter: brightness(0) invert(1);
+}

@@ -109,7 +109,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     </div>
 
     <div class="marquee-container">
-        <div class="marquee">
+      <div class="marquee">
         <span>
           Descubre, disfruta y repite &nbsp;&nbsp;&nbsp;&nbsp;
           <img
@@ -146,12 +146,6 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
             style="height: 1.5rem; width: auto; vertical-align: middle"
           />
           &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
-          <img
-            src="./img/main/images/marqeeIcon.png"
-            alt=""
-            style="height: 1.5rem; width: auto; vertical-align: middle"
-          />
-          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
           &nbsp;&nbsp;&nbsp;&nbsp;
           <img
             src="./img/main/images/marqeeIcon.png"
@@ -187,13 +181,21 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
             style="height: 1.5rem; width: auto; vertical-align: middle"
           />
           &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <img
+            src="./img/main/images/marqeeIcon.png"
+            alt=""
+            style="height: 1.5rem; width: auto; vertical-align: middle"
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp; Descubre, disfruta y repite
           <img
             src="./img/main/images/marqeeIcon.png"
             alt=""
             style="height: 1.5rem; width: auto; vertical-align: middle"
           />
           &nbsp;&nbsp;&nbsp;&nbsp;
-        </span>        </div>
+        </span>
+      </div>
     </div>
 
     <footer class="footer">

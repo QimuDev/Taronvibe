@@ -25,33 +25,33 @@ if($result -> num_rows > 0) {
   </head>
 
   <body>
-    <section class="nav-container">
     <nav>
-      <div class="nav-logo">
-        <a href="index.html">
-            <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
-        </a>
-    </div>
-      <div class="nav-profile">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="listadoEventos.php">Eventos</a></li>
-          <li class="nav-item"><a href="listadoOrganizadores.php">Organizadores</a></li>
-          <li>
-            <a href="userProfile.php">
-                <button class="btn-profile">
-                    <img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil
-                </button>
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
             </a>
-        </li>
-        </ul>
-      </div>
-      <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        </div>
+        <div class="nav-profile">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="listadoEventos.php">Eventos</a></li>
+                <li class="nav-item"><a href="listadoOrganizadores.php">Organizadores</a></li>
+                <li>
+                    <a href="userProfile.php">
+                        <button class="btn-profile">
+                            <img src="./img/img_userUpdate/Vector.svg" alt="svg perfil"> Mi Perfil
+                        </button>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-    </section>
+
     <section>
       <div class="descubre">
         <h1 class="texto">Descubre nuestros <br />eventos ;)</h1>
