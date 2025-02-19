@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
     <section class="nav-container">
         <nav>
             <div class="nav-logo">
-                <a href="main.html">
+                <a href="index.html">
                     <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
                 </a>
             </div>
