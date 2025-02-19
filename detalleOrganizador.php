@@ -58,7 +58,7 @@
         <section>
       <div class="galery-container">
         <div class="img-container">
-          <div class="galery-image a">
+          <div class="galery-image a" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image b">
+          <div class="galery-image b" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -90,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image c">
+          <div class="galery-image c" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image d">
+          <div class="galery-image d" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -122,7 +122,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image e">
+          <div class="galery-image e" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -138,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image f">
+          <div class="galery-image f" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -154,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image g">
+          <div class="galery-image g" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -170,7 +170,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image h">
+          <div class="galery-image h" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -186,7 +186,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image i">
+          <div class="galery-image i" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -202,7 +202,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image j">
+          <div class="galery-image j" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -218,7 +218,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image k">
+          <div class="galery-image k" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
@@ -234,7 +234,7 @@
               </div>
             </div>
           </div>
-          <div class="galery-image l">
+          <div class="galery-image l" onclick="window.open('detalleEvento.html', '_self')">
             <div class="contenido-container">
               <div class="contenido">
                 <ul>
