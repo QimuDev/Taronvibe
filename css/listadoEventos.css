@@ -257,7 +257,7 @@ body {
 }
 .ubicacion-evento a{
 text-decoration: none;
-color:blue;
+color:#5393d8;
 }
 .ubicacion-evento:hover{
     text-decoration: underline;
@@ -277,8 +277,6 @@ color:blue;
     background-position: center;
 
 }
-
-
 
 .contenido-container {
     display: none; 

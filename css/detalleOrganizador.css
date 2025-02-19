@@ -55,20 +55,20 @@
 @media only screen and (min-width: 1281px){
 
     .contenedor {
-        max-width: 85%;
+        max-width: 91%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .eventos {
-        max-width: 85%;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .imagen img {
-        width: 40rem;
-        height: 38rem; /* Ajusta la altura para que sea igual al ancho */
+        width: 450px;
+        height: 450px; /* Ajusta la altura para que sea igual al ancho */
     }
 
     .card {
@@ -92,53 +92,6 @@ body {
     background-color: var(--background);
 }
 
-/* nav */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    padding: 20px 30px;
-}
-
-.nav-logo{
-    margin-left: 5rem;
-}
-
-.nav-logo img {
-    height: 60px;
-    margin-left: px;
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 40px;
-    align-items: center;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.nav-item a:hover {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 15px 20px;
-    background-color: var(--primary); 
-    color: white; 
-    border: none; 
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold; 
-    cursor: pointer; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 .btn-profile {
     display: flex;
@@ -181,6 +134,7 @@ nav {
     flex-wrap: row;
     justify-content: center;
     padding: 6rem 2rem;
+    margin-top:5rem;
 }
 
 .imagen {
@@ -198,10 +152,18 @@ nav {
 }
 
 .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     margin-left: 5rem;
     margin-right: 2rem;
     margin-top: 0rem;
     margin-bottom: 0;
+}
+
+.texto h1{
+    margin: 0;
+    margin-top:1.5rem;    
 }
 
 .nombreOrganizador {
@@ -337,7 +299,6 @@ color:blue;
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 3rem 0;
 }
 
 
@@ -479,6 +440,7 @@ color:blue;
     background-color: var(--primary);
     white-space: nowrap;
     box-sizing: border-box;
+    font-family: "Ballo Tamma 2";
 }
 
 .marquee {
@@ -626,7 +588,6 @@ color:blue;
     font-weight: bold;
     font-size: 17px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-footer:hover {
@@ -663,4 +624,332 @@ color:blue;
   
 .footer-bottom a:hover {
     border-bottom: 1px solid black; 
+  }
+
+  .marqueeContainer1{
+    margin-top:60px;
+  }
+  
+  .marquee-container1,
+  .marquee-container2 {
+    width: 100%;
+    overflow: hidden;
+    background-color: #FF7700;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 20px 0px;
+  }
+  
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 180s linear infinite;
+  }
+  
+  
+  .marquee span {
+    display: inline-block;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 140%;
+  }
+  
+  @keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
+  
+input::placeholder{
+    color: #1c1c1c;
+  }
+  
+  
+  .footer-bottom a:hover {
+    border-bottom: 1px solid black; 
+  }
+
+  .input1,
+.input2{
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+.input1{
+  width: 38%;
+}
+
+.input2{
+  width: 62%;
+}
+
+
+.btn-footer {
+    padding: 15px 20px;
+    background-color: var(--background);
+    color: black;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+  
+  .btn-footer:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  nav {
+    font-family: "Baloo Tamma 2";
+    font-size: 19px;
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    position:fixed;
+    top:0;
+    z-index:10; 
+  }
+  
+  .nav-logo img {
+    height: 60px;
+    margin-left: 68px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .nav-item a {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.3s ease;
+  }
+  
+  .nav-item a:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+  }
+
+  .nav-container {
+    width: 91%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+  }
+  
+  .btn-profile img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .btn-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px 20px;
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold; 
+    font-family:"Varela Round"; 
+    cursor: pointer; 
+    text-decoration: none;
+  }
+
+  
+  .btn-profile{
+    padding: 13px 20px;
+    text-decoration: none;
+  }
+
+  .nav-logo {
+    margin-right: 47rem;
+  }
+
+  .galery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 5rem;
+  }
+  
+  
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom:2.3rem;
+  }
+  
+  /* Contenedor de cada imagen */
+  .galery-image {
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 19px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* Contenedor del contenido del evento */
+  .contenido-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Texto del evento */
+  .contenido ul {
+   list-style-type: none;
+   padding-left: 0;
+  }
+  
+  .contenido li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background);
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .imagenes-contenido img {
+    width: 30px; 
+    height: 30px;
+    margin: 10px 5px; 
+  }
+  
+  .contenido li .imagenes-contenido {
+    width: 50px;
+    height: 10px;
+  }
+  
+  /* Hover: oscurece la imagen y muestra el contenido */
+  .galery-image:hover .contenido-container {
+    background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+    opacity: 1; /* Muestra el texto */
+  }
+  
+  
+  /* IMAGENES DE CADA ELEMENTO DE LA GALERIA PRINCIPAL */
+  .galery-image.a {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.b {
+    background-image: url("../img/main/images/ciudad-artes.webp");
+  }
+  
+  .galery-image.c {
+    background-image: url("../img/main/images/valencia_mercado-central_888.webp");
+  }
+  
+  .galery-image.d {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.e {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.f {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.g {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.h {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.i {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.j {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.k {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  .galery-image.l {
+    background-image: url("../img/main/images/albufera.webp");
+  }
+  
+  /* FIN DE LAS IMAGENES DE LA GALERÍA */
+  
+  .galery-button {
+    margin-top:2rem;
+    margin-bottom:5rem;
+    text-align: center;
+  }
+  
+  .galery-button button {
+    background-color: var(--background);
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border: solid var(--primary) 2px;
+    border-radius: 10rem;
+    font-family: "varela round",serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .galery-button button:hover {
+    background-color: var(--primary);
+    color: var(--background);
+  }
+
+
+  .nombreOrganizador{
+    font-family: "Baloo Tamma 2";
   }
