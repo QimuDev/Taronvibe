@@ -45,7 +45,7 @@ $tabla .= "</div></div>"; // Cerrar el contenedor y la fila
     <!-- NAV MENÚ -->
     <nav>
     <div class="nav-logo">
-        <a href="main.html">
+        <a href="index.html">
             <img src="img/login/TaronvibeLogoNav.png" alt="Logo" />
         </a>
     </div>
