@@ -681,3 +681,167 @@ input::placeholder{
 .footer-bottom a:hover {
   border-bottom: 1px solid black; 
 }
+
+.prox-color {
+  background-color: var(--brown);
+}
+
+.proximos-eventos-container {
+  padding: 1rem;
+  text-align: center;
+}
+.title-prox {
+  font-family: "Baloo Tamma 2";
+  font-weight: 900;
+  font-size:41px;
+  text-align: center;
+  padding: 3rem;
+  color: var(--background);
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+
+.proximos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left:3.8rem;
+  margin-right:3.8rem;
+}
+
+.proximos-img {
+  width: 20rem;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.proximos-img.a {
+  background-image: url("../img/main/images/tazas.png");
+}
+
+.proximos-img.b {
+  background-image: url("../img/main/images/mercadillo.png");
+}
+
+.proximos-img.c {
+  background-image: url("../img/main/images/atracciones.png");
+}
+
+.proximos-img.d {
+  background-image: url("../img/main/images/festival.png");
+}
+
+.contenido-prox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+}
+
+.contenido-prox p {
+  font-family: "Baloo Tamma 2", serif;
+  font-weight: 900;
+  font-size: 32px;
+  width: 50rem;
+  color: var(--background);
+  margin-top:2.5rem;  
+  margin-left: 2rem;
+  margin-right:20rem; 
+  margin-bottom: 2.5rem;  
+}
+
+.btn-prox {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  margin-right:5rem;
+}
+
+.btn-prox button {
+  background-color: var(--background);
+  color: var(--brown);
+  padding: 0.75rem 1.5rem;
+  border: solid var(--brownSecondary) 2px;
+  border-radius: 10rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-prox button:hover {
+  background-color: var(--brown);
+  color: var(--background);
+  border: solid var(--background) 2px;
+}
+
+
+/* Sección de Información */
+.info {
+  margin-left: 6rem;
+  width: 40rem;
+}
+
+.info img {
+  height: 10rem;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.info ul li {
+  margin: 0.5rem 0;
+}
+
+.info ul li a {
+  text-decoration: none;
+  color: var(--nav);
+  transition: color 0.3s ease;
+  font-family: "varela round", serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.info ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Íconos de Redes Sociales */
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
+
+/* SECCION NEWSLETTER */
+.newsleter {
+  text-align: end;
+  margin-right: 6rem;
+  width: 40rem;
+}
+
+.newsleter h1 {
+  margin-bottom: 1rem;
+  font-family: "baloo tamma 2", serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.nav-logo{
+  margin-right: 43rem;
+}

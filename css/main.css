@@ -1266,7 +1266,7 @@ input:hover{
 
 
 .footer-left a:hover {
-  border-bottom: 2px solid var(--primary); 
+  border-bottom: 1px solid var(--primary); 
 }
 
 .footer-bottom a:hover {
