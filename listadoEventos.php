@@ -176,7 +176,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -195,7 +195,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -214,7 +214,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -232,7 +232,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -250,7 +250,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -268,7 +268,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -286,7 +286,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -304,7 +304,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -322,7 +322,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -340,7 +340,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -358,7 +358,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />
@@ -376,7 +376,7 @@ if($result -> num_rows > 0) {
               <ul>
                 <li class="nombre-evento">Nombre del evento</li>
                 <li class="ubicacion-evento"><a href="">Ubicacion del evento</a></li>
-                <li>Fecha del evento</li>
+                <li>22/02/2025</li>
                 <li class="imagenes-contenido">
                   <img src="./img/main/icons/oso.svg" alt="oso" />
                   <img src="./img/main/icons/arbol.svg" alt="arbol" />

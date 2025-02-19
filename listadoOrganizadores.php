@@ -284,8 +284,8 @@ if ($result->num_rows > 0) {
         <div class="footer-bottom">
             <p>Copyright © 2025 - TARONVIBE</p>
             <ul class="footer-policies">
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Política de Cookies</a></li>
+            <li><a href="politicas.html">Política de Privacidad</a></li>
+            <li><a href="cookies.html">Política de Cookies</a></li>
                 <li><a href="#">Aviso Legal</a></li>
             </ul>
         </div>
